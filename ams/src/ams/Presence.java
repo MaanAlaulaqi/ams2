@@ -116,8 +116,10 @@ public class Presence {
     int hoursInMins = hour * 60;
     return hoursInMins + mins;
 }
-    
+    public static boolean readStudentUID = false;
+    public static String UIStudentName;
     public static void MarkPresent(String UID){
+        
         int id_test = -1;
         //TO-DO Main Attendance taking method
         if(timeCheck()){
@@ -134,6 +136,8 @@ public class Presence {
                     System.out.println("Reached this part! "+db.rs.getRow()+" "+k); //Checking
                     k++;
                     w = (""+k);
+                    readStudentUID = true;
+                    UIStudentName = db.rs.getString("first_name")+" "+db.rs.getString("last_name");
                     db.rs.updateString("present",w);
                     db.rs.updateRow();
                 }
@@ -143,6 +147,8 @@ public class Presence {
         }else {
             //Meh, not much to do here  lol
         }
+        //InterfaceCmds.getCurrentStudent(UID);
+
         
         
     }

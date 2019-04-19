@@ -5,6 +5,7 @@
  */
 package ams;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,15 +18,19 @@ import java.util.logging.Logger;
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ams_main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!"); //More stuff to be added lol
-       //try{
-            student n = new student(); //This is temporary, just testing
-            n.print();
-            System.out.println("LOOK AT ME OMG THIS LINE WAS REACHED YIS");
-            n.cardIDLookUp("2989cacc");
-        //}catch (NullPointerException d){System.out.println(d); System.out.println(d.getMessage());}
-        System.out.println("WOOF"); 
+    public static void main(String[] args) throws IOException {
+//        System.out.println("Hello world!"); //More stuff to be added lol
+//       //try{
+//            student n = new student(); //This is temporary, just testing
+//            n.print();
+//            System.out.println("LOOK AT ME OMG THIS LINE WAS REACHED YIS");
+//            n.cardIDLookUp("2989cacc"); //Returns Maan Alaulaqi'a System print
+//        //}catch (NullPointerException d){System.out.println(d); System.out.println(d.getMessage());}
+//        System.out.println("WOOF"); 
+
+        //On-Screen keyboard. This will be needed when in UI
+        //Just saving it here in case I lose the syntax later
+        //Runtime.getRuntime().exec("cmd /c osk");
         CardConnection c1 = new CardConnection();
         c1.enablePlugnPlay();
         c1.initateTerminal();
@@ -33,7 +38,7 @@ public class ams_main {
         new Thread(c1).start(); //This is to keep the reader running 
         String p = c1.cardUID();
         
-        n.cardIDLookUp(p);
+        //n.cardIDLookUp(p);
        
 //       dbControl x = new dbControl();
 //       x.doClose();
