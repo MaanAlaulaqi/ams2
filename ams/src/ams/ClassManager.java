@@ -82,7 +82,8 @@ int x = 0;
 
         studentListLEFT.setVisible(true);
 
-        System.out.println(sClassSelect.getRows());
+        System.out.println(sClassSelect.getRows()+" LOL");
+        System.out.println(sClassSelect.getItemCount()+" LOL");
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
