@@ -100,7 +100,7 @@ public class UserInterface extends javax.swing.JFrame {
                 .addGap(0, 55, Short.MAX_VALUE))
         );
 
-        System.out.println(CardConnection.cardUID+" CardConnect.cardUID lol ");
+        System.out.println(CardConnection.cardUID+"< CardConnect.cardUID lol ");
 
         jPanel2.add(jPanel1);
         jPanel1.setBounds(90, 410, 541, 105);

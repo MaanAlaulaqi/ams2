@@ -5,6 +5,8 @@
  */
 package ams;
 
+import java.util.Vector;
+
 /**
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
@@ -18,6 +20,17 @@ public class ClassManager extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void classListFiller(){
+        Vector<String> elements = new Vector<String>();
+        dbControl.dbComd("SELECT ");
+        while (.next()) {
+        // or whatever is appropriate
+        elements.add(query.getString("name"));
+    }  
+    Jlist mylist = new Jlist(elements);
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

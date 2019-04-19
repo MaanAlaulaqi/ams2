@@ -45,7 +45,8 @@ public class dbLookUp {
         } catch (SQLException ex) {
             Logger.getLogger(dbLookUp.class.getName()).log(Level.SEVERE, null, ex);
         }finally{db.doClose();}
-        
+        //False = Student
+        //True = Instructor
         if(x != null){
             System.out.println("A student");
             return false;

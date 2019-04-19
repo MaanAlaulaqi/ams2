@@ -144,7 +144,7 @@
                     </Property>
                   </Properties>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="System.out.println(CardConnection.cardUID+&quot; CardConnect.cardUID lol &quot;);"/>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="System.out.println(CardConnection.cardUID+&quot;&lt; CardConnect.cardUID lol &quot;);"/>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
                   </AuxValues>
                 </Component>
