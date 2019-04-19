@@ -5,29 +5,39 @@
  */
 package ams;
 
+import java.sql.SQLException;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassManager extends javax.swing.JFrame {
-
+    private static Vector<String> elements = new Vector<String>();
     /**
      * Creates new form ClassManager
      */
     public ClassManager() {
         initComponents();
     }
-
+private static String InstructorUID = UserInterface.UID;
     public void classListFiller(){
-        Vector<String> elements = new Vector<String>();
-        dbControl.dbComd("SELECT ");
-        while (.next()) {
-        // or whatever is appropriate
-        elements.add(query.getString("name"));
-    }  
-    Jlist mylist = new Jlist(elements);
+//        Vector<String> elements = new Vector<String>();
+        try {
+//        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
+        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a';");
+        while (dbControl.rs.next()) {            
+                // or whatever is appropriate
+                elements.add(dbControl.rs.getString("NAME"));
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }  
+    
     }
     
     
@@ -47,7 +57,8 @@ public class ClassManager extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        sClassSelect = new java.awt.List();
+        classListFiller();
+        sClassSelect = new java.awt.List(elements);
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
         sTimeSelect = new java.awt.List();
