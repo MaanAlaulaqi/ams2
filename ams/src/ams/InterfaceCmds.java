@@ -5,6 +5,7 @@
  */
 package ams;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -48,4 +49,108 @@ public class InterfaceCmds {
         else 
             return endTime;
     }
-}
+    /**
+     * This is supposed to return the Card holder's name for the main screen of the UI
+     */
+    static String xx = "";
+    public static String getCurrentUID(String UID){
+        String y; 
+         try {
+                dbControl.dbComd("SELECT * FROM STUDENT WHERE CARD_ID ='"+UID+"'");
+                if(dbControl.rs.next()){
+                    y = dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
+                }
+            }catch (SQLException ex) {
+                Logger.getLogger(ams_main.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{ dbControl.doClose();}
+        System.out.println(Presence.UIStudentName);
+        y = Presence.UIStudentName;
+        xx = y;
+        return CardConnection.cardUID();
+        //return y;
+    }
+    
+    /** This is mostly used in the UI of the application. It'll be 
+     * mostly used to print out the name of the student on the 
+     * front page of the application and their ID. 
+     * 
+     * @param UID
+     * @return A string of words that relate to the student's ID card's being scanned
+     */
+    public static String getCurrentSwipe(String UID){
+         //String x = "SELECT * FROM Student WHERE student.card_id = '"+UID+"'";
+        /*int id = 0; String fName = "", lName = "", contact_phone = ""; Date dob;
+        //x += cardid;
+        try{
+            //String SQL = "SELECT student.id, student.first_name, student.last_name,  FROM STUDENT WHERE student.card_id = cardid";
+            dbControl.dbComd(x);
+            while (dbControl.rs.next()){
+              System.out.println("getCurrentSwipe Reached");
+                id = dbControl.rs.getInt("STUDENT_ID");
+                fName = dbControl.rs.getString("first_name");
+                lName = dbControl.rs.getString("last_name");
+                dob = dbControl.rs.getDate("birth_date");
+                contact_phone = dbControl.rs.getString("contact_mobile");
+                
+
+            }
+        }catch (SQLException error){
+            System.out.println("Oopsies, you gone get goofed, here's the error message: ");
+            System.out.println(error.getMessage());
+        }finally{
+            dbControl.doClose();
+        }
+        if (id == 0) 
+            return "";
+        else 
+            return Integer.toString(id) + " - " + fName + " "+lName + " ";
+        */
+    
+    int counter = 2*10;
+    counter--;
+    int id = 0; String fName = "", lName = "", contact_phone = ""; Date dob;
+    
+    String x = null, y = null;
+        boolean placeholder = false;
+        try{
+            dbControl.dbComd("SELECT * FROM STUDENT WHERE CARD_ID = '"+UID+"'");
+            if(dbControl.rs.next()){
+                x = dbControl.rs.getString("STUDENT_ID") + " - " + dbControl.rs.getString("FIRST_NAME")+" "+dbControl.rs.getString("LAST_NAME");
+                
+               // System.out.println(db.rs.getRow());
+                //System.out.println(x);
+                dbControl.doClose();
+            } else dbControl.doClose();
+            dbControl.dbComd("SELECT * FROM INSTRUCTOR WHERE CARD_ID = '"+UID+"'");
+            if(dbControl.rs.next()){
+                y = dbControl.rs.getString("EMPLOYEE_ID") + " - " + dbControl.rs.getString("TITLE")+ " " +dbControl.rs.getString("FIRST_NAME")+" "+dbControl.rs.getString("LAST_NAME");
+                //System.out.println(db.rs.getRow());
+                //System.out.println(y);
+                dbControl.doClose();
+            } else dbControl.doClose();
+        } catch (SQLException ex) {
+            Logger.getLogger(dbLookUp.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{dbControl.doClose();}
+        if (counter == 0){
+            x = null;
+            y = null;
+        }
+        if(x != null){
+            //System.out.println("A student");
+            return x;
+        }else if(y != null){
+            //System.out.println("An instructor");
+            System.out.println(counter + " Counter");
+            return y;
+        }else {
+            //System.out.println("Not in the database");
+            return "";
+        }
+    
+    
+    
+    
+    
+    }
+    }
+
