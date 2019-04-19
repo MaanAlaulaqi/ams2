@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 
-/*package ams;
+//package ams;
 
+//import static ams.UserInterface.ActiveCheck;
 import javax.swing.ImageIcon;
-*/
+/**/
 /**
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
@@ -26,4 +27,20 @@ import javax.swing.ImageIcon;
     }
     
 }
-*/
+*//*
+public class createImageIcon {
+    
+    
+    public void updateMe(boolean x){
+        if (x) UserInterface.ActiveCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Start_ACTIVE.png")));
+        else UserInterface.ActiveCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Start_NOTACTIVE.png")));
+    }
+    public static void hey(boolean x){
+        updateMe(x);
+    }
+}
+class Lol{
+    public static void hey(boolean x){
+        createImageIcon.updateMe(x);
+    }
+}*/

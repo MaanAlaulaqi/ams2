@@ -41,8 +41,8 @@ import javax.smartcardio.TerminalFactory;
     // API-ACR122U-2.02.pdf Page 11 - 4.1 - Get data (Example 1).
     //(A copy of this should be included in the project)
     private final CommandAPDU GET_UID_COMMAND_APDU = new CommandAPDU(0xFF, 0xCA, 0x00, 0x00, 0x04);
-    private String cardUID = ""; //Used to test passing the UID through classes to interact with db.
-    public static int counter = 2*10;
+    public static String cardUID = ""; //Used to test passing the UID through classes to interact with db.
+    public static int counter = 0;
 	public CardConnection(){
 		
 	}
@@ -154,6 +154,12 @@ import javax.smartcardio.TerminalFactory;
         byte[] uid;
         // Main-loop to keep the thread running.
         while(true){
+            //Start the UI stuff
+            java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new UserInterface().setVisible(true);
+            }
+        });
             // Checks if the CardConnection has been paused, if so it'll sleep and then check again.
             while(!running) {
                 try {
@@ -161,24 +167,31 @@ import javax.smartcardio.TerminalFactory;
                     if (counter > 0) counter--;
                     else counter = 0;
                     //System.out.println();
-                    System.out.print(counter + " ");
+                    //Uncomment the next line to see a count down of the timer
+                    //And the 2nd System print in the 2nd while loop
+                    //System.out.print(counter + " ");
                 } catch (InterruptedException ex) {
                 }
             }
             while(running){
                 try{
                     //System.out.println();
-                    System.out.print(counter + " ");
+                    //See "while(!running) comments 
+                    //This is the timer countdown System print
+                    //System.out.print(counter + " ");
                     if (counter > 0) counter--;
                     else counter = 0;
                     // Checks if a card is present, if not it'll sleep and then check again.
                     if(!terminal.isCardPresent()){
                         //Pause for half a second
+                        try{
                         Thread.sleep(500);
                         ClassThread.classCheck();
+                        //UI NON-ACTIVE 
+                        if (counter <= 0)UserInterface.updateActiveCheck(false);
                         //Continuosly check class slot. 
                         //This part can be to display current class
-                        
+                        }catch (NullPointerException e){}
                     }
                     else{
                         ClassThread.classCheck();
@@ -211,6 +224,8 @@ import javax.smartcardio.TerminalFactory;
 								System.out.print(" " + Integer.toHexString((int) uid[i] & 0xFF));
                             }System.out.println();
                             cardUID = out;
+                            //InterfaceCmds.getCurrentUID(out);
+                            UserInterface.updateStudent(out);
                             System.out.println(out);
                             student.cardIDLookUp(out);
                             // Checks if the UID is in our database
@@ -219,7 +234,8 @@ import javax.smartcardio.TerminalFactory;
                             //HEY POOPOO FACE LOOK HERE! Place activation method here
                             boolean imageIconBoolean;
                             if (emp_stud_check) {
-                                imageIconBoolean = amsActivate.ActivateOrNah(emp_stud_check, out); 
+                                //UI ACTIVE CHECK (This should return true)
+                                UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out)); 
                                 //UserInterface.updateActiveCheck(imageIconBoolean);
                                 //UserInterface.updateActiveCheck(imageIconBoolean);
                                 //THIS IS FOR TESTING TEST YALLA
@@ -250,7 +266,7 @@ import javax.smartcardio.TerminalFactory;
      * For instances where we call the card UID from another class
      * @return 
      */
-    public String cardUID(){ 
+    public static String cardUID(){ 
         String x = cardUID;
         return x;
         }

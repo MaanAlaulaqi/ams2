@@ -27,6 +27,7 @@ public class amsActivate {
         System.out.println("ActivateOrNah reached: " + UID);
         if (x = true) {
             //activateAms(x, UID);
+            UserInterface.updateActiveCheck(x);
             CardConnection.counter = 2*10;
             return x;
         }
@@ -64,12 +65,17 @@ public class amsActivate {
                 return status;
             }else {
                 //TO-DO Deactivate AMS
+                //The default status is deactivated, and it will be deactivated once the timer
+                //runs out, so there is no need to do much here for now. 
                 return status;
             }
         }return status;
     }
     public void activationTimerRunOut(){
         //TO-DO Add timer that calls activateAms(false) once timer pass
+        //Erase this method when you clean up, you already implemented this without
+        //the use of a method. Reminder, you used a counter that ran with the main thread of the 
+        //application 
     }
     
     

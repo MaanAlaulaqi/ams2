@@ -38,7 +38,7 @@ public class ClassThread {
         //System.out.println(DayWeek);
         //System.out.println(dtf.format(now));
         int currentTime = toMins(dtf.format(now));
-        currentTime = currentTime - 500;
+        currentTime = currentTime +250;
         //System.out.println(currentTime);
         //Begin organizing preset class timings..
         String classOneBegin = "11:00", classTwoBegin = "12:30", classThreeBegin = "14:00", classFourBegin = "16:30", classFourEnd = "18:00";
@@ -52,7 +52,6 @@ public class ClassThread {
         //...End. I feel confident that I could've found a faster, more inclusive solution to this, but time is of the essence..
         //For the future, I'd put these into an array. It'd make for faster access and upgradability for more classes. 
         //(Array size will depend on the lastRow of the of class db table)
-        
         //Now to compare the time with each "cycle" and return an int that represent the current class. 
         if(DayWeek.equalsIgnoreCase("Monday") || DayWeek.equals("Wednesday")) {
             if (currentTime >= classOneBeginX && currentTime <= classTwoBeginX) {
@@ -66,7 +65,7 @@ public class ClassThread {
                 class_id = 2;}
         }else if (DayWeek.equals("Thursday") || DayWeek.equals("Friday") || DayWeek.equals("Saturday")) 
             class_id = 0; //Outside of class time ..
-        System.out.println(classOneBeginX + " " + DayWeek);
+        //System.out.println(classOneBeginX + " " + currentTime);
         // This return should never be reached, the method just needed a return statement
         return class_id;
         //return 2; //Return tester

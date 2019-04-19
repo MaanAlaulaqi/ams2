@@ -13,8 +13,11 @@ import javax.swing.ImageIcon;
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class UserInterface extends javax.swing.JFrame {
-    protected final ImageIcon ICON_ACTIVE = createImageIcon("Start_ACTIVE.png", "Card reader currently active.");// = new ImageIcon("/images/Start_ACTIVE.png");
-    protected final ImageIcon ICON_INACTIVE = createImageIcon("ams/src/images/Start_NOTACTIVE.png", "Card reader currently active.");//// = new ImageIcon("/images/Start_NOTACTIVE.png");
+    protected static final ImageIcon ICON_ACTIVE = createImageIcon("images/Start_ACTIVE.png", "Card reader currently active.");// = new ImageIcon("/images/Start_ACTIVE.png");
+    protected static final ImageIcon ICON_INACTIVE = createImageIcon("images/Start_NOTACTIVE.png", "Card reader currently active.");//// = new ImageIcon("/images/Start_NOTACTIVE.png");
+    public static boolean x = false;
+   protected static String  uid_placeholder = "";
+   protected static String UID = uid_placeholder;
 
     
     /**
@@ -42,7 +45,10 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel2 = new javax.swing.JPanel();
-        ActiveCheck = new javax.swing.JLabel();
+        ACTIVE_ICON = new javax.swing.JLabel();
+        INACTIVE_ICON = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        StudentCall = new java.awt.Label();
         main_start = new javax.swing.JPanel();
         currentClass = new java.awt.Label();
         classCall = new java.awt.Label();
@@ -60,8 +66,44 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(798, 584));
         jPanel2.setMinimumSize(new java.awt.Dimension(798, 584));
         jPanel2.setPreferredSize(new java.awt.Dimension(798, 584));
+        jPanel2.setLayout(null);
 
-        ActiveCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Start_NOTACTIVE.png"))); // NOI18N
+        ACTIVE_ICON.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Start_ACTIVE.png"))); // NOI18N
+        jPanel2.add(ACTIVE_ICON);
+        ACTIVE_ICON.setBounds(60, 230, 624, 155);
+
+        INACTIVE_ICON.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Start_NOTACTIVE.png"))); // NOI18N
+        jPanel2.add(INACTIVE_ICON);
+        INACTIVE_ICON.setBounds(60, 230, 624, 155);
+        INACTIVE_ICON.setVisible(false);
+
+        jPanel1.setOpaque(false);
+
+        StudentCall.setBackground(new java.awt.Color(255, 255, 255));
+        StudentCall.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        StudentCall.setText(((InterfaceCmds.getCurrentSwipe(UID) == null) ? " ": InterfaceCmds.getCurrentSwipe(UID))
+
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 151, Short.MAX_VALUE)
+                .addComponent(StudentCall, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(StudentCall, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 55, Short.MAX_VALUE))
+        );
+
+        System.out.println(CardConnection.cardUID+" CardConnect.cardUID lol ");
+
+        jPanel2.add(jPanel1);
+        jPanel1.setBounds(90, 410, 541, 105);
 
         main_start.setMinimumSize(new java.awt.Dimension(798, 584));
         main_start.setLayout(null);
@@ -85,32 +127,8 @@ public class UserInterface extends javax.swing.JFrame {
         main_start.add(mainBG_start);
         mainBG_start.setBounds(0, 0, 798, 584);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
-                .addComponent(ActiveCheck)
-                .addGap(64, 64, 64))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(main_start, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(269, Short.MAX_VALUE)
-                .addComponent(ActiveCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(161, 161, 161))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(main_start, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jPanel2.add(main_start);
+        main_start.setBounds(0, 0, 800, 590);
 
         jLayeredPane1.add(jPanel2);
         jPanel2.setBounds(0, 0, 798, 584);
@@ -119,81 +137,120 @@ public class UserInterface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        
+        /* Set the Nimbus look and feel */ //This is related to my own NetBeans settings, Nimbus theme.
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(UserInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
         //</editor-fold>
         
         //</editor-fold>
 
         /* Create and display the form */
         
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UserInterface().setVisible(true);
-            }
-        });
+        
 //        ImageIcon ACTIVE = 
        /* ImageIcon ICON_ACTIVE1;
         ICON_ACTIVE1 = createImageIcon2("/images/Start_ACTIVE.png", "Card reader currently active.");
          ICON_INACTIVE = new createImageIcon("/images/Start_NOTACTIVE.png");
         */
-       UserInterface need = new UserInterface(2); //
-       need.updateActiveCheck(true); 
-//        ActiveCheck.setIcon(ICON_ACTIVE);
+       
+       //updateActiveCheck(false); 
+       //createImageIcon.updateMe(true);
+       //ActiveCheck.setIcon(ICON_ACTIVE);
     }
-     public ImageIcon createImageIcon(String path, String description) {
-        java.net.URL imgURL = getClass().getResource(path);
+     public static ImageIcon createImageIcon(String path, String description) {
+        java.net.URL imgURL = ClassLoader.getSystemResource(path);
         if (imgURL != null) {
-            return new ImageIcon(imgURL, description);
+            //System.out.println(path);
+            return new ImageIcon(imgURL);
         } else {
             System.out.println("Couldn't find file: " + path);
             return null;
         }
     }
-   public ImageIcon getImageIcon1(ImageIcon x){
-       ImageIcon u;
-        u = x;
-       return u;
-   }
+   
    /**
     * Need a way to access non-static methods from static context
     * Referenced from https://www.javacodegeeks.com/2017/10/can-non-static-method-access-static-variablemethod-java.html
     * 
     * @param d 
     */
-   public UserInterface(int d){} 
-    private void updateActiveCheck(boolean success) {
-        if(success) {            
-            ActiveCheck.setIcon(ICON_ACTIVE);
+     
+
+   public static ImageIcon getIcon(String x) {
+     ImageIcon defaultIcon = new ImageIcon(ClassLoader.getSystemResource(x));
+     return defaultIcon;
+   }
+   
+   public static void updateStudent(String UID){
+       if (UID == ""){}
+       else {
+           //Update Student here
+           uid_placeholder = UID;
+           uid_placeholder = InterfaceCmds.getCurrentUID(UID);
+           String y = InterfaceCmds.getCurrentSwipe(UID);
+           StudentCall.setText(y);
+           System.out.println(uid_placeholder+ " " +y + "InterfaceCmds.getCurrentSwipe() reached");
+       }
+   }
+
+     
+    public static void updateActiveCheck(boolean success) {
+        /*
+        System.out.println(ACTIVE_ICON+" SYSTEM");
+        ImageIcon x,y;
+        x = new ImageIcon(UserInterface.class.getResource("/images/Start_ACTIVE.png"));
+        System.out.println(x + "LOLOLOLLOOLLOL");
+        y = new ImageIcon(UserInterface.class.getResource("/images/Start_NOTACTIVE.png"));*/
+        
+        if(success) {
+            
+            
+            /*System.out.println("YES" + x);
+            ACTIVE_ICON.setIcon(ICON_ACTIVE);// = new ImageIcon("/images/Start_ACTIVE.png"););
+            ACTIVE_ICON.setVisible(true);
+            INACTIVE_ICON.setVisible(false);*/
+            updateChecker.updateActiveCheck(true);
+            x = true;
+            
         }
         else if(!success) {
-            ActiveCheck.setIcon(ICON_INACTIVE);
+            /*
+            System.out.println("NO" + x);
+            ACTIVE_ICON.setIcon(y);
+            ACTIVE_ICON.setVisible(false);
+            INACTIVE_ICON.setVisible(true);*/
+            x = false;
+            updateChecker.updateActiveCheck(false);
+            
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private static javax.swing.JLabel ActiveCheck;
+    public static javax.swing.JLabel ACTIVE_ICON;
+    public static javax.swing.JLabel INACTIVE_ICON;
+    private static java.awt.Label StudentCall;
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel mainBG_start;
     private javax.swing.JPanel main_start;
