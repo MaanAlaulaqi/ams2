@@ -167,6 +167,7 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new java.awt.List(elements.size())"/>
                     <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="classListFiller();"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="System.out.println(sClassSelect.getRows());"/>
                   </AuxValues>
                 </Component>
                 <Component class="java.awt.Label" name="sClassSelectButton">

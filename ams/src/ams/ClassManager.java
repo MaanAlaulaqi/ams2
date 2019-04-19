@@ -82,6 +82,7 @@ int x = 0;
 
         studentListLEFT.setVisible(true);
 
+        System.out.println(sClassSelect.getRows());
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
@@ -244,6 +245,10 @@ int x = 0;
                 new ClassManager().setVisible(true);
             }
         });
+        
+        
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
