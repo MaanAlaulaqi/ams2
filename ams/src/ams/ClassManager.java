@@ -6,6 +6,7 @@
 package ams;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,7 +16,7 @@ import java.util.logging.Logger;
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassManager extends javax.swing.JFrame {
-    private static Vector<String> elements = new Vector<String>();
+    private static ArrayList<String> elements = new ArrayList<String>();
     /**
      * Creates new form ClassManager
      */
@@ -25,19 +26,26 @@ public class ClassManager extends javax.swing.JFrame {
 private static String InstructorUID = UserInterface.UID;
     public void classListFiller(){
 //        Vector<String> elements = new Vector<String>();
+int x = 0;
         try {
 //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+        dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
         while (dbControl.rs.next()) {            
                 // or whatever is appropriate
                 elements.add(dbControl.rs.getString("NAME"));
+                //Needed to test if this worked. The list isn't updating so I need to test things. 
+                System.out.println(elements.get(x));
+                x++;
+                //System.out.println(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
+                //sClassSelect.add(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
+                
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
             }finally{
                 dbControl.doClose();
             }  
-    
+    System.out.println (elements.size());
     }
     
     
@@ -57,7 +65,8 @@ private static String InstructorUID = UserInterface.UID;
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        java.awt.List sClassSelect = new java.awt.List(elements);
+        classListFiller();
+        sClassSelect = new java.awt.List(elements.size());
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
         sTimeSelect = new java.awt.List();
@@ -73,7 +82,6 @@ private static String InstructorUID = UserInterface.UID;
 
         studentListLEFT.setVisible(true);
 
-        classListFiller();
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
@@ -242,6 +250,7 @@ private static String InstructorUID = UserInterface.UID;
     private javax.persistence.EntityManager amsPUEntityManager;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private java.awt.List sClassSelect;
     private java.awt.Label sClassSelectButton;
     private java.awt.Button sDisplayListBUTTON;
     private java.awt.Button sExportListBUTTON;
