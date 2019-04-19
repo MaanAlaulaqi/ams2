@@ -1,0 +1,45 @@
+YOU'RE WORKING ON UI
+	• You need to make the jLabel that calls classes (classCall jLabel) display multi line text (either HTML or using jTextArea instead of jLabels
+	• THE REST OMG GET YOUR ASS MOVING ASSBUTT
+	•••• getClass().getResource ON IMAGES
+	• Create an AbsenceMarker class
+		- ClassStartTime - 
+
+
+++ !!! -->
+	• FALL Semester : Sep 2,2018 ~ Dec. 13, 2018;
+		- 15 weeks ~> 30 classes
+	• SPRING Semester : Jan 06, 2-19 ~ May 1, 2019
+		- 16 weeks ~> 32 classes
+	•• We can assume an average of 31 classes per semester
+		+  Miss 7 classes - FIRST WARNING - Green.
+		+  Miss 10 classes - SECOND WARNING - Yellow .
+		+  Miss 15 classes - FINAL WARNING - Red.
+
+
+(Heck ya this'll help pinpoint multiple classes for each instructor since some of them teach more than one class!)
+SELECT FIRST_NAME, LAST_NAME, CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID
+WHERE INSTRUCTOR.ID = 1;
+
+
+INSERT INTO INSTRUCTOR_CLASS(CLASS_ID, INSTRUCTOR_ID)
+VALUES(
+    (SELECT ID FROM CLASS),
+    (SELECT ID FROM INSTRUCTOR)
+);
+
+
+ALTER TABLE INSTRUCTOR_CLASS
+  ALTER COLUMN
+  CLASS_ID NOT NULL;
+ALTER TABLE INSTRUCTOR_CLASS
+ALTER COLUMN
+  INSTRUCTOR_ID NOT NULL;
+
+  
+ALTER TABLE INSTRUCTOR_CLASS
+  ADD COLUMN
+  CLASS_ID INT REFERENCES CLASS (id);
+ALTER TABLE INSTRUCTOR_CLASS
+ADD COLUMN
+  INSTRUCTOR_ID INT REFERENCES INSTRUCTOR (id);

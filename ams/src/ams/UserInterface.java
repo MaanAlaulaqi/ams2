@@ -208,7 +208,8 @@ public class UserInterface extends javax.swing.JFrame {
            uid_placeholder = InterfaceCmds.getCurrentUID(UID);
            String y = InterfaceCmds.getCurrentSwipe(UID);
            StudentCall.setText(y);
-           System.out.println(uid_placeholder+ " " +y + "InterfaceCmds.getCurrentSwipe() reached");
+           System.out.println(uid_placeholder+ " " +y + " InterfaceCmds.getCurrentSwipe() reached");
+           System.out.println("MAAN LOOK AT ME I'M THE UID WOO! " + UID);
        }
    }
 
