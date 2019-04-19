@@ -21,6 +21,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
+ * This class was automatically created by the NetBeans IDE, however I played
+ * around with the code to use it more functionally.
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
