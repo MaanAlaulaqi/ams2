@@ -28,7 +28,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table(name = "STUDENT", catalog = "", schema = "AMS")
-@NamedQueries({
+@NamedQueries({ 
     @NamedQuery(name = "Student_1.findAll", query = "SELECT s FROM Student_1 s")
     , @NamedQuery(name = "Student_1.findById", query = "SELECT s FROM Student_1 s WHERE s.id = :id")
     , @NamedQuery(name = "Student_1.findByFirstName", query = "SELECT s FROM Student_1 s WHERE s.firstName = :firstName")
