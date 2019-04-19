@@ -1,0 +1,16 @@
+TO DO 
+- Figure out the Foreign key shenanigans 
+- Database class diagram? idk, but you need to figure out the relationships between the tables (ie, student to classes is 1-to-many)
+- Start using the reader to pull up data from the database 
+- Write the rest of the methods and classes
+- Clean shit up
+- Create documentation
+- Create/Edit report
+- killyourself
+- Submit 
+- Get face mask (don't want people getting sick when they see us..)
+- idfkdiealreadyFUCK
+- Create a pretty UI so people think it's a pro project. It's hard to convey the work that went into this, but that's always 
+been the case for projects like these. You can't just "demand" for a feature to be added to a new phone, the devs and engineers need
+to go through a bunch of legal loopholes before they can even begin to look at that stuff. Anyways. Project -> PRETTY. Thank
+
