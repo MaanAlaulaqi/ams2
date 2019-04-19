@@ -27,7 +27,7 @@ private static String InstructorUID = UserInterface.UID;
 //        Vector<String> elements = new Vector<String>();
         try {
 //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a';");
+        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
         while (dbControl.rs.next()) {            
                 // or whatever is appropriate
                 elements.add(dbControl.rs.getString("NAME"));
@@ -57,8 +57,7 @@ private static String InstructorUID = UserInterface.UID;
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        classListFiller();
-        sClassSelect = new java.awt.List(elements);
+        java.awt.List sClassSelect = new java.awt.List(elements);
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
         sTimeSelect = new java.awt.List();
@@ -74,6 +73,7 @@ private static String InstructorUID = UserInterface.UID;
 
         studentListLEFT.setVisible(true);
 
+        classListFiller();
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
@@ -242,7 +242,6 @@ private static String InstructorUID = UserInterface.UID;
     private javax.persistence.EntityManager amsPUEntityManager;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private java.awt.List sClassSelect;
     private java.awt.Label sClassSelectButton;
     private java.awt.Button sDisplayListBUTTON;
     private java.awt.Button sExportListBUTTON;
