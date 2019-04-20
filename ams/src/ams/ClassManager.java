@@ -40,7 +40,8 @@ private String InstructorUID = UserInterface.UID;
                 System.out.println(dbControl.rs.getString("NAME"));
                 //System.out.println(sClassSelect.getSize() + " sClassSelect.getSize()");
                 y = dbControl.rs.getString("NAME");
-                //sClassSelect.add(y);
+                
+                
                 
               //  elements.add(dbControl.rs.getString("NAME"));
                 
@@ -122,7 +123,31 @@ private String InstructorUID = UserInterface.UID;
         sTimeSelect.setViewportView(sTimeSelect1);
 
         sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+
+            int x = 0;
+            try {
+                //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
+                dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+                int xx = dbControl.rs.getint(1);
+                System.out.println(xx + " xx (size lol)");
+                String[] strings = new String[xx];
+                dbControl.doClose();
+                dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+                System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+                while (dbControl.rs.next()) {
+                    System.out.println(dbControl.rs.getString("NAME"));
+                    y = dbControl.rs.getString("NAME");
+                    string[x] = y;
+                    System.out.println(y);
+                    System.out.println(string[x] + " String[x]");
+                    x++;
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }
+
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -287,14 +312,14 @@ private String InstructorUID = UserInterface.UID;
 //        f.add(sClassSelect);
         f.setSize(1000,400);  
         f.setLayout(null);  
-        f.setVisible(true);  
+        f.setVisible(false);  
         
         
         
        //java.awt.List test = new java.awt.List
        //sClassSelect.setSize(322,322);
        
-        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
+//        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
         
         
     }
