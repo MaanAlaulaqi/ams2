@@ -30,50 +30,15 @@ public class ClassManager extends javax.swing.JFrame {
         initComponents();
     }
 private String InstructorUID = UserInterface.UID;
-/*
-    public static void classListFiller(){
-//        Vector<String> elements = new Vector<String>();
-    
-    int x = 0;
-        try {
-//        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-        dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-        System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
-        while (dbControl.rs.next()) {            
-                // or whatever is appropriate
-                System.out.println(dbControl.rs.getString("NAME"));
-                //System.out.println(sClassSelect.getSize() + " sClassSelect.getSize()");
-                y = dbControl.rs.getString("NAME");
-                
-                
-                
-              //  elements.add(dbControl.rs.getString("NAME"));
-                
-                //dlm.addElement((dbControl.rs.getString("NAME")));
-                //Needed to test if this worked. The list isn't updating so I need to test things. 
-                System.out.println(y);
-                x++;
-                //System.out.println(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
-                //sClassSelect.add(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
-                
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
-            }finally{
-                dbControl.doClose();
-            }  
-    //System.out.println (elements.size());
-    //System.out.print(dlm.getSize() + "dlm size");
-    }
-    */
     
     public static int classListFiller2(){
-         
-            //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
+         sizeMeUpbb = 0; //resetting the values
+         incrementMe = 0; 
+            
             
             try {
                 dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-                sizeMeUpbb = dbControl.rs.getInt("1");
+                if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
                 System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
 
             } catch (SQLException ex) {
@@ -288,23 +253,7 @@ private String InstructorUID = UserInterface.UID;
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         
-        dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-        try {
-            int xx = 0;
-            if (dbControl.rs.next()) xx = dbControl.rs.getInt("1");
-            System.out.println(xx+ " xx on Main");
-            
-            
-            
-            //java.awt.List test = new java.awt.List
-            //sClassSelect.setSize(322,322);
-            
-//        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
-        } catch (SQLException ex) {
-            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            dbControl.doClose();
-        }
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
