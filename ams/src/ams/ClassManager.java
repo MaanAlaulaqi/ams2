@@ -69,15 +69,15 @@ private String InstructorUID = UserInterface.UID;
             //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
             dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
             try {
-                int xx = dbControl.rs.getInt("1");
-                System.out.println(xx + " xx (size lol)");
+                sizeMeUpbb = dbControl.rs.getInt("1");
+                System.out.println(sizeMeUpbb + " xx (size lol)");
 
             } catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
             }finally{
                 dbControl.doClose();
             }
-            String[] string = new String[3];
+            String[] stringy = new String[sizeMeUpbb];
             try {
                 dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
                 System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
@@ -86,14 +86,15 @@ private String InstructorUID = UserInterface.UID;
                     y = dbControl.rs.getString("NAME");
                     stringy[incrementMe] = y;
                     System.out.println(y);
-                    System.out.println(string[x] + " String[x]");
-                    x++;
+                    System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
+                    incrementMe++;
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
             }finally{
                 dbControl.doClose();
             }
+            return stringy;
     }
     
     /**
@@ -157,36 +158,7 @@ private String InstructorUID = UserInterface.UID;
 
         sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
 
-            int x = 0; int xx = 0;
-            /*
-            //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-            dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-            try {
-                int xx = dbControl.rs.getInt("1");
-                System.out.println(xx + " xx (size lol)");
-
-            } catch (SQLException ex) {
-                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
-            }finally{
-                dbControl.doClose();
-            }*/
-            String[] strings = new String[3];
-            try {
-                dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-                System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
-                while (dbControl.rs.next()) {
-                    System.out.println(dbControl.rs.getString("NAME"));
-                    y = dbControl.rs.getString("NAME");
-                    string[x] = y;
-                    System.out.println(y);
-                    System.out.println(string[x] + " String[x]");
-                    x++;
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
-            }finally{
-                dbControl.doClose();
-            }
+            String[] strings = new String[sizeMeUpbb];
 
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
