@@ -22,6 +22,7 @@ public class ClassManager extends javax.swing.JFrame {
     private static String y=""; //whenever I need a random string from somewhere. 
     private static int incrementMe = 0; 
     private static int sizeMeUpbb = 0;
+    private static String [] stringy;
     /**
      * Creates new form ClassManager
      */
@@ -29,6 +30,7 @@ public class ClassManager extends javax.swing.JFrame {
         initComponents();
     }
 private String InstructorUID = UserInterface.UID;
+/*
     public static void classListFiller(){
 //        Vector<String> elements = new Vector<String>();
     
@@ -63,21 +65,23 @@ private String InstructorUID = UserInterface.UID;
     //System.out.println (elements.size());
     //System.out.print(dlm.getSize() + "dlm size");
     }
+    */
     
-    public static String[] classListFiller2(){
+    public static int classListFiller2(){
          
             //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-            dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+            
             try {
+                dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
                 sizeMeUpbb = dbControl.rs.getInt("1");
-                System.out.println(sizeMeUpbb + " xx (size lol)");
+                System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
 
             } catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
             }finally{
                 dbControl.doClose();
             }
-            String[] stringy = new String[sizeMeUpbb];
+            stringy = new String[sizeMeUpbb];
             try {
                 dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
                 System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
@@ -94,7 +98,7 @@ private String InstructorUID = UserInterface.UID;
             }finally{
                 dbControl.doClose();
             }
-            return stringy;
+            return sizeMeUpbb;
     }
     
     /**
@@ -158,7 +162,9 @@ private String InstructorUID = UserInterface.UID;
 
         sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
 
-            String[] strings = new String[sizeMeUpbb];
+            int wut = classListFiller2();
+            //I just need reason to run this method before making the String array, so that I can clone it
+            String[] strings = stringy.clone();
 
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
@@ -324,7 +330,7 @@ private String InstructorUID = UserInterface.UID;
             }
         });
         
-        classListFiller();
+//        classListFiller();
         
         
         java.awt.Frame f= new java.awt.Frame();  
