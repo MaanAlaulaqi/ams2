@@ -164,11 +164,6 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sClassSelectActionPerformed"/>
                   </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new java.awt.List(elements.size())"/>
-                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="classListFiller();"/>
-                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="System.out.println(sClassSelect.getRows()+&quot; LOL&quot;);&#xa;System.out.println(sClassSelect.getItemCount()+&quot; LOL&quot;);"/>
-                  </AuxValues>
                 </Component>
                 <Component class="java.awt.Label" name="sClassSelectButton">
                   <Properties>

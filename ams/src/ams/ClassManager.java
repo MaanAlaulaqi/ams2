@@ -10,13 +10,15 @@ import java.util.ArrayList;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 
 /**
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassManager extends javax.swing.JFrame {
-    private static ArrayList<String> elements = new ArrayList<String>();
+    private static Vector<String> elements;// = new Vector<String>(); //Was playing with ArrayList and Vectors here. Read somewhere it made a difference.
+    private static DefaultListModel dlm;
     /**
      * Creates new form ClassManager
      */
@@ -24,15 +26,20 @@ public class ClassManager extends javax.swing.JFrame {
         initComponents();
     }
 private static String InstructorUID = UserInterface.UID;
-    public void classListFiller(){
+    public static void classListFiller(){
 //        Vector<String> elements = new Vector<String>();
 int x = 0;
         try {
 //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
         dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+        System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
         while (dbControl.rs.next()) {            
                 // or whatever is appropriate
-                elements.add(dbControl.rs.getString("NAME"));
+                System.out.println(dbControl.rs.getString("NAME"));
+                System.out.println(dbControl.rs.getString("NAME"));
+              //  elements.add(dbControl.rs.getString("NAME"));
+                
+                dlm.addElement((dbControl.rs.getString("NAME")));
                 //Needed to test if this worked. The list isn't updating so I need to test things. 
                 System.out.println(elements.get(x));
                 x++;
@@ -46,6 +53,7 @@ int x = 0;
                 dbControl.doClose();
             }  
     System.out.println (elements.size());
+    System.out.print(dlm.getSize() + "dlm size");
     }
     
     
@@ -65,8 +73,7 @@ int x = 0;
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        classListFiller();
-        sClassSelect = new java.awt.List(elements.size());
+        sClassSelect = new java.awt.List();
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
         sTimeSelect = new java.awt.List();
@@ -82,8 +89,6 @@ int x = 0;
 
         studentListLEFT.setVisible(true);
 
-        System.out.println(sClassSelect.getRows()+" LOL");
-        System.out.println(sClassSelect.getItemCount()+" LOL");
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
@@ -247,7 +252,7 @@ int x = 0;
             }
         });
         
-        
+        classListFiller();
         
         
     }
