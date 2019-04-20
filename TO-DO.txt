@@ -1,0 +1,30 @@
+TO DO 
+
+- [SORTA DONE?] [HIGH]Prepare a method to activate the thing 
+- [80%][MED-HIGH] Work on the ClassThread - Should it run on its own thread, or be called by a separate thread? It should display the info at all times of which class is currently underway 
+	• This is dependant on the UI, so do this after you do the UI.
+	• Should I do the UI now? 
+- [VERY HIGH] UI
+- [MED]Profile method? 
+- [Eh..]PROFILE PHOTOS FOR DB DAMMIT
+- [MED]Instructor side of things (INSTRUCTOR_PRESENCE is a table afterall)
+- [DONE] DAYS OF THE FUCKING WEEK! Classes aren't every day of the week, dumbdumb. Some classes are Sunday/Tuesday, etc. Work on it 
+- [MED]Absence Precentage thing
+- [MED]Check if the student has already marked their presence in a given day
+- [MED]Date of absence of the student needs to e recorded. Consider a A/P approach. 
+	• All students assumed absent until they scan in. 
+	• At the end of a class session, all students with an A in thir profile will have date of their absence recorded to their profile.
+	• Maybe something like :
+		* db.rs.doComd("SELECT * FROM STUDENT_PRESENCE WHERE PRESENT = 'A'");
+		* if(db.rs.getString() == "A"){ 
+			db.rs.doComdUpdate("SELECT * ABSENCE_RECORD);
+			db.rs.moveToInsertRow();
+			db.rs.updateString('column', 'value')	OR db.rs.updateInt('column', 'value') (whatever value)
+
+
+
+
+Commands you'll find useful later. 
+
+SELECT * FROM STUDENT_PRESENCE inner join student on student.id = student_presence.STUDENT_ID WHERE CARD_ID = '2989cacc' AND CLASS_SCHEDULE_ID = 2;
+SELECT * FROM STUDENT_PRESENCE inner join student on student.id = student_presence.STUDENT_ID; 

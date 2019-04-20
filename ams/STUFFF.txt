@@ -21,6 +21,14 @@ YOU'RE WORKING ON UI
 SELECT FIRST_NAME, LAST_NAME, CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID
 WHERE INSTRUCTOR.ID = 1;
 
+//To count the stuff 
+SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'
+
+//To list the class schedules of each instructor using the instructor.id (where I'll replace with instructor.card_id later on)
+select * from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where instructor.ID = 2;
+
+//Need a space to paste random stuff
+timeConcat = dbControl.rs.getString("firstt_class") + "/"+ dbControl.rs.getString("second_class")+" - "+ dbControl.rs.getString("start_time")+"~"+dbControl.rs.getString("end_time");
 
 INSERT INTO INSTRUCTOR_CLASS(CLASS_ID, INSTRUCTOR_ID)
 VALUES(
