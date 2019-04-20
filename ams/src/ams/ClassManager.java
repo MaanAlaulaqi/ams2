@@ -78,7 +78,7 @@ private String InstructorUID = UserInterface.UID;
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        sClassSelect = new java.awt.List();
+        sClassSelect = new java.awt.List(4, false);
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
         sTimeSelect = new java.awt.List();
@@ -97,6 +97,11 @@ private String InstructorUID = UserInterface.UID;
         sClassSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sClassSelectActionPerformed(evt);
+            }
+        });
+        sClassSelect.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                sClassSelectPropertyChange(evt);
             }
         });
 
@@ -163,15 +168,19 @@ private String InstructorUID = UserInterface.UID;
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${id}"));
         columnBinding.setColumnName("Id");
         columnBinding.setColumnClass(Integer.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${studentId}"));
         columnBinding.setColumnName("Student Id");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${firstName}"));
         columnBinding.setColumnName("First Name");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${lastName}"));
         columnBinding.setColumnName("Last Name");
         columnBinding.setColumnClass(String.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         studentListRIGHT.setViewportView(studentLIST);
@@ -223,6 +232,10 @@ private String InstructorUID = UserInterface.UID;
         // TODO add your handling code here:
     }//GEN-LAST:event_sClassSelectActionPerformed
 
+    private void sClassSelectPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_sClassSelectPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sClassSelectPropertyChange
+
     /**
      * @param args the command line arguments
      */
@@ -258,7 +271,30 @@ private String InstructorUID = UserInterface.UID;
         });
         
         classListFiller();
-        System.out.print(sClassSelect.getSize()+ " sClassSelect.getSize()");
+        
+        
+        java.awt.Frame f= new java.awt.Frame();  
+        java.awt.List l1=new java.awt.List(5);  
+        l1.setBounds(100,100, 75,75);  
+        l1.add("Item 1");  
+        l1.add("Item 2");  
+        l1.add("Item 3");  
+        l1.add("Item 4");  
+        l1.add("Item 5");  
+        f.add(l1);
+        sClassSelect.setBounds(200,200,200,200);
+        sClassSelect.add("Lol");
+        f.add(sClassSelect);
+        f.setSize(1000,400);  
+        f.setLayout(null);  
+        f.setVisible(true);  
+        
+        
+        
+       //java.awt.List test = new java.awt.List
+       //sClassSelect.setSize(322,322);
+       
+        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
         
         
     }
