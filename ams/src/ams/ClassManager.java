@@ -19,16 +19,18 @@ import javax.swing.DefaultListModel;
 public class ClassManager extends javax.swing.JFrame {
     private static Vector<String> elements;// = new Vector<String>(); //Was playing with ArrayList and Vectors here. Read somewhere it made a difference.
     private static DefaultListModel dlm;
+    private static String y="";
     /**
      * Creates new form ClassManager
      */
     public ClassManager() {
         initComponents();
     }
-private static String InstructorUID = UserInterface.UID;
+private String InstructorUID = UserInterface.UID;
     public static void classListFiller(){
 //        Vector<String> elements = new Vector<String>();
-int x = 0;
+    
+    int x = 0;
         try {
 //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
         dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
@@ -36,12 +38,15 @@ int x = 0;
         while (dbControl.rs.next()) {            
                 // or whatever is appropriate
                 System.out.println(dbControl.rs.getString("NAME"));
-                System.out.println(dbControl.rs.getString("NAME"));
+                //System.out.println(sClassSelect.getSize() + " sClassSelect.getSize()");
+                y = dbControl.rs.getString("NAME");
+                //sClassSelect.add(y);
+                
               //  elements.add(dbControl.rs.getString("NAME"));
                 
-                dlm.addElement((dbControl.rs.getString("NAME")));
+                //dlm.addElement((dbControl.rs.getString("NAME")));
                 //Needed to test if this worked. The list isn't updating so I need to test things. 
-                System.out.println(elements.get(x));
+                System.out.println(y);
                 x++;
                 //System.out.println(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
                 //sClassSelect.add(elements.get((dbControl.rs.getInt(dbControl.rs.getRow()))-1));
@@ -52,8 +57,8 @@ int x = 0;
             }finally{
                 dbControl.doClose();
             }  
-    System.out.println (elements.size());
-    System.out.print(dlm.getSize() + "dlm size");
+    //System.out.println (elements.size());
+    //System.out.print(dlm.getSize() + "dlm size");
     }
     
     
@@ -253,6 +258,7 @@ int x = 0;
         });
         
         classListFiller();
+        System.out.print(sClassSelect.getSize()+ " sClassSelect.getSize()");
         
         
     }
@@ -261,7 +267,7 @@ int x = 0;
     private javax.persistence.EntityManager amsPUEntityManager;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private java.awt.List sClassSelect;
+    private static java.awt.List sClassSelect;
     private java.awt.Label sClassSelectButton;
     private java.awt.Button sDisplayListBUTTON;
     private java.awt.Button sExportListBUTTON;
