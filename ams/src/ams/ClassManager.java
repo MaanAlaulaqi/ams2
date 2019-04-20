@@ -149,7 +149,6 @@ private String InstructorUID = UserInterface.UID;
         sClassSelectButton.setText("Select class");
 
         sTimeSelectBUTTON.setText("Select time");
-        sTimeSelectBUTTON.setVisible(false);
 
         sDisplayListBUTTON.setLabel("Display student list");
         sDisplayListBUTTON.addActionListener(new java.awt.event.ActionListener() {
@@ -165,15 +164,6 @@ private String InstructorUID = UserInterface.UID;
             }
         });
 
-        sTimeSelect1.setModel(new javax.swing.AbstractListModel<String>() {
-
-            int wut = classListFiller2();
-            //I just need reason to run this method before making the String array, so that I can clone it
-            String[] strings = stringy.clone();
-
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         sTimeSelect1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         sTimeSelect.setViewportView(sTimeSelect1);
 
@@ -236,6 +226,30 @@ private String InstructorUID = UserInterface.UID;
                 .addComponent(sExportListBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        studentLIST.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Id", "Student Id", "First Name", "Last Name"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, student_1List, studentLIST);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${id}"));
@@ -301,6 +315,7 @@ private String InstructorUID = UserInterface.UID;
         // TODO add your handling code here:
     }//GEN-LAST:event_sExportListBUTTONActionPerformed
 
+    
     private void sClassSelectMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sClassSelectMouseReleased
         // TODO add your handling code here:
         sTimeSelectBUTTON.setVisible(true); 
@@ -308,6 +323,15 @@ private String InstructorUID = UserInterface.UID;
         String class_select = sClassSelect.getSelectedValue();
         timeListFiller2(class_select);
         System.out.println(class_select);
+        sTimeSelect1.setModel(new javax.swing.AbstractListModel<String>() {
+
+                
+                //I just need reason to run this method before making the String array, so that I can clone it
+                String[] strings = stringy.clone();
+
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+        });
         
         
     }//GEN-LAST:event_sClassSelectMouseReleased
