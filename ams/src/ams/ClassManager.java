@@ -30,7 +30,10 @@ public class ClassManager extends javax.swing.JFrame {
         initComponents();
     }
 private String InstructorUID = UserInterface.UID;
-    
+    /**
+     * This is to fill the first table of classes
+     * @return 
+     */
     public static int classListFiller2(){
          sizeMeUpbb = 0; //resetting the values
          incrementMe = 0; 
@@ -65,6 +68,49 @@ private String InstructorUID = UserInterface.UID;
             }
             return sizeMeUpbb;
     }
+    
+    /**
+     * This will be to fill the time slots
+     */
+    public static int timeListFiller2(String class_select1){
+        sizeMeUpbb = 0; //resetting the values
+        incrementMe = 0; 
+        String class_select = class_select1;
+        String timeConcat = "";
+
+        try {
+            dbControl.dbComd("select count (*) from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_select+"'");
+             if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
+                System.out.println(sizeMeUpbb + " TIME.sizeMeUpbb (size lol)");
+                
+            System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            dbControl.doClose();
+        }
+        stringy = new String[sizeMeUpbb];
+        try {
+            dbControl.dbComd("select start_time, end_time, firstt_class, second_class, name from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_select+"'");
+            System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+            while (dbControl.rs.next()) {
+                System.out.println(dbControl.rs.getString("NAME"));
+                timeConcat = dbControl.rs.getString("firstt_class") + "/"+ dbControl.rs.getString("second_class")+" - "+ dbControl.rs.getString("start_time")+"~"+dbControl.rs.getString("end_time");
+                stringy[incrementMe] = timeConcat;
+                System.out.println(timeConcat);
+                System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
+                incrementMe++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            dbControl.doClose();
+        }
+        return sizeMeUpbb;
+    }
+    
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -103,6 +149,7 @@ private String InstructorUID = UserInterface.UID;
         sClassSelectButton.setText("Select class");
 
         sTimeSelectBUTTON.setText("Select time");
+        sTimeSelectBUTTON.setVisible(false);
 
         sDisplayListBUTTON.setLabel("Display student list");
         sDisplayListBUTTON.addActionListener(new java.awt.event.ActionListener() {
@@ -119,10 +166,15 @@ private String InstructorUID = UserInterface.UID;
         });
 
         sTimeSelect1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+
+            int wut = classListFiller2();
+            //I just need reason to run this method before making the String array, so that I can clone it
+            String[] strings = stringy.clone();
+
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        sTimeSelect1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         sTimeSelect.setViewportView(sTimeSelect1);
 
         sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
@@ -133,6 +185,12 @@ private String InstructorUID = UserInterface.UID;
 
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+        });
+        sClassSelect.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        sClassSelect.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                sClassSelectMouseReleased(evt);
+            }
         });
         jScrollPane2.setViewportView(sClassSelect);
 
@@ -149,7 +207,7 @@ private String InstructorUID = UserInterface.UID;
                             .addComponent(sTimeSelectBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2)
                             .addComponent(sTimeSelect))
                         .addGap(34, 34, 34))
                     .addGroup(studentListLEFTLayout.createSequentialGroup()
@@ -172,7 +230,7 @@ private String InstructorUID = UserInterface.UID;
                                 .addGap(12, 12, 12)
                                 .addComponent(sTimeSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(63, 63, 63)
                 .addComponent(sDisplayListBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(sExportListBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,7 +265,7 @@ private String InstructorUID = UserInterface.UID;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(studentListLEFT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentListRIGHT, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
+                .addComponent(studentListRIGHT, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,6 +300,17 @@ private String InstructorUID = UserInterface.UID;
     private void sExportListBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sExportListBUTTONActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sExportListBUTTONActionPerformed
+
+    private void sClassSelectMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sClassSelectMouseReleased
+        // TODO add your handling code here:
+        sTimeSelectBUTTON.setVisible(true); 
+        sTimeSelect.setVisible(true); 
+        String class_select = sClassSelect.getSelectedValue();
+        timeListFiller2(class_select);
+        System.out.println(class_select);
+        
+        
+    }//GEN-LAST:event_sClassSelectMouseReleased
 
     /**
      * @param args the command line arguments

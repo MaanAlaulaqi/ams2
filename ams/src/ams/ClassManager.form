@@ -86,7 +86,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="studentListLEFT" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="studentListRIGHT" pref="379" max="32767" attributes="0"/>
+                      <Component id="studentListRIGHT" pref="378" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -119,7 +119,7 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane2" pref="258" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane2" max="32767" attributes="0"/>
                                       <Component id="sTimeSelect" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
@@ -153,7 +153,7 @@
                               </Group>
                               <Component id="jScrollPane2" min="-2" pref="49" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           <Component id="sDisplayListBUTTON" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="sExportListBUTTON" min="-2" pref="40" max="-2" attributes="0"/>
@@ -171,6 +171,7 @@
                 <Component class="java.awt.Label" name="sTimeSelectBUTTON">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Select time"/>
+                    <Property name="visible" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="java.awt.Button" name="sDisplayListBUTTON">
@@ -198,15 +199,10 @@
                   <SubComponents>
                     <Component class="javax.swing.JList" name="sTimeSelect1">
                       <Properties>
-                        <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                            <StringItem index="4" value="Item 5"/>
-                          </StringArray>
+                        <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.AbstractListModel&lt;String&gt;() {&#xa;&#xa;    int wut = classListFiller2();&#xa;    //I just need reason to run this method before making the String array, so that I can clone it&#xa;    String[] strings = stringy.clone();&#xa;&#xa;    public int getSize() { return strings.length; }&#xa;    public String getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
                         </Property>
+                        <Property name="selectionMode" type="int" value="0"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -226,7 +222,11 @@
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                           <Connection code="new javax.swing.AbstractListModel&lt;String&gt;() {&#xa;&#xa;    int wut = classListFiller2();&#xa;    //I just need reason to run this method before making the String array, so that I can clone it&#xa;    String[] strings = stringy.clone();&#xa;&#xa;    public int getSize() { return strings.length; }&#xa;    public String getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
                         </Property>
+                        <Property name="selectionMode" type="int" value="0"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="sClassSelectMouseReleased"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
