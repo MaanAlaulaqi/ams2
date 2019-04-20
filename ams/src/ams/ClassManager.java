@@ -78,12 +78,14 @@ private String InstructorUID = UserInterface.UID;
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
-        sClassSelect = new java.awt.List(4, false);
         sClassSelectButton = new java.awt.Label();
         sTimeSelectBUTTON = new java.awt.Label();
-        sTimeSelect = new java.awt.List();
         sDisplayListBUTTON = new java.awt.Button();
         sExportListBUTTON = new java.awt.Button();
+        sTimeSelect = new javax.swing.JScrollPane();
+        sTimeSelect1 = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        sClassSelect = new javax.swing.JList<>();
         studentListRIGHT = new javax.swing.JScrollPane();
         studentLIST = new javax.swing.JTable();
 
@@ -93,17 +95,6 @@ private String InstructorUID = UserInterface.UID;
         setPreferredSize(new java.awt.Dimension(798, 514));
 
         studentListLEFT.setVisible(true);
-
-        sClassSelect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sClassSelectActionPerformed(evt);
-            }
-        });
-        sClassSelect.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                sClassSelectPropertyChange(evt);
-            }
-        });
 
         sClassSelectButton.setText("Select class");
 
@@ -123,6 +114,20 @@ private String InstructorUID = UserInterface.UID;
             }
         });
 
+        sTimeSelect1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        sTimeSelect.setViewportView(sTimeSelect1);
+
+        sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(sClassSelect);
+
         javax.swing.GroupLayout studentListLEFTLayout = new javax.swing.GroupLayout(studentListLEFT.getContentPane());
         studentListLEFT.getContentPane().setLayout(studentListLEFTLayout);
         studentListLEFTLayout.setHorizontalGroup(
@@ -134,10 +139,10 @@ private String InstructorUID = UserInterface.UID;
                         .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sClassSelectButton, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sTimeSelectBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                        .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(sClassSelect, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                            .addComponent(sTimeSelect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+                            .addComponent(sTimeSelect))
                         .addGap(34, 34, 34))
                     .addGroup(studentListLEFTLayout.createSequentialGroup()
                         .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -148,16 +153,18 @@ private String InstructorUID = UserInterface.UID;
         studentListLEFTLayout.setVerticalGroup(
             studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(studentListLEFTLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(studentListLEFTLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sClassSelectButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(sClassSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(sClassSelectButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sTimeSelectBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(studentListLEFTLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(sTimeSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(studentListLEFTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sTimeSelectBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sTimeSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
                 .addComponent(sDisplayListBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(sExportListBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,14 +235,6 @@ private String InstructorUID = UserInterface.UID;
         // TODO add your handling code here:
     }//GEN-LAST:event_sExportListBUTTONActionPerformed
 
-    private void sClassSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sClassSelectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sClassSelectActionPerformed
-
-    private void sClassSelectPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_sClassSelectPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sClassSelectPropertyChange
-
     /**
      * @param args the command line arguments
      */
@@ -282,9 +281,10 @@ private String InstructorUID = UserInterface.UID;
         l1.add("Item 4");  
         l1.add("Item 5");  
         f.add(l1);
-        sClassSelect.setBounds(200,200,200,200);
-        sClassSelect.add("Lol");
-        f.add(sClassSelect);
+//        studentListLEFT.add(l1);
+//        sClassSelect.setBounds(200,200,200,200);
+//        sClassSelect.add("Lol");
+//        f.add(sClassSelect);
         f.setSize(1000,400);  
         f.setLayout(null);  
         f.setVisible(true);  
@@ -302,12 +302,14 @@ private String InstructorUID = UserInterface.UID;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.persistence.EntityManager amsPUEntityManager;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private static java.awt.List sClassSelect;
+    private static javax.swing.JList<String> sClassSelect;
     private java.awt.Label sClassSelectButton;
     private java.awt.Button sDisplayListBUTTON;
     private java.awt.Button sExportListBUTTON;
-    private java.awt.List sTimeSelect;
+    private javax.swing.JScrollPane sTimeSelect;
+    private javax.swing.JList<String> sTimeSelect1;
     private java.awt.Label sTimeSelectBUTTON;
     private javax.swing.JTable studentLIST;
     private javax.swing.JInternalFrame studentListLEFT;
