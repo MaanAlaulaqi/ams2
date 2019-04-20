@@ -12,14 +12,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 
-/**
+/** Something the professor requested that I'm dying over. 
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassManager extends javax.swing.JFrame {
     private static Vector<String> elements;// = new Vector<String>(); //Was playing with ArrayList and Vectors here. Read somewhere it made a difference.
     private static DefaultListModel dlm;
-    private static String y="";
+    private static String y=""; //whenever I need a random string from somewhere. 
+    private static int incrementMe = 0; 
+    private static int sizeMeUpbb = 0;
     /**
      * Creates new form ClassManager
      */
@@ -62,6 +64,37 @@ private String InstructorUID = UserInterface.UID;
     //System.out.print(dlm.getSize() + "dlm size");
     }
     
+    public static String[] classListFiller2(){
+         
+            //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
+            dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+            try {
+                int xx = dbControl.rs.getInt("1");
+                System.out.println(xx + " xx (size lol)");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }
+            String[] string = new String[3];
+            try {
+                dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+                System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+                while (dbControl.rs.next()) {
+                    System.out.println(dbControl.rs.getString("NAME"));
+                    y = dbControl.rs.getString("NAME");
+                    stringy[incrementMe] = y;
+                    System.out.println(y);
+                    System.out.println(string[x] + " String[x]");
+                    x++;
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,14 +157,21 @@ private String InstructorUID = UserInterface.UID;
 
         sClassSelect.setModel(new javax.swing.AbstractListModel<String>() {
 
-            int x = 0;
+            int x = 0; int xx = 0;
+            /*
+            //dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
+            dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
             try {
-                //        dbControl.dbComd("SELECT CLASS.NAME FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '"+InstructorUID+"';");
-                dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
-                int xx = dbControl.rs.getint(1);
+                int xx = dbControl.rs.getInt("1");
                 System.out.println(xx + " xx (size lol)");
-                String[] strings = new String[xx];
+
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
                 dbControl.doClose();
+            }*/
+            String[] strings = new String[3];
+            try {
                 dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
                 System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
                 while (dbControl.rs.next()) {
@@ -269,6 +309,24 @@ private String InstructorUID = UserInterface.UID;
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+        dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = 'e0b48a'");
+        try {
+            int xx = 0;
+            if (dbControl.rs.next()) xx = dbControl.rs.getInt("1");
+            System.out.println(xx+ " xx on Main");
+            
+            
+            
+            //java.awt.List test = new java.awt.List
+            //sClassSelect.setSize(322,322);
+            
+//        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            dbControl.doClose();
+        }
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -313,13 +371,8 @@ private String InstructorUID = UserInterface.UID;
         f.setSize(1000,400);  
         f.setLayout(null);  
         f.setVisible(false);  
-        
-        
-        
-       //java.awt.List test = new java.awt.List
-       //sClassSelect.setSize(322,322);
-       
-//        System.out.print(sClassSelect.getSize() + " sClassSelect.getSize()");
+
+         
         
         
     }
