@@ -5,6 +5,8 @@
  */
 package ams;
 
+import static ams.dbControl.rs;
+import net.proteanit.sql.DbUtils;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +21,10 @@ public class ClassManager extends javax.swing.JFrame {
     private static int incrementMe = 0; 
     private static int sizeMeUpbb = 0;
     private static String [] stringy;
+    private static String [][] stringy2;
     private static String uid = "";
+    private static String class_name;
+    private static String class_sec;
     /**
      * Creates new form ClassManager
      */
@@ -79,9 +84,9 @@ private String InstructorUID = UserInterface.UID;
     public static int timeListFiller2(String class_select){
         sizeMeUpbb = 0; //resetting the values
         incrementMe = 0; 
-        String class_name = class_select.substring(0, class_select.length() - 4);
+         class_name = class_select.substring(0, class_select.length() - 4);
         
-        String class_sec = class_select.substring(class_select.length() - 1);;
+         class_sec = class_select.substring(class_select.length() - 1);;
         
         String timeConcat = "";
         //String class;
@@ -98,23 +103,24 @@ private String InstructorUID = UserInterface.UID;
         }finally{
             dbControl.doClose();
         }
-        stringy = new String[sizeMeUpbb];
+        stringy2 = new String[2][sizeMeUpbb];
         try {
-            dbControl.dbComd("select start_time, end_time, firstt_class, second_class, name, class_section from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
+            dbControl.dbComd("select class.id, start_time, end_time, firstt_class, second_class, name, class_section from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
             //System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
             while (dbControl.rs.next()) {
                 
                 timeConcat = dbControl.rs.getString("firstt_class") + "/"+ dbControl.rs.getString("second_class")+" - "+ dbControl.rs.getString("start_time")+"~"+dbControl.rs.getString("end_time");
-                stringy[incrementMe] = timeConcat;
-                
-                
+                stringy2[0][incrementMe] = rs.getString("ID");
+                stringy2[1][incrementMe] = timeConcat;
+                System.out.print(stringy2[0][incrementMe] + ", ");
                 incrementMe++;
-            }
+            }System.out.println();
         } catch (SQLException ex) {
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             dbControl.doClose();
         }
+        System.out.println(stringy2[0].length + " stringy2[0].length");
         return sizeMeUpbb;
     }
     
@@ -128,7 +134,6 @@ private String InstructorUID = UserInterface.UID;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         amsPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("amsPU").createEntityManager();
         student_1Query = java.beans.Beans.isDesignTime() ? null : amsPUEntityManager.createQuery("SELECT s FROM Student_1 s");
@@ -159,6 +164,11 @@ private String InstructorUID = UserInterface.UID;
         sTimeSelectBUTTON.setText("Select time");
 
         sDisplayListBUTTON.setLabel("Display student list");
+        sDisplayListBUTTON.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                sDisplayListBUTTONMouseReleased(evt);
+            }
+        });
         sDisplayListBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sDisplayListBUTTONActionPerformed(evt);
@@ -234,49 +244,6 @@ private String InstructorUID = UserInterface.UID;
                 .addGap(149, 149, 149))
         );
 
-        studentLIST.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Id", "Student Id", "First Name", "Last Name"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, student_1List, studentLIST);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${id}"));
-        columnBinding.setColumnName("Id");
-        columnBinding.setColumnClass(Integer.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${studentId}"));
-        columnBinding.setColumnName("Student Id");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${firstName}"));
-        columnBinding.setColumnName("First Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${lastName}"));
-        columnBinding.setColumnName("Last Name");
-        columnBinding.setColumnClass(String.class);
-        columnBinding.setEditable(false);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
         studentListRIGHT.setViewportView(studentLIST);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -309,8 +276,6 @@ private String InstructorUID = UserInterface.UID;
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
         );
 
-        bindingGroup.bind();
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -334,7 +299,7 @@ private String InstructorUID = UserInterface.UID;
 
                 
                 //I just need reason to run this method before making the String array, so that I can clone it
-                String[] strings = stringy.clone();
+                String[] strings = stringy2[1].clone();
 
                 public int getSize() { return strings.length; }
                 public String getElementAt(int i) { return strings[i]; }
@@ -342,6 +307,17 @@ private String InstructorUID = UserInterface.UID;
         
         
     }//GEN-LAST:event_sClassSelectMouseReleased
+
+    private void sDisplayListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sDisplayListBUTTONMouseReleased
+        // TODO add your handling code here:
+        System.out.println(stringy2[0][incrementMe-1] + " " + class_sec);
+        dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'");
+        try {
+            if (dbControl.rs.next()) studentLIST.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{ dbControl.doClose(); }
+    }//GEN-LAST:event_sDisplayListBUTTONMouseReleased
 
     /**
      * @param args the command line arguments
@@ -405,6 +381,5 @@ private String InstructorUID = UserInterface.UID;
     private javax.swing.JScrollPane studentListRIGHT;
     private java.util.List<ams.Student_1> student_1List;
     private javax.persistence.Query student_1Query;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

@@ -176,6 +176,7 @@
                     <Property name="label" type="java.lang.String" value="Display student list"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="sDisplayListBUTTONMouseReleased"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sDisplayListBUTTONActionPerformed"/>
                   </Events>
                 </Component>
@@ -239,66 +240,13 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="studentLIST">
                   <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="0">
-                        <Column editable="false" title="Id" type="java.lang.Integer"/>
-                        <Column editable="false" title="Student Id" type="java.lang.String"/>
-                        <Column editable="false" title="First Name" type="java.lang.String"/>
-                        <Column editable="false" title="Last Name" type="java.lang.String"/>
-                      </Table>
-                    </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                      <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                      </TableColumnModel>
+                      <TableColumnModel selectionModel="0"/>
                     </Property>
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
-                  <BindingProperties>
-                    <BindingProperty name="elements" source="student_1List" target="studentLIST" targetPath="elements" updateStrategy="1" immediately="true">
-                      <Subbinding sourcePath="${id}">
-                        <BindingParameter name="NAME" value="Id"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
-                      </Subbinding>
-                      <Subbinding sourcePath="${studentId}">
-                        <BindingParameter name="NAME" value="Student Id"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
-                      </Subbinding>
-                      <Subbinding sourcePath="${firstName}">
-                        <BindingParameter name="NAME" value="First Name"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
-                      </Subbinding>
-                      <Subbinding sourcePath="${lastName}">
-                        <BindingParameter name="NAME" value="Last Name"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="String.class"/>
-                        <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
-                      </Subbinding>
-                    </BindingProperty>
-                  </BindingProperties>
                 </Component>
               </SubComponents>
             </Container>
