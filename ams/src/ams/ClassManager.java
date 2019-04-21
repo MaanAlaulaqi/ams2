@@ -31,7 +31,7 @@ public class ClassManager extends javax.swing.JFrame {
     }
 private String InstructorUID = UserInterface.UID;
     /**
-     * This is to fill the first table of classes
+     * This is to fill the first table of classes. All the classes will be listed with which section that particular professor is using
      * @return 
      */
     public static int classListFiller2(){
@@ -40,7 +40,7 @@ private String InstructorUID = UserInterface.UID;
             
             
             try {
-                dbControl.dbComd("SELECT COUNT (CLASS.NAME) from INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '888888'");
+                dbControl.dbComd("select count (first_name) from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.id = 1");
                 if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
                 System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
 
@@ -51,11 +51,11 @@ private String InstructorUID = UserInterface.UID;
             }
             stringy = new String[sizeMeUpbb];
             try {
-                dbControl.dbComd("SELECT CLASS.NAME, INSTRUCTOR_CLASS.ID FROM INSTRUCTOR INNER JOIN INSTRUCTOR_CLASS ON INSTRUCTOR.ID =  INSTRUCTOR_CLASS.INSTRUCTOR_ID INNER JOIN CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID WHERE INSTRUCTOR.CARD_ID = '888888'");
+                dbControl.dbComd("select class.name,class_section from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.id = 1");
                 System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
                 while (dbControl.rs.next()) {
                     System.out.println(dbControl.rs.getString("NAME"));
-                    y = dbControl.rs.getString("NAME");
+                    y = dbControl.rs.getString("NAME") + " - " + dbControl.rs.getString("class_section");
                     stringy[incrementMe] = y;
                     System.out.println(y);
                     System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
@@ -70,16 +70,25 @@ private String InstructorUID = UserInterface.UID;
     }
     
     /**
-     * This will be to fill the time slots
+     * This is to fill the time table with selectable times.
+     * You'll see that class_select is taken and split into two sub strings. 
+     * The substrings are used to call sql queries, therefore the string MUST be formated like so:
+     * "string - #" where the section is the very last charact and preceeding it is 2 spaces and 1 dash(total 3 char spaces)
+     * @param class_select
+     * @return 
      */
-    public static int timeListFiller2(String class_select1){
+    public static int timeListFiller2(String class_select){
         sizeMeUpbb = 0; //resetting the values
         incrementMe = 0; 
-        String class_select = class_select1;
+        String class_name = class_select.substring(0, class_select.length() - 4);;;
+        System.out.println(class_name + " Substring test");
+        String class_sec = class_select.substring(class_select.length() - 1);;
+        System.out.println(class_sec + " SEC Substring test");
         String timeConcat = "";
+        //String class;
 
         try {
-            dbControl.dbComd("select count (*) from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_select+"'");
+            dbControl.dbComd("select count (*) from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
              if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
                 System.out.println(sizeMeUpbb + " TIME.sizeMeUpbb (size lol)");
                 
@@ -92,7 +101,7 @@ private String InstructorUID = UserInterface.UID;
         }
         stringy = new String[sizeMeUpbb];
         try {
-            dbControl.dbComd("select start_time, end_time, firstt_class, second_class, name from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_select+"'");
+            dbControl.dbComd("select start_time, end_time, firstt_class, second_class, name, class_section from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
             System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
             while (dbControl.rs.next()) {
                 System.out.println(dbControl.rs.getString("NAME"));
