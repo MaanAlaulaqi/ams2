@@ -6,23 +6,20 @@
 package ams;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.DefaultListModel;
+
 
 /** Something the professor requested that I'm dying over. 
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassManager extends javax.swing.JFrame {
-    private static Vector<String> elements;// = new Vector<String>(); //Was playing with ArrayList and Vectors here. Read somewhere it made a difference.
-    private static DefaultListModel dlm;
     private static String y=""; //whenever I need a random string from somewhere. 
     private static int incrementMe = 0; 
     private static int sizeMeUpbb = 0;
     private static String [] stringy;
+    private static String uid = "";
     /**
      * Creates new form ClassManager
      */
@@ -37,12 +34,14 @@ private String InstructorUID = UserInterface.UID;
     public static int classListFiller2(){
          sizeMeUpbb = 0; //resetting the values
          incrementMe = 0; 
+         uid = UserInterface.uid_placeholder;
+         System.out.println(uid+ "uid check, classListFiller2() method");
             
             
             try {
-                dbControl.dbComd("select count (first_name) from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.id = 1");
+                dbControl.dbComd("select count (first_name) from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.card_id = '"+uid+"'");
                 if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
-                System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
+                
 
             } catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -51,14 +50,14 @@ private String InstructorUID = UserInterface.UID;
             }
             stringy = new String[sizeMeUpbb];
             try {
-                dbControl.dbComd("select class.name,class_section from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.id = 1");
-                System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+                dbControl.dbComd("select class.name,class_section from class join instructor_class on instructor_class.CLASS_ID = class.id join class_schedule on class_schedule.id = instructor_class.CLASS_ID join instructor on instructor_class.INSTRUCTOR_ID = instructor.id where instructor.card_id = '"+uid+"'");
+                //System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
                 while (dbControl.rs.next()) {
-                    System.out.println(dbControl.rs.getString("NAME"));
+                    //System.out.println(dbControl.rs.getString("NAME"));
                     y = dbControl.rs.getString("NAME") + " - " + dbControl.rs.getString("class_section");
                     stringy[incrementMe] = y;
-                    System.out.println(y);
-                    System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
+                    //System.out.println(y);
+                    //System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
                     incrementMe++;
                 }
             } catch (SQLException ex) {
@@ -80,19 +79,19 @@ private String InstructorUID = UserInterface.UID;
     public static int timeListFiller2(String class_select){
         sizeMeUpbb = 0; //resetting the values
         incrementMe = 0; 
-        String class_name = class_select.substring(0, class_select.length() - 4);;;
-        System.out.println(class_name + " Substring test");
+        String class_name = class_select.substring(0, class_select.length() - 4);
+        
         String class_sec = class_select.substring(class_select.length() - 1);;
-        System.out.println(class_sec + " SEC Substring test");
+        
         String timeConcat = "";
         //String class;
 
         try {
             dbControl.dbComd("select count (*) from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
              if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
-                System.out.println(sizeMeUpbb + " TIME.sizeMeUpbb (size lol)");
                 
-            System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
+                
+            //System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
 
         } catch (SQLException ex) {
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -102,13 +101,13 @@ private String InstructorUID = UserInterface.UID;
         stringy = new String[sizeMeUpbb];
         try {
             dbControl.dbComd("select start_time, end_time, firstt_class, second_class, name, class_section from class_schedule inner join class on class.id = class_schedule.ID inner join instructor_class on instructor_class.CLASS_ID = class_schedule.ID inner join instructor on instructor.id = INSTRUCTOR_CLASS.INSTRUCTOR_ID where class.name = '"+ class_name+"' and class_section = '"+class_sec+"'");
-            System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+            //System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
             while (dbControl.rs.next()) {
-                System.out.println(dbControl.rs.getString("NAME"));
+                
                 timeConcat = dbControl.rs.getString("firstt_class") + "/"+ dbControl.rs.getString("second_class")+" - "+ dbControl.rs.getString("start_time")+"~"+dbControl.rs.getString("end_time");
                 stringy[incrementMe] = timeConcat;
-                System.out.println(timeConcat);
-                System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
+                
+                
                 incrementMe++;
             }
         } catch (SQLException ex) {
@@ -330,7 +329,7 @@ private String InstructorUID = UserInterface.UID;
         sTimeSelect.setVisible(true); 
         String class_select = sClassSelect.getSelectedValue();
         timeListFiller2(class_select);
-        System.out.println(class_select);
+        
         sTimeSelect1.setModel(new javax.swing.AbstractListModel<String>() {
 
                 
@@ -348,13 +347,14 @@ private String InstructorUID = UserInterface.UID;
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         
-        
+       /* 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -374,11 +374,13 @@ private String InstructorUID = UserInterface.UID;
         //</editor-fold>
 
         /* Create and display the form */
+       /*
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ClassManager().setVisible(true);
             }
-        });
+        });*/
+                
         
 
          

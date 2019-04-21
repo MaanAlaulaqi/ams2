@@ -156,6 +156,8 @@ public class UserInterface extends javax.swing.JFrame {
                 new ClassManager().setVisible(true);
             }
         });
+        System.out.println(" Boop:"+ uid_placeholder+ "Coz why not lol ");
+        
     }//GEN-LAST:event_viewStudentsButtonActionPerformed
     
     
@@ -233,8 +235,8 @@ public class UserInterface extends javax.swing.JFrame {
            uid_placeholder = InterfaceCmds.getCurrentUID(UID);
            String y = InterfaceCmds.getCurrentSwipe(UID);
            StudentCall.setText(y);
-           System.out.println(uid_placeholder+ " " +y + " InterfaceCmds.getCurrentSwipe() reached");
-           System.out.println("MAAN LOOK AT ME I'M THE UID WOO! " + UID);
+          // System.out.println(uid_placeholder+ " " +y + " InterfaceCmds.getCurrentSwipe() reached");
+           //System.out.println("MAAN LOOK AT ME I'M THE UID WOO! " + UID);
        }
    }
 
