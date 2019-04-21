@@ -10,6 +10,7 @@ import net.proteanit.sql.DbUtils;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.event.ListDataListener;
 
 
 /** Something the professor requested that I'm dying over. 
@@ -25,6 +26,7 @@ public class ClassManager extends javax.swing.JFrame {
     private static String uid = "";
     private static String class_name;
     private static String class_sec;
+    private static String[] stringy3;
     /**
      * Creates new form ClassManager
      */
@@ -124,6 +126,85 @@ private String InstructorUID = UserInterface.UID;
         return sizeMeUpbb;
     }
     
+    /**
+     * This is basically to fill in the "add class" roster
+     * shouldn't be too complicated 
+     * @return 
+     */
+    public static int class2ListFiller2(){
+         sizeMeUpbb = 0; //resetting the values
+         incrementMe = 0; 
+         uid = UserInterface.uid_placeholder;
+         System.out.println(uid+ "uid check, classListFiller2() method");
+            
+            
+            try {
+                dbControl.dbComd("select count (*) from class");
+                if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
+                
+
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }
+            stringy = new String[sizeMeUpbb];
+            try {
+                dbControl.dbComd("select name from class");
+                //System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+                while (dbControl.rs.next()) {
+                    //System.out.println(dbControl.rs.getString("NAME"));
+                    y = dbControl.rs.getString("NAME");
+                    stringy[incrementMe] = y;
+                    //System.out.println(y);
+                    //System.out.println(stringy[incrementMe] + " Stringy[incremementMe]");
+                    incrementMe++;
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+            }finally{
+                dbControl.doClose();
+            }
+            return sizeMeUpbb;
+    }
+    
+     public static int timingsListFiller2(){
+        sizeMeUpbb = 0; //resetting the values
+        incrementMe = 0; 
+         
+        String timeConcat = "";
+        //String class;
+
+        try {
+            dbControl.dbComd("select count (*) from class_schedule");
+             if (dbControl.rs.next()) sizeMeUpbb = dbControl.rs.getInt("1");
+                
+                
+            //System.out.println(sizeMeUpbb + " sizeMeUpbb (size lol)");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            dbControl.doClose();
+        }
+            stringy3 = new String[sizeMeUpbb];
+            dbControl.dbComd("select * from class_schedule");
+            try {
+            //System.out.println(dbControl.rs.getFetchSize() + " rs.getFetchSize()");
+            while (dbControl.rs.next()) {
+                
+                timeConcat = dbControl.rs.getString("firstt_class") + "/"+ dbControl.rs.getString("second_class")+" - "+ dbControl.rs.getString("start_time")+"~"+dbControl.rs.getString("end_time");
+                stringy3[incrementMe] = timeConcat;
+                incrementMe++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            dbControl.doClose();
+        }
+        
+        return sizeMeUpbb;
+    }
     
     
     /**
@@ -151,6 +232,12 @@ private String InstructorUID = UserInterface.UID;
         sClassSelect = new javax.swing.JList<>();
         studentListRIGHT = new javax.swing.JScrollPane();
         studentLIST = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(798, 514));
@@ -265,6 +352,62 @@ private String InstructorUID = UserInterface.UID;
 
         jTabbedPane1.addTab("Student list", jPanel1);
 
+        jLabel1.setText("Select classes: ");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+
+            int wut = class2ListFiller2();
+            //I just need reason to run this method before making the String array, so that I can clone it
+            String[] strings = stringy.clone();
+
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(jList1);
+
+        jLabel2.setText("Select timings:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<String>() {
+
+            int wut = timingsListFiller2();
+            //I just need reason to run this method before making the String array, so that I can clone it
+            String[] strings = stringy3.clone();
+
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(66, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Add classes", jPanel2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -350,12 +493,12 @@ private String InstructorUID = UserInterface.UID;
         //</editor-fold>
 
         /* Create and display the form */
-       /*
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ClassManager().setVisible(true);
             }
-        });*/
+        });
                 
         
 
@@ -366,7 +509,13 @@ private String InstructorUID = UserInterface.UID;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.persistence.EntityManager amsPUEntityManager;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private static javax.swing.JList<String> sClassSelect;
