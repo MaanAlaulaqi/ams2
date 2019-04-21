@@ -231,9 +231,11 @@ import javax.smartcardio.TerminalFactory;
                             // Checks if the UID is in our database
                             System.out.println("bdLookUp HERE:");
                             emp_stud_check = dbLookUp.uidCheck(out);
+                            
                             //HEY POOPOO FACE LOOK HERE! Place activation method here
                             boolean imageIconBoolean;
                             if (emp_stud_check) {
+                                UserInterface.viewStudentsButton.setVisible(true);
                                 //UI ACTIVE CHECK (This should return true)
                                 UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out)); 
                                 //UserInterface.updateActiveCheck(imageIconBoolean);
@@ -241,6 +243,8 @@ import javax.smartcardio.TerminalFactory;
                                 //THIS IS FOR TESTING TEST YALLA
                                 //updateActiveCheck(true);
                                 //UserInterfaceActiveCheck.setIcon(ICON_ACTIVE);
+                            } else{
+                                UserInterface.viewStudentsButton.setVisible(false);
                             }
                             amsActivate.activateAms(emp_stud_check, out);
                                 

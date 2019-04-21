@@ -52,6 +52,7 @@ public class UserInterface extends javax.swing.JFrame {
         main_start = new javax.swing.JPanel();
         currentClass = new java.awt.Label();
         classCall = new java.awt.Label();
+        viewStudentsButton = new javax.swing.JButton();
         mainBG_start = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,6 +123,16 @@ public class UserInterface extends javax.swing.JFrame {
         classCall.setBounds(250, 167, 390, 50);
         classCall.getAccessibleContext().setAccessibleName("");
 
+        viewStudentsButton.setText("View students");
+        viewStudentsButton.setVisible(false);
+        viewStudentsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewStudentsButtonActionPerformed(evt);
+            }
+        });
+        main_start.add(viewStudentsButton);
+        viewStudentsButton.setBounds(620, 500, 140, 60);
+
         mainBG_start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mainBG_start.png"))); // NOI18N
         mainBG_start.setAlignmentY(0.0F);
         main_start.add(mainBG_start);
@@ -137,6 +148,15 @@ public class UserInterface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void viewStudentsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewStudentsButtonActionPerformed
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ClassManager().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_viewStudentsButtonActionPerformed
     
     
     /**
@@ -175,6 +195,8 @@ public class UserInterface extends javax.swing.JFrame {
        //updateActiveCheck(false); 
        //createImageIcon.updateMe(true);
        //ActiveCheck.setIcon(ICON_ACTIVE);
+//        UserInterface.viewStudentsButton.setVisible(false);
+
     }
      public static ImageIcon createImageIcon(String path, String description) {
         java.net.URL imgURL = ClassLoader.getSystemResource(path);
@@ -199,7 +221,10 @@ public class UserInterface extends javax.swing.JFrame {
      ImageIcon defaultIcon = new ImageIcon(ClassLoader.getSystemResource(x));
      return defaultIcon;
    }
-   
+   /**
+    * This is to update the name bar of the student/employee. I just stuck to student coz it's easier
+    * @param UID 
+    */
    public static void updateStudent(String UID){
        if (UID == ""){}
        else {
@@ -231,6 +256,7 @@ public class UserInterface extends javax.swing.JFrame {
             INACTIVE_ICON.setVisible(false);*/
             updateChecker.updateActiveCheck(true);
             x = true;
+            viewStudentsButton.setVisible(true);
             
         }
         else if(!success) {
@@ -241,7 +267,8 @@ public class UserInterface extends javax.swing.JFrame {
             INACTIVE_ICON.setVisible(true);*/
             x = false;
             updateChecker.updateActiveCheck(false);
-            
+            viewStudentsButton.setVisible(false);
+
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -255,6 +282,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel mainBG_start;
     private javax.swing.JPanel main_start;
+    public static javax.swing.JButton viewStudentsButton;
     // End of variables declaration//GEN-END:variables
 
     

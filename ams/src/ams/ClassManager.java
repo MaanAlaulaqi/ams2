@@ -148,7 +148,7 @@ private String InstructorUID = UserInterface.UID;
         studentListRIGHT = new javax.swing.JScrollPane();
         studentLIST = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(798, 514));
         setMinimumSize(new java.awt.Dimension(798, 514));
         setPreferredSize(new java.awt.Dimension(798, 514));
@@ -380,25 +380,6 @@ private String InstructorUID = UserInterface.UID;
             }
         });
         
-//        classListFiller();
-        
-        
-        java.awt.Frame f= new java.awt.Frame();  
-        java.awt.List l1=new java.awt.List(5);  
-        l1.setBounds(100,100, 75,75);  
-        l1.add("Item 1");  
-        l1.add("Item 2");  
-        l1.add("Item 3");  
-        l1.add("Item 4");  
-        l1.add("Item 5");  
-        f.add(l1);
-//        studentListLEFT.add(l1);
-//        sClassSelect.setBounds(200,200,200,200);
-//        sClassSelect.add("Lol");
-//        f.add(sClassSelect);
-        f.setSize(1000,400);  
-        f.setLayout(null);  
-        f.setVisible(false);  
 
          
         
