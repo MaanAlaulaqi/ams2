@@ -454,7 +454,7 @@ private String InstructorUID = UserInterface.UID;
     private void sDisplayListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sDisplayListBUTTONMouseReleased
         // TODO add your handling code here:
         System.out.println(stringy2[0][incrementMe-1] + " " + class_sec);
-        dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'");
+        dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         try {
             if (dbControl.rs.next()) studentLIST.setModel(DbUtils.resultSetToTableModel(rs));
         } catch (SQLException ex) {
