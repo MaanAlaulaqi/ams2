@@ -45,7 +45,7 @@ public class ClassThread {
         int currentTime = toMins(dtf.format(now));
         dbControl.dbComd("select count(*) from active_classes");
         try {
-            if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1)+1;
+            if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1)+2;
             class_table = new int[arraySize][2];
             dbControl.doClose();
             dbControl.dbComd("select active_classes.id,start_time from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id");
@@ -54,12 +54,21 @@ public class ClassThread {
                 class_table[dbControl.rs.getInt("id")][0] = dbControl.rs.getInt("id");
                 class_table[dbControl.rs.getInt("id")][1] = Presence.toMins(dbControl.rs.getString("start_time"));
                 arraySize--;
-                //System.out.print(arraySize + "LOLOLOLOL");
-            }
+                
+            }class_table[class_table.length-1][1] = class_table[class_table.length-2][1] + 90;
         } catch (SQLException ex) {
             Logger.getLogger(ClassThread.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
-       
+        boolean checker = false;
+        for(int i = 0; i < class_table.length;i++){
+            if (currentTime >= class_table[i][1] && currentTime >= class_table[i+1][1]){
+                class_id = class_table[i][0];
+            }
+        }
+       System.out.println(class_table[3][1] + " LOLOLOLOL");
+       System.out.println(class_table[5][0] + " LOLOLOLOL");
+       System.out.println(class_table[5][1] + " LOLOLOLOL");
+        
         System.out.println(Arrays.deepToString(class_table));
         System.out.println("lol");
 
