@@ -129,7 +129,7 @@ public class Presence {
                 if(db.rs.next()){
                     id_test = db.rs.getInt("ID");
                     //System.out.println("ID # is: "+id_test);
-                }
+                } db.doClose();
                 dbControl.dbComdUpdate("SELECT * FROM STUDENT_PRESENCE JOIN STUDENT ON STUDENT_PRESENCE.STUDENT_ID = STUDENT.ID WHERE STUDENT_PRESENCE.STUDENT_ID = " +id_test);
                 if(dbControl.rs.next()){
                     k = Integer.parseInt(dbControl.rs.getInt("PRESENT") +"");
