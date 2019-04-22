@@ -21,8 +21,8 @@ public class dbLookUp {
      * This is a method to check if the card scanned is belongs to either a student or an instructor
      * It will return true for instructors and false for students
      * 
-     * @param uid
-     * @return 
+     * @param uid Card UID
+     * @return False = Student, True = Instructor
      */
     public static boolean uidCheck(String uid){
         String x = null, y = null;

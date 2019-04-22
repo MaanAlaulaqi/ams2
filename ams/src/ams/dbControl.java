@@ -34,7 +34,7 @@ public class dbControl {
      * When using this method, be sure to add the "doClose();" method in your finally block
      * in the end of the try-catch. 
      * 
-     * @param sqlcmd 
+     * @param sqlcmd The all-in-one SQL query (READ ONLY) method. The WRITABLE method is doComdUpdate(String) 
      */
     public static void dbComd(String sqlcmd){
         try {
@@ -64,7 +64,7 @@ public class dbControl {
      * dComUpdate is to be used when updating a record in the database(student presence for example)
      * When this is called, call doClose() right after it to avoid database errors and close unneeded connections.
      * Generally, at the "finally" stage of a try-catch-finally.
-     * @param sqlcmd 
+     * @param sqlcmd The all-in-one SQL query (UPDATABLE) method. 
      */
     public static void dbComdUpdate(String sqlcmd){
         try {
@@ -114,8 +114,8 @@ public class dbControl {
      * I've had issues with this bit. It continuously tried to connect to a 
      * deleted scheme, therefore I manually set a direct connection to 
      * the schema we're using with "con.setSchema("AMS");"
-     * @param username = "test"
-     * @param password = "test" 
+     * @param username = "test" username for the DB
+     * @param password = "test" username for the DB
      * @return  con to carry out the connection to other methods
      */
     public static Connection doConnect(){ 
@@ -138,7 +138,7 @@ public class dbControl {
         }
     /**
      * Closes the connection in the agreed upon safe pattern:
-     * ResultSet > Statement > Connection.
+     * ResultSet ¬ Statement ¬ Connection.
      * Should generally be added to the finally block after the try-catch. 
      * Based on ( https://stackoverflow.com/questions/2225221/closing-database-connections-in-java ) 
      */

@@ -36,7 +36,7 @@ public class ClassManager extends javax.swing.JFrame {
 private String InstructorUID = UserInterface.UID;
     /**
      * This is to fill the first table of classes. All the classes will be listed with which section that particular professor is using
-     * @return 
+     * @return  The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called
      */
     public static int classListFiller2(){
          sizeMeUpbb = 0; //resetting the values
@@ -80,8 +80,8 @@ private String InstructorUID = UserInterface.UID;
      * You'll see that class_select is taken and split into two sub strings. 
      * The substrings are used to call sql queries, therefore the string MUST be formated like so:
      * "string - #" where the section is the very last charact and preceeding it is 2 spaces and 1 dash(total 3 char spaces)
-     * @param class_select
-     * @return 
+     * @param class_select This will be concatnated into two separate Strings .
+     * @return The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called
      */
     public static int timeListFiller2(String class_select){
         sizeMeUpbb = 0; //resetting the values
@@ -129,7 +129,7 @@ private String InstructorUID = UserInterface.UID;
     /**
      * This is basically to fill in the "add class" roster
      * shouldn't be too complicated 
-     * @return 
+     * @return The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called
      */
     public static int class2ListFiller2(){
          sizeMeUpbb = 0; //resetting the values

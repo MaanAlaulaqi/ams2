@@ -215,7 +215,8 @@ public class UserInterface extends javax.swing.JFrame {
     * Need a way to access non-static methods from static context
     * Referenced from https://www.javacodegeeks.com/2017/10/can-non-static-method-access-static-variablemethod-java.html
     * 
-    * @param d 
+    *  @param x Picture URL/File Path location
+    *  @return ImageIcon The image file will now be able to be used in java.
     */
      
 
@@ -225,7 +226,7 @@ public class UserInterface extends javax.swing.JFrame {
    }
    /**
     * This is to update the name bar of the student/employee. I just stuck to student coz it's easier
-    * @param UID 
+    * @param UID Card UID.
     */
    public static void updateStudent(String UID){
        if (UID == ""){}

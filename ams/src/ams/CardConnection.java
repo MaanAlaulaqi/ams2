@@ -268,7 +268,7 @@ import javax.smartcardio.TerminalFactory;
     }
     /**
      * For instances where we call the card UID from another class
-     * @return 
+     * @return Returns the card's UID in String format.
      */
     public static String cardUID(){ 
         String x = cardUID;
@@ -276,7 +276,7 @@ import javax.smartcardio.TerminalFactory;
         }
     /**
      * Will pause the CardConnection
-     * @throws InterruptedException 
+     * @throws InterruptedException InterruptException
      */
     public void pause() throws InterruptedException
     {
@@ -284,7 +284,7 @@ import javax.smartcardio.TerminalFactory;
     }
     /**
      * Will resume the CardConnection.
-     * @throws InterruptedException 
+     * @throws InterruptedException InterruptedException 
      */
     public void resume() throws InterruptedException
     {

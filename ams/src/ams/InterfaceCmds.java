@@ -74,7 +74,7 @@ public class InterfaceCmds {
      * mostly used to print out the name of the student on the 
      * front page of the application and their ID. 
      * 
-     * @param UID
+     * @param UID Card UID
      * @return A string of words that relate to the student's ID card's being scanned
      */
     public static String getCurrentSwipe(String UID){

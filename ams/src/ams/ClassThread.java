@@ -6,8 +6,11 @@
 package ams;
 
 import static ams.Presence.toMins; //easier than setting up a different variable for every time I use this..
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *The idea here is to try and have a constant java thread that's consistently checking 
@@ -25,8 +28,35 @@ public class ClassThread {
      * This method is to check which "time slot" of the day as class is ongoing.
      * The classCheck() method is written with knowledge of the tables in the 
      * database. 
-     * @return 
+     * @return The number returned will be used in SQL queries where we need to obtain the class list of active classes
      */
+     public static int classCheck(){//Nothing wrong here
+        int class_id = -1, arraySize = 0, start_time = 0;
+        int[][] class_table;
+        String DayWeek;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dtfWEEK = DateTimeFormatter.ofPattern("EEEE");  
+        LocalDateTime DayOfWeek = LocalDateTime.now();
+        DayWeek = dtfWEEK.format(DayOfWeek);
+        //System.out.println(DayWeek);
+        //System.out.println(dtf.format(now));
+        int currentTime = toMins(dtf.format(now));
+        dbControl.dbComd("select count(*) from active_classes");
+        try {
+            if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1) + 1; // +1 because I don't  feel like dealing with mismatching indexes..
+            if(dbControl.rs.next()) {
+                dbControl.dbComd("select active_classes.id,start_time from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id");
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassThread.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {dbControl.doClose();}
+        
+        return -1;
+     }
+    
+    /*
     public static int classCheck(){//Nothing wrong here
         int class_id = -1;
         String DayWeek;
@@ -73,4 +103,6 @@ public class ClassThread {
         //return 2; //Return tester
 
     }
+    
+    */
 }

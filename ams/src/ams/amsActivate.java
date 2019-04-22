@@ -20,8 +20,9 @@ public class amsActivate {
     /**
      * The idea here is the instructor will be presented with a choice of whether to activate
      * or not. If not, it should call another method to present the instructor with options.
-     * @param x
-     * @return 
+     * @param x True = Yes activate, false = No don't activate.
+     * @param UID The UID will be passed through here from the CardConnection class.
+     * @return true/false. This method is being called by a couple other methods. 
      */
     public static boolean ActivateOrNah(boolean x, String UID){
         System.out.println("ActivateOrNah reached: " + UID);
@@ -38,9 +39,9 @@ public class amsActivate {
     }
     /**
      * A straight to it activate or deactivate method of the AMS.
-     * @param x
-     * @return true will turn it on 
-     * @return false will turn it off
+     * @param x will be obtained from ActivateOrNah method
+     * @param UID will be obtained from ActivateOrNah method
+     * @return true will turn it on
      */
     public static boolean activateAms(boolean x, String UID){
         System.out.println("activateAms reached: " + UID);

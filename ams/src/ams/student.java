@@ -46,12 +46,12 @@ public class student {
             boop.doClose();
             System.out.println("Closed");
         }
-    }/**
+    }/**@deprecated 
      * The idea here is to have a ready SQL statement that can be multi-purposed
      * @param column This is a string. To include more than one column, make sure to pass 
      * all the needed columns as a string. ie: "col1, col2"
      * @param table This is a string. At a later time, this will be able to include multiple tables
-     * @return 
+     * @return Returns an SQL command
      */
     public String SQLStudent(String column, String table){
         return "SELECT "+column+" FROM "+table;

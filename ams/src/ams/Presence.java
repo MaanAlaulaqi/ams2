@@ -31,7 +31,7 @@ public class Presence {
      * anyhwhere in the application to check whether the current time has any 
      * ongoing classes. 
      * 
-     * @return 
+     * @return Time Check Positive or Negative
      */
     public static boolean timeCheck(){
         String start="", end="";
@@ -106,7 +106,7 @@ public class Presence {
     /**
      * This method is meant for the timeCheck method. It returns the minute format for DD:HH:MM
      * 
-     * @param s
+     * @param s This is a method used to turn HH:MM:SS format into one int number in MINUTES only. It helps with time comparisons. 
      * @return HoursInMins 
      */
     public static int toMins(String s) {
@@ -159,8 +159,8 @@ public class Presence {
     /**
      * The following three methods are geared towards adjusting a student's presence
      * in a certain class. 
-     * @param UID
-     * @param req 
+     * @param UID Card UID
+     * @param req  req
      */
     public static void AdjustPresence(String UID, boolean req){ 
         //TO-DO Method for moments where instructors needs to adjust a presence
