@@ -9,6 +9,7 @@ import static ams.Presence.toMins; //easier than setting up a different variable
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,7 +33,7 @@ public class ClassThread {
      */
      public static int classCheck(){//Nothing wrong here
         int class_id = -1, arraySize = 0, start_time = 0;
-        int[][] class_table;
+        int[][] class_table = null;
         String DayWeek;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
         LocalDateTime now = LocalDateTime.now();
@@ -44,15 +45,30 @@ public class ClassThread {
         int currentTime = toMins(dtf.format(now));
         dbControl.dbComd("select count(*) from active_classes");
         try {
-            if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1) + 1; // +1 because I don't  feel like dealing with mismatching indexes..
-            if(dbControl.rs.next()) {
-                dbControl.dbComd("select active_classes.id,start_time from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id");
+            if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1)+1;
+            class_table = new int[arraySize][2];
+            dbControl.doClose();
+            dbControl.dbComd("select active_classes.id,start_time from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id");
+            while (dbControl.rs.next() && arraySize >= 0) {
                 
+                class_table[dbControl.rs.getInt("id")][0] = dbControl.rs.getInt("id");
+                class_table[dbControl.rs.getInt("id")][1] = Presence.toMins(dbControl.rs.getString("start_time"));
+                arraySize--;
+                //System.out.print(arraySize + "LOLOLOLOL");
             }
         } catch (SQLException ex) {
             Logger.getLogger(ClassThread.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
-        
+       
+        System.out.println(Arrays.deepToString(class_table));
+        System.out.println("lol");
+
+        /* for (int i = 0; i < class_table.length; i++){
+            for (int j = 0; j < class_table[0].length; j++){
+                System.out.println();
+                System.out.print(class_table[0][j]);
+            }
+        }*/
         return -1;
      }
     
