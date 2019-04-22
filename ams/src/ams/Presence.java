@@ -144,7 +144,7 @@ public class Presence {
                 }
             }catch (SQLException ex) {
                 Logger.getLogger(ams_main.class.getName()).log(Level.SEVERE, null, ex);
-            }finally{ db.doClose();}
+            }finally{ dbControl.doClose();}
         }else {
             //Meh, not much to do here  lol
         }

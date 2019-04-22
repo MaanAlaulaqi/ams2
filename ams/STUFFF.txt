@@ -51,3 +51,26 @@ ALTER TABLE INSTRUCTOR_CLASS
 ALTER TABLE INSTRUCTOR_CLASS
 ADD COLUMN
   INSTRUCTOR_ID INT REFERENCES INSTRUCTOR (id);
+ALTER TABLE INSTRUCTOR_CLASS
+ADD COLUMN
+  class_section INT REFERENCES class_schedule(section);
+
+
+1	Math Pre-calc	2019-01-31	2019-05-15
+2	Calculus	2019-01-21	2019-05-15
+3	English - Creative Writing and Literature	2019-01-21	2019-05-15
+4	Adulting 101	2019-01-21	2019-05-15
+
+Math Pre-calc	2019-01-31	2019-05-15
+Calculus	2019-01-21	2019-05-15
+English - Creative Writing and Literature	2019-01-21	2019-05-15
+Adulting 101	2019-01-21	2019-05-15
+
+
+int GENERATED ALWAYS AS IDENTITY
+
+
+
+
+select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id;
+-- USE this to create array

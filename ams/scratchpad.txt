@@ -103,3 +103,40 @@ e0b48a was e0b48a	77785188	Wade	Wilson	1973-11-22	1-300-DEADPOO	2
 10	13	2
 10	7	1
 10	6	1
+
+Cards leftover:
+e9ebc8a - used 
+effd18a - used
+e78cf8a - used
+e1feb8a - used
+
+
+
+//Omg the motherload has come forth 
+
+
+select student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = 5 and student_class.class_section = '1';
+
+
+
+
+
+
+
+
+1	1	09:30:00	11:00:00	Sunday	Tuesday
+2	2	09:30:00	11:00:00	Monday	Wednesday
+3	1	11:00:00	12:30:00	Sunday	Tuesday
+4	2	11:00:00	12:30:00	Monday	Wednesday
+5	1	12:30:00	14:00:00	Sunday	Tuesday
+6	2	12:30:00	14:00:00	Monday	Wednesday
+7	1	14:00:00	16:30:00	Sunday	Tuesday
+8	2	14:00:00	16:30:00	Monday	Wednesday
+9	1	16:30:00	18:00:00	Sunday	Tuesday
+10	2	16:30:00	18:00:00	Monday	Wednesday
+11	1	18:00:00	19:30:00	Sunday	Tuesday
+12	2	18:00:00	19:30:00	Monday	Wednesday
+13	1	10:00:00	12:00:00	Thursday	Thursday
+14	1	12:00:00	15:00:00	Thursday	Thursday
+15	1	10:00:00	12:00:00	Saturday	Saturday
+16	1	12:00:00	15:00:00	Saturday	Saturday
