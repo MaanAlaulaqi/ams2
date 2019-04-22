@@ -28,7 +28,7 @@ public class Presence {
     public Presence(){}
     /**
      * The timeCheck() method is meant to be an inclusive method that can be used
-     * anyhwere in the application to check whether the current time has any 
+     * anyhwhere in the application to check whether the current time has any 
      * ongoing classes. 
      * 
      * @return 
@@ -58,7 +58,7 @@ public class Presence {
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
             LocalDateTime now = LocalDateTime.now();
             currentTime = toMins(dtf.format(now));
-            currentTime = currentTime - 500; //Testing methods that rely on this variable. 
+            //currentTime = currentTime - 500; //Testing methods that rely on this variable. 
             System.out.println(currentTime + " Altered currenttime " +startX);
             if(currentTime >= startX && currentTime <= endX){
                 System.out.println("Time Check positive");
@@ -130,16 +130,17 @@ public class Presence {
                     id_test = db.rs.getInt("ID");
                     //System.out.println("ID # is: "+id_test);
                 }
-                db.dbComdUpdate("SELECT * FROM STUDENT_PRESENCE WHERE STUDENT_ID = " +id_test);
-                if(db.rs.next()){
-                    k = Integer.parseInt(db.rs.getInt("PRESENT") +"");
-                    System.out.println("Reached this part! "+db.rs.getRow()+" "+k); //Checking
+                dbControl.dbComdUpdate("SELECT * FROM STUDENT_PRESENCE JOIN STUDENT ON STUDENT_PRESENCE.STUDENT_ID = STUDENT.ID WHERE STUDENT_PRESENCE.STUDENT_ID = " +id_test);
+                if(dbControl.rs.next()){
+                    k = Integer.parseInt(dbControl.rs.getInt("PRESENT") +"");
+                    System.out.println("Reached this part! "+dbControl.rs.getRow()+" "+k); //Checking
                     k++;
                     w = (""+k);
                     readStudentUID = true;
-                    UIStudentName = db.rs.getString("first_name")+" "+db.rs.getString("last_name");
-                    db.rs.updateString("present",w);
-                    db.rs.updateRow();
+                    UIStudentName = dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
+                    //dbControl.dbComdUpdate("select present from student_presence");
+                    dbControl.rs.updateString("present",w);
+                    dbControl.rs.updateRow();
                 }
             }catch (SQLException ex) {
                 Logger.getLogger(ams_main.class.getName()).log(Level.SEVERE, null, ex);

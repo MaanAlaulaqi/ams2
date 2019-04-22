@@ -38,9 +38,11 @@ public class ClassThread {
         //System.out.println(DayWeek);
         //System.out.println(dtf.format(now));
         int currentTime = toMins(dtf.format(now));
-        currentTime = currentTime +250;
+        //currentTime = currentTime +250;
         //System.out.println(currentTime);
         //Begin organizing preset class timings..
+        //String class ="",  = "";
+        //switch 
         String classOneBegin = "11:00", classTwoBegin = "12:30", classThreeBegin = "14:00", classFourBegin = "16:30", classFourEnd = "18:00";
         int classOneBeginX, classTwoBeginX, classThreeBeginX, classFourBeginX, classFourEndX;
         classOneBeginX = timeCheck.toMins(classOneBegin);

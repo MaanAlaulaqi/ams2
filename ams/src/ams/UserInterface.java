@@ -156,7 +156,7 @@ public class UserInterface extends javax.swing.JFrame {
                 new ClassManager().setVisible(true);
             }
         });
-        System.out.println(" Boop:"+ uid_placeholder+ "Coz why not lol ");
+        //System.out.println(" Boop:"+ uid_placeholder+ "Coz why not lol ");
         
     }//GEN-LAST:event_viewStudentsButtonActionPerformed
     
