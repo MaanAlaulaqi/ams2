@@ -65,19 +65,7 @@ public class ClassThread {
                 class_id = class_table[i][0];
             }
         }
-       System.out.println(class_table[3][1] + " LOLOLOLOL");
-       System.out.println(class_table[5][0] + " LOLOLOLOL");
-       System.out.println(class_table[5][1] + " LOLOLOLOL");
-        
-        System.out.println(Arrays.deepToString(class_table));
-        System.out.println("lol");
-
-        /* for (int i = 0; i < class_table.length; i++){
-            for (int j = 0; j < class_table[0].length; j++){
-                System.out.println();
-                System.out.print(class_table[0][j]);
-            }
-        }*/
+       
         return -1;
      }
     
