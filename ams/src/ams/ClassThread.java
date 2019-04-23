@@ -32,7 +32,7 @@ public class ClassThread {
      * @return The number returned will be used in SQL queries where we need to obtain the class list of active classes
      */
      public static int classCheck(){//Nothing wrong here
-        int class_id = -1, arraySize = 0, start_time = 0;
+        int class_id = 0, arraySize = 0, start_time = 0;
         int[][] class_table = null;
         String DayWeek;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
@@ -53,6 +53,10 @@ public class ClassThread {
                 
                 class_table[dbControl.rs.getInt("id")][0] = dbControl.rs.getInt("id");
                 class_table[dbControl.rs.getInt("id")][1] = Presence.toMins(dbControl.rs.getString("start_time"));
+//                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
+//                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
+//                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
+                
                 arraySize--;
                 
             }class_table[class_table.length-1][1] = class_table[class_table.length-2][1] + 90;
@@ -66,7 +70,7 @@ public class ClassThread {
             }
         }
        
-        return -1;
+        return class_id;
      }
     
     /*

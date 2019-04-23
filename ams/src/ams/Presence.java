@@ -39,7 +39,7 @@ public class Presence {
         //Time x;
         classNum = classC.classCheck();
         //System.out.println(classNum);
-        db.dbComd("SELECT * FROM CLASS_SCHEDULE WHERE CLASS_SCHEDULE.ID = "+classNum+"");
+        db.dbComd("select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id where active_classes.ID = " +classNum);
         if (classNum == 0){
             System.out.println("There are no classes at this time to register your attendance to.");
             return false;
@@ -171,7 +171,7 @@ public class Presence {
     }
     public static void UpPresence(String UID){
         //TO-DO Present +1 
-        int classNum = ClassThread.classCheck();
+        //int classNum = ClassThread.classCheck();
         int id_test = -1;
         //TO-DO Main Attendance taking method
         if(timeCheck()){
@@ -200,7 +200,7 @@ public class Presence {
     }
     public static void DownPresence(String UID){
         //TO-DO Present -1
-        int classNum = ClassThread.classCheck();
+        //int classNum = ClassThread.classCheck();
         int id_test = -1;
         //TO-DO Main Attendance taking method
         if(timeCheck()){

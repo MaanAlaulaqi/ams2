@@ -195,7 +195,6 @@ import javax.smartcardio.TerminalFactory;
                     }
                     else{
                         ClassThread.classCheck();
-                        //System.out.println("New card found!");
                         // Connects to the card
                         
                         card = terminal.connect("*");

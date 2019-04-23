@@ -24,7 +24,7 @@ public class InterfaceCmds {
     public static String getCurrentClass(int x){//x = 1 : return class name, x = 2: return start, x = 3: return end time
         int classID = ClassThread.classCheck();
         String className = "", startTime = "", endTime = "";
-        dbC.dbComd("select  NAME, START_TIME, END_TIME FROM CLASS_SCHEDULE JOIN CLASS ON CLASS_SCHEDULE.ID = " +classID);
+        dbC.dbComd("select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id where active_classes.ID = " +classID);
         try {
             if(dbC.rs.next()){
                 if(classID == 0) {
