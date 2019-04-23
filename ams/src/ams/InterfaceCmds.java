@@ -20,20 +20,24 @@ import java.util.logging.Logger;
 public class InterfaceCmds {
     private static dbControl dbC;
     InterfaceCmds() {}
-    
-    public static String getCurrentClass(int x){//x = 1 : return class name, x = 2: return start, x = 3: return end time
+    /**This is mostly used to obtain the name of the current class, and its timing
+     * 
+     * @param x x = 1 : return class name, x = 2: return start, x = 3: return end time
+     * @return Returns class name, start time, or end time, depending on the parameter of x
+     */
+    public static String getCurrentClass(int x){
         int classID = ClassThread.classCheck();
         String className = "", startTime = "", endTime = "";
         dbC.dbComd("select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id where active_classes.ID = " +classID);
         try {
-            if(dbC.rs.next()){
-                if(classID == 0) {
-                    className = "There are currently no classes ongoing.";
-                }else{
-                    className = dbC.rs.getString("NAME");
-                    startTime = dbC.rs.getString("START_TIME");
-                    endTime = dbC.rs.getString("END_TIME");
-                }
+            if(classID == 0) {
+                className = "There are no ongoing classes.";
+            }else{
+                if(dbC.rs.next()){
+                className = dbC.rs.getString("NAME");
+                startTime = dbC.rs.getString("START_TIME");
+                endTime = dbC.rs.getString("END_TIME");
+            }
             }
         } catch (SQLException ex) {
             Logger.getLogger(InterfaceCmds.class.getName()).log(Level.SEVERE, null, ex);

@@ -56,7 +56,8 @@ public class ClassThread {
 //                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
 //                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
 //                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
-                
+                //Ideally, I'd have this array in the main class, it'd save on memory,
+                //However, its memory and CPU footprint is small enough to ignore
                 arraySize--;
                 
             }class_table[class_table.length-1][1] = class_table[class_table.length-2][1] + 90;
@@ -69,7 +70,7 @@ public class ClassThread {
                 class_id = class_table[i][0];
             }
         }
-       
+       System.out.println(class_id + " class_id in ClassThread.classCheck");
         return class_id;
      }
     
