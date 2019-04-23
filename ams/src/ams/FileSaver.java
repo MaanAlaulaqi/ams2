@@ -28,16 +28,16 @@ public class FileSaver {
 		int retrival = chooser.showSaveDialog(null);
 		if (retrival == JFileChooser.APPROVE_OPTION) {
 			try {
-				FileWriter fw = new FileWriter(chooser.getSelectedFile()+".txt");
-//				 if (s) {
-//					int response = JOptionPane.showConfirmDialog(null, //
-//							"Do you want to replace the existing file?", //
-//							"Confirm", JOptionPane.YES_NO_OPTION, //
-//							JOptionPane.QUESTION_MESSAGE);
-//					if (response != JOptionPane.YES_OPTION) {
-//						return;
-//					} 
-//				} 
+			FileWriter fw = new FileWriter(chooser.getSelectedFile()+".txt");
+//                      if (s) {
+//                          int response = JOptionPane.showConfirmDialog(null, //
+//                          "Do you want to replace the existing file?", //
+//                          "Confirm", JOptionPane.YES_NO_OPTION, //
+//                          JOptionPane.QUESTION_MESSAGE);
+//                          if (response != JOptionPane.YES_OPTION) {
+//                              return;
+//                          } 
+//                      } 
 				fw.write(sb.toString());
 				fw.close();
 			} catch (Exception ex) {
