@@ -478,7 +478,17 @@ private String InstructorUID = UserInterface.UID;
         }catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
-       FileSaver.SaveMe(listOfNames); 
+        //listOfNames += "\n\n" +uid;
+        String namingCon = uid;
+        dbControl.dbComd("select instructor.First_name, instructor.last_name, class.name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+        try {
+            if(dbControl.rs.next()) {
+                namingCon = dbControl.rs.getString("name")+" - "+dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {dbControl.doClose();}
+       FileSaver.SaveMe(listOfNames, namingCon); 
     }//GEN-LAST:event_sExportListBUTTONMouseReleased
 
     /**

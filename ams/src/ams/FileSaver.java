@@ -18,10 +18,10 @@ public class FileSaver {
     
     public FileSaver(){}
     
-    public static void SaveMe(String x) {
+    public static void SaveMe(String x, String y) {
 		String sb = x;
 		JFileChooser chooser = new JFileChooser();
-		chooser.setSelectedFile(new File("Lololol.txt"));
+		chooser.setSelectedFile(new File(y + " - Student list"));
 		chooser.setCurrentDirectory(new File("/home/me/Dcouments"));
 		File file = new File (chooser.getSelectedFile().toString() + ".txt");
 		//boolean s = file.exists();
