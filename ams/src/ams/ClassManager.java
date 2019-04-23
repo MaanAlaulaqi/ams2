@@ -469,6 +469,16 @@ private String InstructorUID = UserInterface.UID;
 
     private void sExportListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sExportListBUTTONMouseReleased
         // TODO add your handling code here:
+        String listOfNames = "Student ID \tFirst Name\tLast Name\n\n";
+        dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+        try { 
+            while(dbControl.rs.next()) {
+                listOfNames += dbControl.rs.getString("STUDENT_ID") + "\t" + dbControl.rs.getString("FIRST_NAME") + "\t\t" + dbControl.rs.getString("LAST_NAME") + "\n";
+            }
+        }catch (SQLException ex) {
+                Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {dbControl.doClose();}
+       FileSaver.SaveMe(listOfNames); 
     }//GEN-LAST:event_sExportListBUTTONMouseReleased
 
     /**
