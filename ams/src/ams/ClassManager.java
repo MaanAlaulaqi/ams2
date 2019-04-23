@@ -263,6 +263,11 @@ private String InstructorUID = UserInterface.UID;
         });
 
         sExportListBUTTON.setLabel("Export student list");
+        sExportListBUTTON.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                sExportListBUTTONMouseReleased(evt);
+            }
+        });
         sExportListBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sExportListBUTTONActionPerformed(evt);
@@ -461,6 +466,10 @@ private String InstructorUID = UserInterface.UID;
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
         } finally{ dbControl.doClose(); }
     }//GEN-LAST:event_sDisplayListBUTTONMouseReleased
+
+    private void sExportListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sExportListBUTTONMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sExportListBUTTONMouseReleased
 
     /**
      * @param args the command line arguments

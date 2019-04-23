@@ -185,6 +185,7 @@
                     <Property name="label" type="java.lang.String" value="Export student list"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="sExportListBUTTONMouseReleased"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sExportListBUTTONActionPerformed"/>
                   </Events>
                 </Component>
