@@ -70,7 +70,7 @@ public class ClassThread {
                 class_id = class_table[i][0];
             }
         }
-       System.out.println(class_id + " class_id in ClassThread.classCheck");
+       //System.out.println(class_id + " class_id in ClassThread.classCheck");
         return class_id;
      }
     
