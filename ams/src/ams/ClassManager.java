@@ -10,6 +10,7 @@ import net.proteanit.sql.DbUtils;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.event.ListDataListener;
@@ -207,7 +208,14 @@ private String InstructorUID = UserInterface.UID;
         
         return sizeMeUpbb;
     }
-    
+     /**
+      * Just an error message window generator
+      * @param infoMessage Contents of error
+      * @param titleBar  Title bar of error message window
+      */
+    public static void infoBox(String infoMessage, String titleBar){
+        JOptionPane.showMessageDialog(null, infoMessage, titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -531,6 +539,9 @@ private String InstructorUID = UserInterface.UID;
 
     private void sExportListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sExportListBUTTONMouseReleased
         // TODO add your handling code here:
+        if (class_sec == null){
+            infoBox("Please make a selection from the list of classes", "Need a class selected to help you with that!");
+        }else{
         String listOfNames = "Student ID \tFirst Name\tLast Name\n\n";
         dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         try { 
@@ -551,6 +562,7 @@ private String InstructorUID = UserInterface.UID;
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
        FileSaver.SaveMe(listOfNames, namingCon); 
+        }
     }//GEN-LAST:event_sExportListBUTTONMouseReleased
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
