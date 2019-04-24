@@ -56,6 +56,7 @@ public class ClassThread {
 //                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
 //                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
 //                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
+                  System.out.println(class_table.length + " class_table length");
                 //Ideally, I'd have this array in the main class, it'd save on memory,
                 //However, its memory and CPU footprint is small enough to ignore
                 arraySize--;
@@ -66,6 +67,11 @@ public class ClassThread {
         } finally {dbControl.doClose();}
         boolean checker = false;
         for(int i = 0; i < class_table.length;i++){
+            //The problem area is here. The statement also checks the index outside of the array bounds.
+            //Think of a way out. Maybe making the array one cell bigger, but that
+            //cell is never reached perhaps? 
+            //It should also be the same value as the cell before it? idk yet 
+            //ugh 
             if (currentTime >= class_table[i][1] && currentTime >= class_table[i+1][1]){
                 class_id = class_table[i][0];
             }

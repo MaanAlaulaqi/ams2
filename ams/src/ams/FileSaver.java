@@ -28,7 +28,7 @@ public class FileSaver {
 		int retrival = chooser.showSaveDialog(null);
 		if (retrival == JFileChooser.APPROVE_OPTION) {
 			try {
-			FileWriter fw = new FileWriter(chooser.getSelectedFile()+".txt");
+			FileWriter fw = new FileWriter(chooser.getSelectedFile()+".xls");
 //                      if (s) {
 //                          int response = JOptionPane.showConfirmDialog(null, //
 //                          "Do you want to replace the existing file?", //
