@@ -23,7 +23,7 @@ public class FileSaver {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setSelectedFile(new File(y + " - Student list"));
 		chooser.setCurrentDirectory(new File("/home/me/Dcouments"));
-		File file = new File (chooser.getSelectedFile().toString() + ".txt");
+		File file = new File (chooser.getSelectedFile().toString() + ".xls");
 		//boolean s = file.exists();
 		int retrival = chooser.showSaveDialog(null);
 		if (retrival == JFileChooser.APPROVE_OPTION) {
