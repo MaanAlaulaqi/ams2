@@ -536,7 +536,10 @@ private String InstructorUID = UserInterface.UID;
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
         } finally{ dbControl.doClose(); }
     }//GEN-LAST:event_sDisplayListBUTTONMouseReleased
-
+    /**
+     * Export student list of select class
+     * @param evt Mouse release event
+     */
     private void sExportListBUTTONMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sExportListBUTTONMouseReleased
         // TODO add your handling code here:
         if (class_sec == null){
@@ -546,7 +549,7 @@ private String InstructorUID = UserInterface.UID;
         dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         try { 
             while(dbControl.rs.next()) {
-                listOfNames += dbControl.rs.getString("STUDENT_ID") + "\t" + dbControl.rs.getString("FIRST_NAME") + "\t\t" + dbControl.rs.getString("LAST_NAME") + "\n";
+                listOfNames += dbControl.rs.getString("STUDENT_ID") + "\t" + dbControl.rs.getString("FIRST_NAME") + "\t" + dbControl.rs.getString("LAST_NAME") + "\n";
             }
         }catch (SQLException ex) {
                 Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -556,7 +559,7 @@ private String InstructorUID = UserInterface.UID;
         dbControl.dbComd("select instructor.First_name, instructor.last_name, class.name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         try {
             if(dbControl.rs.next()) {
-                namingCon = dbControl.rs.getString("name")+" - "+dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
+                namingCon = dbControl.rs.getString("name")+" - "+dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name") + "(Student list)";
             }
         } catch (SQLException ex) {
             Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);

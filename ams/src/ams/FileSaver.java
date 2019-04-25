@@ -21,8 +21,9 @@ public class FileSaver {
     public static void SaveMe(String x, String y) {
 		String sb = x;
 		JFileChooser chooser = new JFileChooser();
-		chooser.setSelectedFile(new File(y + " - Student list"));
-		chooser.setCurrentDirectory(new File("/home/me/Dcouments"));
+		chooser.setSelectedFile(new File(y));
+                String userDir = System.getProperty("user.home");
+		chooser.setCurrentDirectory(new File(userDir + "/Desktop"));
 		File file = new File (chooser.getSelectedFile().toString() + ".xls");
 		//boolean s = file.exists();
 		int retrival = chooser.showSaveDialog(null);
