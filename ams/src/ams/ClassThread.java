@@ -26,6 +26,12 @@ public class ClassThread {
     
     public ClassThread(){}
     
+    /**
+     * Creates an array of the active classes of a current semester every time
+     * it's called. 
+     * @return a 2D array, index [x][0] is for the class_id, [x][1] is for the 
+     * time of that class in minutes.
+     */
     public static int[][] ActiveClassesList(){
         int arraySize = 0;
         
