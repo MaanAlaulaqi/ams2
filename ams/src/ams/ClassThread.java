@@ -56,7 +56,8 @@ public class ClassThread {
 //                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
 //                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
 //                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
-                  System.out.println(class_table.length + " class_table length");
+                  //System.out.println(class_table.length + " class_table length");
+                  //System.out.println(currentTime + " Current Time");
                 //Ideally, I'd have this array in the main class, it'd save on memory,
                 //However, its memory and CPU footprint is small enough to ignore
                 arraySize--;
@@ -72,7 +73,9 @@ public class ClassThread {
             //cell is never reached perhaps? 
             //It should also be the same value as the cell before it? idk yet 
             //ugh 
-            if (currentTime >= class_table[i][1] && currentTime >= class_table[i+1][1]){
+            if (currentTime > class_table[0][1] && currentTime <class_table[class_table.length-1][1])
+                class_id = 0;
+            else if (currentTime >= class_table[i][1] && currentTime >= class_table[i][1]){
                 class_id = class_table[i][0];
             }
         }
