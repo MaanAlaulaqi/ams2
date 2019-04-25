@@ -22,27 +22,23 @@ import java.util.logging.Logger;
  */
 public class ClassThread {
     private static Presence timeCheck;
+    private static int[][] class_table = ActiveClassesList();
     
     public ClassThread(){}
     
-    /**
-     * This method is to check which "time slot" of the day as class is ongoing.
-     * The classCheck() method is written with knowledge of the tables in the 
-     * database. 
-     * @return The number returned will be used in SQL queries where we need to obtain the class list of active classes
-     */
-     public static int classCheck(){//Nothing wrong here
-        int class_id = 0, arraySize = 0, start_time = 0;
-        int[][] class_table = null;
-        String DayWeek;
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter dtfWEEK = DateTimeFormatter.ofPattern("EEEE");  
-        LocalDateTime DayOfWeek = LocalDateTime.now();
-        DayWeek = dtfWEEK.format(DayOfWeek);
-        //System.out.println(DayWeek);
-        //System.out.println(dtf.format(now));
-        int currentTime = toMins(dtf.format(now));
+    public static int[][] ActiveClassesList(){
+        int arraySize = 0;
+        
+        System.out.println("ActiveClassesList accessed)");
+        //I'm keeping the next few lines of code for later reference 
+        //in case I need to reference a way to access dates and stuff
+//        String DayWeek;
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+//        LocalDateTime now = LocalDateTime.now();
+//        DateTimeFormatter dtfWEEK = DateTimeFormatter.ofPattern("EEEE");  
+//        LocalDateTime DayOfWeek = LocalDateTime.now();
+//        DayWeek = dtfWEEK.format(DayOfWeek);
+        //int currentTime = toMins(dtf.format(now));
         dbControl.dbComd("select count(*) from active_classes");
         try {
             if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1)+2;
@@ -53,20 +49,31 @@ public class ClassThread {
                 
                 class_table[dbControl.rs.getInt("id")][0] = dbControl.rs.getInt("id");
                 class_table[dbControl.rs.getInt("id")][1] = Presence.toMins(dbControl.rs.getString("start_time"));
-//                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
-//                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
-//                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
-                  //System.out.println(class_table.length + " class_table length");
-                  //System.out.println(currentTime + " Current Time");
-                //Ideally, I'd have this array in the main class, it'd save on memory,
-                //However, its memory and CPU footprint is small enough to ignore
                 arraySize--;
                 
             }class_table[class_table.length-1][1] = class_table[class_table.length-2][1] + 90;
         } catch (SQLException ex) {
             Logger.getLogger(ClassThread.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
-        boolean checker = false;
+        return class_table;
+    }
+    
+    /**
+     * This method is to check which "time slot" of the day as class is ongoing.
+     * The classCheck() method is written with knowledge of the tables in the 
+     * database. 
+     * @return The number returned will be used in SQL queries where we need to obtain the class list of active classes
+     */
+     public static int classCheck(){//Nothing wrong here
+        int class_id = 0, arraySize = 0, start_time = 0;        
+        String DayWeek;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter dtfWEEK = DateTimeFormatter.ofPattern("EEEE");  
+        LocalDateTime DayOfWeek = LocalDateTime.now();
+        DayWeek = dtfWEEK.format(DayOfWeek);
+        int currentTime = toMins(dtf.format(now));
+
         for(int i = 0; i < class_table.length;i++){
             //The problem area is here. The statement also checks the index outside of the array bounds.
             //Think of a way out. Maybe making the array one cell bigger, but that
