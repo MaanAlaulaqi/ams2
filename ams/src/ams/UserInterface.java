@@ -26,13 +26,7 @@ public class UserInterface extends javax.swing.JFrame {
     public UserInterface() {
         initComponents();
     }
-    
-    /** Returns an ImageIcon, or null if the path was invalid. 
-     * This is to allow images to brought in without a NullPointerException
-     * Resourced from :
-     * https://stackoverflow.com/questions/13151979/null-pointer-exception-when-an-imageicon-is-added-to-jbutton-in-netbeans
-     */
-        
+ 
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,6 +38,9 @@ public class UserInterface extends javax.swing.JFrame {
     private void initComponents() {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         ACTIVE_ICON = new javax.swing.JLabel();
         INACTIVE_ICON = new javax.swing.JLabel();
@@ -53,6 +50,7 @@ public class UserInterface extends javax.swing.JFrame {
         currentClass = new java.awt.Label();
         classCall = new java.awt.Label();
         viewStudentsButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         mainBG_start = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,6 +61,45 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLayeredPane1.setMaximumSize(new java.awt.Dimension(798, 584));
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(798, 584));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 465, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 415, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jLayeredPane1.add(jPanel4);
+        jPanel4.setBounds(260, 100, 465, 415);
+
+        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.setMaximumSize(new java.awt.Dimension(798, 584));
         jPanel2.setMinimumSize(new java.awt.Dimension(798, 584));
@@ -133,6 +170,10 @@ public class UserInterface extends javax.swing.JFrame {
         main_start.add(viewStudentsButton);
         viewStudentsButton.setBounds(620, 500, 140, 60);
 
+        jButton1.setText("jButton1");
+        main_start.add(jButton1);
+        jButton1.setBounds(20, 490, 150, 70);
+
         mainBG_start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mainBG_start.png"))); // NOI18N
         mainBG_start.setAlignmentY(0.0F);
         main_start.add(mainBG_start);
@@ -141,10 +182,7 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel2.add(main_start);
         main_start.setBounds(0, 0, 800, 590);
 
-        jLayeredPane1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 798, 584);
-
-        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -200,6 +238,14 @@ public class UserInterface extends javax.swing.JFrame {
 //        UserInterface.viewStudentsButton.setVisible(false);
 
     }
+    
+       
+    /** Returns an ImageIcon, or null if the path was invalid. 
+     * This is to allow images to brought in without a NullPointerException
+     * Resourced from :
+     * https://stackoverflow.com/questions/13151979/null-pointer-exception-when-an-imageicon-is-added-to-jbutton-in-netbeans
+     */
+        
      public static ImageIcon createImageIcon(String path, String description) {
         java.net.URL imgURL = ClassLoader.getSystemResource(path);
         if (imgURL != null) {
@@ -280,9 +326,13 @@ public class UserInterface extends javax.swing.JFrame {
     private static java.awt.Label StudentCall;
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel mainBG_start;
     private javax.swing.JPanel main_start;
     public static javax.swing.JButton viewStudentsButton;

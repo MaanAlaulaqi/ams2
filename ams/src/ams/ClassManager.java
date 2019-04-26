@@ -11,12 +11,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.event.ListDataListener;
 
 
-/** Something the professor requested that I'm dying over. 
+
+/** A class manager kind of class. My hopes with this class is to provide the instructor
+ * with an interface that will allow them to manage their students and classes. 
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
