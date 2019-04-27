@@ -214,17 +214,22 @@ public class UserInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
           //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
           int active_class_id = ClassThread.classCheck();
-          dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
-                            "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
-                            "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
-                            "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
-                            "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
-                            "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
-          //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-          StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-          dbControl.doClose();
-          jPanel4.setVisible(true);
-          StudentListOnStart.setVisible(true);
+          System.out.println(active_class_id);
+          if (active_class_id == 0){}
+          else{
+              //good lord this sql query was a mess to figure out.
+            dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
+                              "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
+                              "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
+                              "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
+                              "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
+                              "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
+            //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+            StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+            dbControl.doClose();
+            jPanel4.setVisible(true);
+            StudentListOnStart.setVisible(true);
+          }
     }//GEN-LAST:event_jButton1MouseReleased
     
     
