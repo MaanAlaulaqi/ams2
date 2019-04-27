@@ -1,3 +1,8 @@
+[NOT STARTED]
+- Fix the UI issue with current class and student/instructor name not showing
+- 
+
+[HALF COMPLETED]
 What you were doing before leaving Caribou cafe to join the two lovely souls: 
 
  - You wanted to fill in the StudentListOnStart table in UserInterface
@@ -21,4 +26,4 @@ JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID
 JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID 
 JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID 
 JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID 
-WHERE ACTIVE_CLASSES.ID = 4; /* ACTIVE_CLASSES.ID will be obtained from the classCheck() in ClassThread class
+WHERE ACTIVE_CLASSES.ID = 4; /* ACTIVE_CLASSES.ID will be obtained from the classCheck() in ClassThread class*/
