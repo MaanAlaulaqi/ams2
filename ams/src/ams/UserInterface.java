@@ -5,8 +5,13 @@
  */
 package ams;
 
+import static ams.dbControl.rs;
 import static com.sun.javafx.scene.control.skin.Utils.getResource;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -40,7 +45,7 @@ public class UserInterface extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        StudentListOnStart = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         ACTIVE_ICON = new javax.swing.JLabel();
         INACTIVE_ICON = new javax.swing.JLabel();
@@ -62,7 +67,7 @@ public class UserInterface extends javax.swing.JFrame {
         jLayeredPane1.setMaximumSize(new java.awt.Dimension(798, 584));
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(798, 584));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        StudentListOnStart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -73,7 +78,7 @@ public class UserInterface extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(StudentListOnStart);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -171,6 +176,11 @@ public class UserInterface extends javax.swing.JFrame {
         viewStudentsButton.setBounds(620, 500, 140, 60);
 
         jButton1.setText("jButton1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton1MouseReleased(evt);
+            }
+        });
         main_start.add(jButton1);
         jButton1.setBounds(20, 490, 150, 70);
 
@@ -197,6 +207,16 @@ public class UserInterface extends javax.swing.JFrame {
         //System.out.println(" Boop:"+ uid_placeholder+ "Coz why not lol ");
         
     }//GEN-LAST:event_viewStudentsButtonActionPerformed
+
+    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+        // TODO add your handling code here:
+          dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+        try {
+            if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{ dbControl.doClose(); }
+    }//GEN-LAST:event_jButton1MouseReleased
     
     
     /**
@@ -324,6 +344,7 @@ public class UserInterface extends javax.swing.JFrame {
     public static javax.swing.JLabel ACTIVE_ICON;
     public static javax.swing.JLabel INACTIVE_ICON;
     private static java.awt.Label StudentCall;
+    private javax.swing.JTable StudentListOnStart;
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
     private javax.swing.JButton jButton1;
@@ -332,7 +353,6 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel mainBG_start;
     private javax.swing.JPanel main_start;
     public static javax.swing.JButton viewStudentsButton;

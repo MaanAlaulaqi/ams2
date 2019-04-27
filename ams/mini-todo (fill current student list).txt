@@ -1,0 +1,24 @@
+What you were doing before leaving Caribou cafe to join the two lovely souls: 
+
+ - You wanted to fill in the StudentListOnStart table in UserInterface
+	• You need to use the currentTime and instructor's UID to fill it with students
+	• You had this to work with : 
+select class_id, name from active_classes join class on class.id = class_id where exists (select class_id from instructor_class where active_classes.class_id = instructor_class.class_id) ;
+There's something you can use with this:
+
+SELECT * FROM STUDENT 
+JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID 
+JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID 
+JOIN INSTRUCTOR_CLASS ON INSTRUCTOR_CLASS.CLASS_ID = CLASS.ID 
+JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID= CLASS.ID
+JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID 
+WHERE ACTIVE_CLASSES.ID = 2 ;
+
+THIS ONE!!!11!1ONE!1ELVENTYONE!1
+
+SELECT FIRST_NAME FROM STUDENT 
+JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID 
+JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID 
+JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID 
+JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID 
+WHERE ACTIVE_CLASSES.ID = 4; /* ACTIVE_CLASSES.ID will be obtained from the classCheck() in ClassThread class
