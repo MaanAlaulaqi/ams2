@@ -30,6 +30,8 @@ public class UserInterface extends javax.swing.JFrame {
      */
     public UserInterface() {
         initComponents();
+        jPanel4.setVisible(false);
+        StudentListOnStart.setVisible(false);
     }
  
     
@@ -210,12 +212,18 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
         // TODO add your handling code here:
-          dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
-        try {
-            if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-        } catch (SQLException ex) {
-            Logger.getLogger(ClassManager.class.getName()).log(Level.SEVERE, null, ex);
-        } finally{ dbControl.doClose(); }
+          //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+          dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
+                            "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
+                            "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
+                            "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
+                            "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
+                            "WHERE ACTIVE_CLASSES.ID = 4");
+          //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+          StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+          dbControl.doClose();
+          jPanel4.setVisible(true);
+          StudentListOnStart.setVisible(true);
     }//GEN-LAST:event_jButton1MouseReleased
     
     
