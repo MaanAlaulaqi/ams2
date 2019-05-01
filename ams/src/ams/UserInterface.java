@@ -32,7 +32,7 @@ public class UserInterface extends javax.swing.JFrame {
         initComponents();
         jPanel1.setVisible(true);
         jPanel4.setVisible(false);
-        StudentListOnStart.setVisible(false);
+//        jTable1.setVisible(false);
     }
  
     
@@ -47,6 +47,7 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         StudentListOnStart = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
@@ -60,6 +61,8 @@ public class UserInterface extends javax.swing.JFrame {
         viewStudentsButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         mainBG_start = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -69,6 +72,17 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLayeredPane1.setMaximumSize(new java.awt.Dimension(798, 584));
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(798, 584));
+
+        jPanel4.setMinimumSize(new java.awt.Dimension(798, 584));
+        jPanel4.setOpaque(false);
+        jPanel4.setPreferredSize(new java.awt.Dimension(798, 584));
+
+        jButton2.setText("jButton1");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton2MouseReleased(evt);
+            }
+        });
 
         StudentListOnStart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -87,27 +101,27 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 453, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(370, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         jLayeredPane1.add(jPanel4);
-        jPanel4.setBounds(285, 100, 440, 415);
-
-        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel4.setBounds(0, 0, 798, 584);
 
         jPanel2.setMaximumSize(new java.awt.Dimension(798, 584));
         jPanel2.setMinimumSize(new java.awt.Dimension(798, 584));
@@ -187,7 +201,7 @@ public class UserInterface extends javax.swing.JFrame {
         main_start.add(jButton1);
         jButton1.setBounds(20, 490, 150, 70);
 
-        mainBG_start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mainBG_start.png"))); // NOI18N
+        mainBG_start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mainBG_start2.png"))); // NOI18N
         mainBG_start.setAlignmentY(0.0F);
         main_start.add(mainBG_start);
         mainBG_start.setBounds(0, 0, 798, 584);
@@ -195,7 +209,28 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel2.add(main_start);
         main_start.setBounds(0, 0, 800, 590);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLayeredPane1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 798, 584);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mainBG_start2.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 0, 0))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+
+        jLayeredPane1.add(jPanel3);
+        jPanel3.setBounds(0, 0, 800, 590);
+
+        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -213,28 +248,16 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
         // TODO add your handling code here:
-        //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
-        int active_class_id = ClassThread.classCheck();
-        System.out.println(active_class_id);
-        if (active_class_id == 0){
-            //jPanel4.setVisible(true);
-            //StudentListOnStart.setVisible(true);
-        }
-        else{
-            //good lord this sql query was a mess to figure out.
-            dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
-                "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
-                "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
-                "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
-                "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
-                "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
-            //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-            StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-            dbControl.doClose();
-            jPanel4.setVisible(true);
-            StudentListOnStart.setVisible(true);
-        }
+        //currentClass.setVisible(false);
+        //classCall.setVisible(false);
+        //StudentCall.setVisible(false);
+        jPanel2.setVisible(false);
+        jPanel4.setVisible(true);
     }//GEN-LAST:event_jButton1MouseReleased
+
+    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseReleased
     
     
     /**
@@ -366,9 +389,12 @@ public class UserInterface extends javax.swing.JFrame {
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel mainBG_start;
