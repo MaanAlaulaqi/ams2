@@ -47,7 +47,7 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel4 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        backToStart = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         StudentListOnStart = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
@@ -77,10 +77,10 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel4.setOpaque(false);
         jPanel4.setPreferredSize(new java.awt.Dimension(798, 584));
 
-        jButton2.setText("jButton1");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        backToStart.setText("Back");
+        backToStart.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButton2MouseReleased(evt);
+                backToStartMouseReleased(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class UserInterface extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backToStart, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -116,7 +116,7 @@ public class UserInterface extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(backToStart, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
 
@@ -248,16 +248,35 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
         // TODO add your handling code here:
-        //currentClass.setVisible(false);
-        //classCall.setVisible(false);
-        //StudentCall.setVisible(false);
+        
+        //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+        int active_class_id = ClassThread.classCheck();
+        System.out.println(active_class_id);
+        if (active_class_id == 0){
+            //jPanel4.setVisible(true);
+            //StudentListOnStart.setVisible(true);
+        }
+        else{
+            //good lord this sql query was a mess to figure out.
+            dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
+                "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
+                "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
+                "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
+                "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
+                "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
+            //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+            StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+            dbControl.doClose();
+        }
         jPanel2.setVisible(false);
         jPanel4.setVisible(true);
     }//GEN-LAST:event_jButton1MouseReleased
 
-    private void jButton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseReleased
+    private void backToStartMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backToStartMouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseReleased
+         jPanel2.setVisible(true);
+        jPanel4.setVisible(false);
+    }//GEN-LAST:event_backToStartMouseReleased
     
     
     /**
@@ -386,10 +405,10 @@ public class UserInterface extends javax.swing.JFrame {
     public static javax.swing.JLabel INACTIVE_ICON;
     private static java.awt.Label StudentCall;
     private javax.swing.JTable StudentListOnStart;
+    private javax.swing.JButton backToStart;
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
