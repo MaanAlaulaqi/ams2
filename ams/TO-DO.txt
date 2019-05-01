@@ -1,7 +1,7 @@
 TO DO 
 
-- [SORTA DONE?] [HIGH]Prepare a method to activate the thing 
-- [80%][MED-HIGH] Work on the ClassThread - Should it run on its own thread, or be called by a separate thread? It should display the info at all times of which class is currently underway 
+- [DONE] [HIGH]Prepare a method to activate the thing 
+- [DONE][MED-HIGH] Work on the ClassThread - Should it run on its own thread, or be called by a separate thread? It should display the info at all times of which class is currently underway 
 	• This is dependant on the UI, so do this after you do the UI.
 	• Should I do the UI now? 
 - [VERY HIGH] UI

@@ -49,7 +49,7 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         backToStart = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        StudentListOnStart = new javax.swing.JTable();
+        studentListOnStart = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         ACTIVE_ICON = new javax.swing.JLabel();
         INACTIVE_ICON = new javax.swing.JLabel();
@@ -84,7 +84,7 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
-        StudentListOnStart.setModel(new javax.swing.table.DefaultTableModel(
+        studentListOnStart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -95,7 +95,7 @@ public class UserInterface extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(StudentListOnStart);
+        jScrollPane1.setViewportView(studentListOnStart);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -252,22 +252,26 @@ public class UserInterface extends javax.swing.JFrame {
         //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         int active_class_id = ClassThread.classCheck();
         System.out.println(active_class_id);
+        active_class_id = 3;
         if (active_class_id == 0){
             //jPanel4.setVisible(true);
             //StudentListOnStart.setVisible(true);
         }
         else{
             //good lord this sql query was a mess to figure out.
-            dbControl.dbComd("SELECT STUDENT.STUDENT_ID, FIRST_NAME, LAST_NAME FROM STUDENT \n" +
+            dbControl.dbComd("SELECT STUDENT.STUDENT_ID as \"Student ID\", FIRST_NAME as \"First Name\", LAST_NAME as \"Last Name\", PRESENT AS \"PRESENT?\" FROM STUDENT \n" +
                 "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
                 "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
                 "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
                 "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
+                "JOIN ATTEND ON ACTIVE_CLASSES.CLASS_ID = ATTEND.CLASS_ID \n"+    
                 "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
             //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
-            StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
+            studentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
             dbControl.doClose();
         }
+        //Use the following line to edit records. setValueAt(row,colum)
+        //System.out.println(studentListOnStart.getValueAt(1,2));
         jPanel2.setVisible(false);
         jPanel4.setVisible(true);
     }//GEN-LAST:event_jButton1MouseReleased
@@ -404,7 +408,6 @@ public class UserInterface extends javax.swing.JFrame {
     public static javax.swing.JLabel ACTIVE_ICON;
     public static javax.swing.JLabel INACTIVE_ICON;
     private static java.awt.Label StudentCall;
-    private javax.swing.JTable StudentListOnStart;
     private javax.swing.JButton backToStart;
     private java.awt.Label classCall;
     private java.awt.Label currentClass;
@@ -418,6 +421,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel mainBG_start;
     private javax.swing.JPanel main_start;
+    private javax.swing.JTable studentListOnStart;
     public static javax.swing.JButton viewStudentsButton;
     // End of variables declaration//GEN-END:variables
 

@@ -13,7 +13,8 @@ Absence check for the day ideas:
 	• At a time before midnight, the absences/presence will be tranferred to a more permanent table and:
 	• At midnight have the ticks reset.
 	
-Since there are an average of 31 classes per semester for each course, the absence percentage will be calculated as (# of no_ticks of personel)/31*100.
+Since there are an average of 31 classes per semester for each course, the absence percentage will be calculated as
+ (# of no_ticks of personel)/31*100.
 
 Table ideas?:
 

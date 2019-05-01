@@ -1,4 +1,4 @@
-[NOT STARTED]
+[DONE]
 - Fix the UI issue with current class and student/instructor name not showing
 - 
 
