@@ -14,3 +14,13 @@ Absence check for the day ideas:
 	• At midnight have the ticks reset.
 	
 Since there are an average of 31 classes per semester for each course, the absence percentage will be calculated as (# of no_ticks of personel)/31*100.
+
+Table ideas?:
+
+The main tables would be as follows:
+	- ATTEND   (temporary table)
+	- ATTEND_LIST  (permanent table)
+
+ATTEND : ID, STUDENT_ID, CLASS_ID, (boolean y/n)
+ATTEND_LIST: ID, STUDENT_ID, CLASS_ID, (boolean y/n), DATE
+	- The DATE should be auto filled using the current date. 

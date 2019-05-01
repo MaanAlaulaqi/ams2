@@ -68,6 +68,7 @@ public class amsActivate {
                 //TO-DO Deactivate AMS
                 //The default status is deactivated, and it will be deactivated once the timer
                 //runs out, so there is no need to do much here for now. 
+                System.out.print("activateAms(): false reached.");
                 return status;
             }
         }return status;

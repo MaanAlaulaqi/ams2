@@ -274,7 +274,8 @@ import javax.smartcardio.TerminalFactory;
         return x;
         }
     /**
-     * Will pause the CardConnection
+     * Will pause the CardConnection. I don't think I ever needed to use it
+     * But to have an unused method is better than having to make one later on I think.
      * @throws InterruptedException InterruptException
      */
     public void pause() throws InterruptedException

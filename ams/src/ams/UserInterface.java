@@ -30,6 +30,7 @@ public class UserInterface extends javax.swing.JFrame {
      */
     public UserInterface() {
         initComponents();
+        jPanel1.setVisible(true);
         jPanel4.setVisible(false);
         StudentListOnStart.setVisible(false);
     }
