@@ -260,12 +260,12 @@ public class UserInterface extends javax.swing.JFrame {
         else{
             //good lord this sql query was a mess to figure out.
             dbControl.dbComd("SELECT STUDENT.STUDENT_ID as \"Student ID\", FIRST_NAME as \"First Name\", LAST_NAME as \"Last Name\", PRESENT AS \"PRESENT?\" FROM STUDENT \n" +
-                "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID \n" +
-                "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID \n" +
-                "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID \n" +
-                "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID \n" +
-                "JOIN ATTEND ON ACTIVE_CLASSES.CLASS_ID = ATTEND.CLASS_ID \n"+    
-                "WHERE ACTIVE_CLASSES.ID = " + active_class_id);
+                            "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID\n" +
+                            "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID\n" +
+                            "JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.CLASS_ID = CLASS.ID\n" +
+                            "JOIN ATTEND ON ATTEND.STUDENT_ID = STUDENT.ID\n" +
+                            "JOIN CLASS_SCHEDULE ON CLASS_SCHEDULE.ID = ACTIVE_CLASSES.CLASS_SCHEDULE_ID\n" +
+                            "WHERE ACTIVE_CLASSES.CLASS_ID = "+ active_class_id);
             //if (dbControl.rs.next()) StudentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
             studentListOnStart.setModel(DbUtils.resultSetToTableModel(rs));
             dbControl.doClose();
