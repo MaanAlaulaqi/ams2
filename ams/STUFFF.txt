@@ -67,9 +67,13 @@ English - Creative Writing and Literature	2019-01-21	2019-05-15
 Adulting 101	2019-01-21	2019-05-15
 
 
-int GENERATED ALWAYS AS IDENTITY
+INT GENERATED ALWAYS AS IDENTITY
+
+ALTER COLUMN ID RESTART WITH 1;
 
 
+This is to obtain the %age of absence! 
+SELECT (((SELECT COUNT(*) FROM ATTEND_LIST WHERE PRESENT = TRUE)/31.0)*100 ) AS "ABSENCE" FROM ATTEND_LIST;
 
 
 select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id;
