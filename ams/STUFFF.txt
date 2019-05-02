@@ -73,7 +73,7 @@ ALTER COLUMN ID RESTART WITH 1;
 
 
 This is to obtain the %age of absence! 
-SELECT (((SELECT COUNT(*) FROM ATTEND_LIST WHERE PRESENT = TRUE)/31.0)*100 ) AS "ABSENCE" FROM ATTEND_LIST;
+SELECT (((SELECT COUNT(*) FROM ATTEND_LIST WHERE STUDENT_ID = 2 AND CLASS_ID = 3 AND PRESENT = FALSE)/31.0)*100 ) AS "ABSENCE" FROM ATTEND_LIST;
 
 
 select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id;
