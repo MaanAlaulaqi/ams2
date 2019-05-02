@@ -252,7 +252,7 @@ public class UserInterface extends javax.swing.JFrame {
         //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         int active_class_id = ClassThread.classCheck();
         System.out.println(active_class_id);
-        active_class_id = 3;
+        active_class_id = 2;
         if (active_class_id == 0){
             //jPanel4.setVisible(true);
             //StudentListOnStart.setVisible(true);
@@ -271,8 +271,13 @@ public class UserInterface extends javax.swing.JFrame {
             dbControl.doClose();
         }
         //Use the following line to edit records. setValueAt(row,colum)
-        
-        //System.out.println(studentListOnStart.getValueAt(1,2));
+        System.out.println(studentListOnStart.getRowCount()+ " studentListOnStart size");
+        for (int i = 0; i < studentListOnStart.getRowCount(); i++){
+            boolean x = (boolean) studentListOnStart.getValueAt(i,3);
+            if (!x) studentListOnStart.setValueAt("NOT PRESENT", i, 3);
+            else studentListOnStart.setValueAt("PRESENT", i, 3);
+        }
+        System.out.println(studentListOnStart.getValueAt(1,3));
         jPanel2.setVisible(false);
         jPanel4.setVisible(true);
     }//GEN-LAST:event_jButton1MouseReleased
