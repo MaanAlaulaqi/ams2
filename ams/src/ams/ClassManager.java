@@ -225,9 +225,6 @@ private String InstructorUID = UserInterface.UID;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        amsPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("amsPU").createEntityManager();
-        student_1Query = java.beans.Beans.isDesignTime() ? null : amsPUEntityManager.createQuery("SELECT s FROM Student_1 s");
-        student_1List = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : student_1Query.getResultList();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         studentListLEFT = new javax.swing.JInternalFrame();
@@ -358,7 +355,7 @@ private String InstructorUID = UserInterface.UID;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(studentListLEFT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(studentListRIGHT, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                .addComponent(studentListRIGHT, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,7 +452,7 @@ private String InstructorUID = UserInterface.UID;
                                 .addComponent(sManualClassInput)
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(16, Short.MAX_VALUE))
+                    .addContainerGap(66, Short.MAX_VALUE))
             );
             jPanel2Layout.setVerticalGroup(
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -618,7 +615,6 @@ private String InstructorUID = UserInterface.UID;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.persistence.EntityManager amsPUEntityManager;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -642,7 +638,5 @@ private String InstructorUID = UserInterface.UID;
     private javax.swing.JTable studentLIST;
     private javax.swing.JInternalFrame studentListLEFT;
     private javax.swing.JScrollPane studentListRIGHT;
-    private java.util.List<ams.Student_1> student_1List;
-    private javax.persistence.Query student_1Query;
     // End of variables declaration//GEN-END:variables
 }
