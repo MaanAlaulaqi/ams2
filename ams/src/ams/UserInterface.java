@@ -259,6 +259,8 @@ public class UserInterface extends javax.swing.JFrame {
         }
         else{
             //good lord this sql query was a mess to figure out.
+            //Basically it selects the students from the current class of the current 
+            //instructor.
             dbControl.dbComd("SELECT DISTINCT STUDENT.STUDENT_ID as \"Student ID\", FIRST_NAME as \"First Name\", LAST_NAME as \"Last Name\", PRESENT AS \"PRESENT?\" FROM STUDENT \n" +
                             "JOIN STUDENT_CLASS ON STUDENT_CLASS.STUDENT_ID = STUDENT.ID\n" +
                             "JOIN CLASS ON CLASS.ID = STUDENT_CLASS.CLASS_ID\n" +
