@@ -67,7 +67,7 @@ public class Presence {
                 return true;
             }else {
                 System.out.println("Time Check negative");
-                return true;
+                    return false;
                 //TO-DO Present profile
             }
         }

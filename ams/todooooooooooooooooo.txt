@@ -1,0 +1,7 @@
+	• At attendance list for the instructor 
+		- Write a method that'll pull out whether the instructor was present today and then use the result to either automatically activate the AMS.
+	• Allow the MarkPresence() to work better
+		- Fix your fucking code you noob. 
+	• Maybe make another methof that activate the presence of the AMS? Somethihng where the 15 min thing can be utilized.
+	• Walla madri
+
