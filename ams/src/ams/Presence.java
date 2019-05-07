@@ -6,6 +6,7 @@
 package ams;
 
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.time.LocalDateTime;
@@ -19,6 +20,7 @@ import java.util.logging.Logger;
  */
 public class Presence {
     private static dbControl db = new dbControl();
+    private static dbControl dbUpdate = new dbControl();
     private static dbLookUp LookUp;
     private static ClassThread classC;
     
@@ -65,7 +67,7 @@ public class Presence {
                 return true;
             }else {
                 System.out.println("Time Check negative");
-                return false;
+                return true;
                 //TO-DO Present profile
             }
         }
@@ -122,36 +124,69 @@ public class Presence {
         
         int id_test = -1;
         //TO-DO Main Attendance taking method
+        int class_id = ClassThread.classCheck();
+        class_id = 2;
         if(timeCheck()){
-            int k; String w;
+            int class_idFromTable; String student_idFromTable;
+            System.out.print(" MarkPresent() reached successfully. ");
             try {
-                db.dbComd("SELECT ID FROM STUDENT WHERE CARD_ID ='"+UID+"'");
-                if(db.rs.next()){
-                    id_test = db.rs.getInt("ID");
-                    //System.out.println("ID # is: "+id_test);
-                } db.doClose();
-                dbControl.dbComdUpdate("SELECT * FROM STUDENT_PRESENCE JOIN STUDENT ON STUDENT_PRESENCE.STUDENT_ID = STUDENT.ID WHERE STUDENT_PRESENCE.STUDENT_ID = " +id_test);
-                if(dbControl.rs.next()){
-                    k = Integer.parseInt(dbControl.rs.getInt("PRESENT") +"");
-                    System.out.println("Reached this part! "+dbControl.rs.getRow()+" "+k); //Checking
-                    k++;
-                    w = (""+k);
-                    readStudentUID = true;
-                    UIStudentName = dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
-                    //dbControl.dbComdUpdate("select present from student_presence");
-                    dbControl.rs.updateString("present",w);
-                    dbControl.rs.updateRow();
+            
+            int x = dbUpdate.dbComdUpdate.rsUpdateMe("update attend \n" +
+                    "    set present = true\n" +
+                    "    where student_id = (SELECT attend.student_id FROM ATTEND\n" +
+                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
+                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
+                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
+                            "    AND ACTIVE_CLASSES.ID = "+class_id+")\n" +
+                            "    and class_id = (SELECT attend.class_id FROM ATTEND\n" +
+                            "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
+                            "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
+                            "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
+                            "    AND ACTIVE_CLASSES.ID = "+class_id+")");
+            
+            dbUpdate.dbComdUpdate("SELECT * FROM ATTEND\n" +
+                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
+                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
+                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
+                    "    AND ACTIVE_CLASSES.ID = "+class_id+"");   
+            System.out.println("||  " + dbUpdate.rsUpdate.getConcurrency() + " CONCURRENCY HERE ");
+            System.out.println("||  " + ResultSet.CONCUR_UPDATABLE+ " CONCURRENCY HERE ResultSet.CONCUR_UPDATABLE ");
+            
+                if(dbUpdate.rsUpdate.next()){ //dbControl.rs.updateRow();
+                    //dbUpdate.rs.moveToInsertRow();
+                    student_idFromTable = dbUpdate.rsUpdate.getString("STUDENT_ID");
+                    class_idFromTable = dbUpdate.rsUpdate.getInt("CLASS_ID");
+                    dbUpdate.dbComdUpdate("select present from attend where student_id = "+student_idFromTable+" and card_id= "+class_idFromTable);
+                    dbUpdate.rsUpdate.updateBoolean("present", true);
+                    dbUpdate.rsUpdate.updateRow();
+//                    id_test = db.rs.getInt("ID");
+//System.out.println("ID # is: "+id_test);
+//} db.doClose();
+//dbControl.dbComdUpdate("SELECT * FROM STUDENT_PRESENCE JOIN STUDENT ON STUDENT_PRESENCE.STUDENT_ID = STUDENT.ID WHERE STUDENT_PRESENCE.STUDENT_ID = " +id_test);
+//                if(dbControl.rs.next()){
+//                    k = Integer.parseInt(dbControl.rs.getInt("PRESENT") +"");
+//                    System.out.println("Reached this part! "+dbControl.rs.getRow()+" "+k); //Checking
+//                    k++;
+//                    w = (""+k);
+//                    readStudentUID = true;
+//                    UIStudentName = dbControl.rs.getString("first_name")+" "+dbControl.rs.getString("last_name");
+//                    //dbControl.dbComdUpdate("select present from student_presence");
+//                    dbControl.rs.updateString("present",w);
+//                    dbControl.rs.updateRow();
+//                }
+//dbControl.doClose();
+                }else {
+//Meh, not much to do here  lol
                 }
-            }catch (SQLException ex) {
-                Logger.getLogger(ams_main.class.getName()).log(Level.SEVERE, null, ex);
-            }finally{ dbControl.doClose();}
-        }else {
-            //Meh, not much to do here  lol
-        }
-        //InterfaceCmds.getCurrentStudent(UID);
+            } catch (SQLException ex) {
+                Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
+            
+//InterfaceCmds.getCurrentStudent(UID);
+            }finally {dbUpdate.doClose();}
 
         
         
+    }
     }
     //This will most likely be a button, so we want to send in as much info as 
     //we can, without any work from the instructor.

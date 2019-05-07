@@ -22,8 +22,9 @@ import java.util.logging.Logger;
 public class dbControl {
     
     private static Connection con ;
-    private static Statement COMMANDTHEE; //generally known as "stmt"
-    static ResultSet rs;
+    private static Statement COMMANDTHEE, DO_THE_THING; //generally known as "stmt"
+    static ResultSet rs, rsUpdate;
+    static ResultSet rsUpdateMe;
     private String SQL;
     
     public dbControl(){
@@ -38,7 +39,7 @@ public class dbControl {
      */
     public static void dbComd(String sqlcmd){
         try {
-            doConnect();
+            
             COMMANDTHEE = doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);//ResultSet.CONCUR_UPDATABLE if we wish to update the record
             String SQL = sqlcmd;
             rs = COMMANDTHEE.executeQuery(SQL);
@@ -69,9 +70,10 @@ public class dbControl {
     public static void dbComdUpdate(String sqlcmd){
         try {
             doConnect();
-            COMMANDTHEE = doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);//ResultSet.CONCUR_UPDATABLE if we wish to update the record
+            DO_THE_THING = doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);//ResultSet.CONCUR_UPDATABLE if we wish to update the record
             String SQL = sqlcmd;
-            rs = COMMANDTHEE.executeQuery(SQL);
+            rsUpdate = DO_THE_THING.executeQuery(SQL);
+            
            /* while (rs.next()){
                 int id_col = rs.getInt("ID");
                 String first_name = rs.getString("first_name");
