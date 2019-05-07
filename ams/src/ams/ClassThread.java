@@ -78,8 +78,8 @@ public class ClassThread {
                 class_id = class_table[i][0];
             }
         }
-        //return class_id;
-        return 2;
+        return class_id;
+        //return 2;
      }
     
     

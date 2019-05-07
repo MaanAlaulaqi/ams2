@@ -22,7 +22,8 @@ import java.util.logging.Logger;
 public class dbControl {
     
     private static Connection con ;
-    private static Statement COMMANDTHEE, DO_THE_THING; //generally known as "stmt"
+    static Statement COMMANDTHEE;
+    static Statement DO_THE_THING; //generally known as "stmt"
     static ResultSet rs, rsUpdate;
     static ResultSet rsUpdateMe;
     private String SQL;
