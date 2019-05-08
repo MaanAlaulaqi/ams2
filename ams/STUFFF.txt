@@ -78,3 +78,20 @@ SELECT (((SELECT COUNT(*) FROM ATTEND_LIST WHERE STUDENT_ID = 2 AND CLASS_ID = 3
 
 select active_classes.id, name, start_time, end_time, firstt_class, second_class from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id;
 -- USE this to create array
+
+
+//--  To update the presence of an instructor record by record = 
+update instructor_attend
+set present = true 
+where instructor_id = (select instructor_id from instructor_attend 
+join instructor on instructor_attend.instructor_id = instructor.ID
+join active_classes on instructor_attend.CLASS_ID = active_classes.CLASS_ID
+join class on instructor_attend.CLASS_ID = class.id
+where instructor.CARD_ID = 'e9ebc8a'
+and active_classes.class_id = 2)
+and class_id = (select instructor_attend.class_id from instructor_attend 
+join instructor on instructor_attend.instructor_id = instructor.ID
+join active_classes on instructor_attend.CLASS_ID = active_classes.CLASS_ID
+join class on instructor_attend.CLASS_ID = class.id
+where instructor.CARD_ID = 'e9ebc8a'
+and active_classes.class_id = 2);
