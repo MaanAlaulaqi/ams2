@@ -168,7 +168,11 @@ import javax.smartcardio.TerminalFactory;
                     else {
                         counter = 0;
                         if(Presence.instructorIN){}
-                        else Presence.FifteenMinActivate();
+                        else {
+                            Presence.FifteenMinActivate();
+                            //System.out.print (" else counter = 0 reached ");
+                        }
+                        
                     }
                     //System.out.println();
                     //Uncomment the next line to see a count down of the timer
@@ -182,9 +186,16 @@ import javax.smartcardio.TerminalFactory;
                     //System.out.println();
                     //See "while(!running) comments 
                     //This is the timer countdown System print
-                    //System.out.print(counter + " ");
+                    System.out.print (counter + " ");
                     if (counter > 0) counter--;
-                    else counter = 0;
+                    else  {
+                        counter = 0;
+                        if(Presence.instructorIN){}
+                        else {
+                            Presence.FifteenMinActivate();
+                            //System.out.print (" else counter = 0 reached ");
+                        }
+                    }
                     // Checks if a card is present, if not it'll sleep and then check again.
                     if(!terminal.isCardPresent()){
                         //Pause for half a second

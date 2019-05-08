@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
 public class ClassThread {
-    private static int[][] class_table = ActiveClassesList();
+    private static int[][] class_table;
     
     public ClassThread(){}
     
