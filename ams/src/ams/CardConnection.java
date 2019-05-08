@@ -161,27 +161,34 @@ import javax.smartcardio.TerminalFactory;
             }
         });
             // Checks if the CardConnection has been paused, if so it'll sleep and then check again.
-            while(!running) {
-                try {
-                    Thread.sleep(500);
-                    if (counter > 0) counter--;
-                    else {
-                        counter = 0;
-                        if(Presence.instructorIN){}
+            
+                while(!running) //<editor-fold defaultstate="collapsed" desc="running = false">
+                {
+
+                    try {
+                        Thread.sleep(500);
+                        if (counter > 0) counter--;
                         else {
-                            Presence.FifteenMinActivate();
-                            //System.out.print (" else counter = 0 reached ");
+                            counter = 0;
+                            if(Presence.instructorIN){}
+                            else {
+                                Presence.FifteenMinActivate();
+                                //System.out.print (" else counter = 0 reached ");
+                            }
+
                         }
-                        
+                        //System.out.println();
+                        //Uncomment the next line to see a count down of the timer
+                        //And the 2nd System print in the 2nd while loop
+                        //System.out.print(counter + " ");
+                    } catch (InterruptedException ex) {
                     }
-                    //System.out.println();
-                    //Uncomment the next line to see a count down of the timer
-                    //And the 2nd System print in the 2nd while loop
-                    //System.out.print(counter + " ");
-                } catch (InterruptedException ex) {
                 }
-            }
-            while(running){
+                //</editor-fold>
+
+                while(running)//<editor-fold defaultstate="collapsed" desc="running = true">
+                {
+                    
                 try{
                     //System.out.println();
                     //See "while(!running) comments 
@@ -196,6 +203,12 @@ import javax.smartcardio.TerminalFactory;
                             //System.out.print (" else counter = 0 reached ");
                         }
                     }
+                    //Checks if an instructor ever swiped. This also resets after the class ends
+                    //if (ClassThread.class_table[ClassThread.classCheck()][1] )
+                    System.out.print(Presence.instructorIN+" ");
+                    if (Presence.screwmeover) Presence.screwmeover = false;
+                    else Presence.screwmeover = true;
+                    System.out.print(Presence.screwmeover +" ");
                     // Checks if a card is present, if not it'll sleep and then check again.
                     if(!terminal.isCardPresent()){
                         //Pause for half a second
@@ -278,6 +291,8 @@ import javax.smartcardio.TerminalFactory;
                 catch(CardException | InterruptedException | HeadlessException ex){
                 }
             }
+            //</editor-fold>
+            
         }
     }
     /**

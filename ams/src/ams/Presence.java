@@ -234,8 +234,9 @@ public class Presence {
      * 
      * @param UID 
      */
+    static boolean screwmeover = timeCheck(); 
     public static void InstructorPresence(String UID){
-        instructorIN = true;
+        
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
             System.out.print(" MarkPresent() reached successfully. ");
@@ -255,11 +256,12 @@ public class Presence {
                     "        join class on instructor_attend.CLASS_ID = class.id\n" +
                     "        where instructor.CARD_ID = '"+UID+"'\n" +
                     "        and active_classes.class_id = "+class_id+" );");
+            instructorIN = true;
             } catch (SQLException ex) {
                 Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
             }finally {dbUpdate.doClose();}
             
-        }
+        } else instructorIN = false;
         
     }
     

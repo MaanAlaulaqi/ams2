@@ -417,7 +417,7 @@ public class UserInterface extends javax.swing.JFrame {
     public static javax.swing.JLabel INACTIVE_ICON;
     private static java.awt.Label StudentCall;
     private javax.swing.JButton backToStart;
-    private java.awt.Label classCall;
+    static java.awt.Label classCall;
     private java.awt.Label currentClass;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

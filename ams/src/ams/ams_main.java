@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,7 +33,16 @@ public class ams_main {
         //Just saving it here in case I lose the syntax later
         //Runtime.getRuntime().exec("cmd /c osk");
         //Class list/array init
+        
         ClassThread.ActiveClassesList();
+//        for(int i = 0; i < ClassThread.class_table.length; i++){
+//            for(int j = 0; j < ClassThread.class_table[i].length; j++){
+//                System.out.print(ClassThread.class_table[i][j] + " ");
+//            }
+//        }
+        System.out.println(Arrays.deepToString(ClassThread.class_table));
+        System.out.println("Class table array accessed \n");
+        
         CardConnection c1 = new CardConnection();
         c1.enablePlugnPlay();
         c1.initateTerminal();
