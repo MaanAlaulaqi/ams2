@@ -23,6 +23,7 @@ public class Presence {
     private static dbControl dbUpdate = new dbControl();
     private static dbLookUp LookUp;
     private static ClassThread classC;
+    static boolean instructorIN = false;
     
     
     
@@ -101,6 +102,9 @@ public class Presence {
         currentTime = toMins(dtf.format(now));
         if(currentTime >= (startX+15) && currentTime <= endX){
             //TO-DO Activate for students 100% regardless of whether professor is there
+            //15*(60*2) refers to 15 minutes, it's written this way because the counter variable
+            //in CardConnection decrements every half a second, and we want 15 minutes
+            CardConnection.counter = +(15*(60*2));
         }else{
             //TO-DO Present profile
         }
@@ -124,7 +128,6 @@ public class Presence {
         //TO-DO Main Attendance taking method
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
-            int class_idFromTable; String student_idFromTable;
             System.out.print(" MarkPresent() reached successfully. ");
             try {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -162,13 +165,16 @@ public class Presence {
         //Utilize the UpPresence and DownPresence for this
        if(req == true) UpPresence(UID);
        else DownPresence(UID);
-        
+    /**
+    * In case the instructor needs to up someone's presence count manually for a class
+    * This can only be used effectively within the time range of a particular class session 
+    * @param UID 
+    */
     }
     public static void UpPresence(String UID){
         //TO-DO Present +1 
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
-            int class_idFromTable; String student_idFromTable;
             System.out.print(" MarkPresent() reached successfully. ");
             try {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -190,11 +196,15 @@ public class Presence {
             
         }
     }
+    /**
+     * In case the instructor needs to lower someone's presence count for a class
+     * This can only be used effectively within the time range of a particular class session 
+     * @param UID 
+     */
     public static void DownPresence(String UID){
         //TO-DO Present -1
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
-            int class_idFromTable; String student_idFromTable;
             System.out.print(" MarkPresent() reached successfully. ");
             try {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -217,11 +227,17 @@ public class Presence {
         }
     }
     
+    /**
+     * InstructorPresence will have multiple functions: 
+     *      • It'll mark their presence for that class
+     *      • If this method is not met, the 15 minute activation of the AMS will automatically commence
+     * 
+     * @param UID 
+     */
     public static void InstructorPresence(String UID){
-        
+        instructorIN = true;
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
-            int class_idFromTable; String student_idFromTable;
             System.out.print(" MarkPresent() reached successfully. ");
             try {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);

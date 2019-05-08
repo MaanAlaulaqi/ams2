@@ -5,3 +5,14 @@
 	• Maybe make another methof that activate the presence of the AMS? Somethihng where the 15 min thing can be utilized.
 	• Walla madri
 
+
+YOOO -- 
+Ok quick idea before you forget, 
+FifteenMinActivate method:
+	• This can use the InstructorPresence() method, where the method sets a boolean true 
+	• That boolean is reset at the end of a class, somehow
+		- Maybe the thread can have a function that checks the class_array and once a new class starts the boolean is reset? 
+		- I feel like there may be some potential errors here.. 
+		- But as far as tracing and logic goes, this will work fine. The 15 min activation won't activate unless the boolean is false. 
+		- I feel burnt out of existence 
+	• idk but ya

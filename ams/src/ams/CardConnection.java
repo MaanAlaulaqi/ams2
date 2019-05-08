@@ -165,7 +165,11 @@ import javax.smartcardio.TerminalFactory;
                 try {
                     Thread.sleep(500);
                     if (counter > 0) counter--;
-                    else counter = 0;
+                    else {
+                        counter = 0;
+                        if(Presence.instructorIN){}
+                        else Presence.FifteenMinActivate();
+                    }
                     //System.out.println();
                     //Uncomment the next line to see a count down of the timer
                     //And the 2nd System print in the 2nd while loop
@@ -234,11 +238,11 @@ import javax.smartcardio.TerminalFactory;
                             //HEY POOPOO FACE LOOK HERE! Place activation method here
                             boolean imageIconBoolean;
                             if (emp_stud_check) {
+                                Presence.instructorIN = true;
+                                Presence.InstructorPresence(out);
                                 UserInterface.viewStudentsButton.setVisible(true);
                                 //UI ACTIVE CHECK (This should return true)
-                                UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out)); 
-                                //UserInterface.updateActiveCheck(imageIconBoolean);
-                                //UserInterface.updateActiveCheck(imageIconBoolean);
+                                UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out));
                                 //THIS IS FOR TESTING TEST YALLA
                                 //updateActiveCheck(true);
                                 //UserInterfaceActiveCheck.setIcon(ICON_ACTIVE);
