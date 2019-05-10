@@ -7,6 +7,7 @@ package ams;
 
 import static ams.Presence.toMins; //easier than setting up a different variable for every time I use this..
 import java.sql.SQLException;
+import java.sql.Time;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
@@ -43,22 +44,50 @@ public class ClassThread {
 //        LocalDateTime DayOfWeek = LocalDateTime.now();
 //        DayWeek = dtfWEEK.format(DayOfWeek);
         //int currentTime = toMins(dtf.format(now));
+        dbControl d = null, c = null;
         dbControl.dbComd("select count(*) from active_classes");
         try {
             if(dbControl.rs.next()) arraySize = dbControl.rs.getInt(1)+2;
             class_table = new int[arraySize][2];
+            System.out.println(arraySize + " arraySize");
             dbControl.doClose();
             dbControl.dbComd("select active_classes.id,start_time from active_classes join class on active_classes.CLASS_ID = class.id join class_schedule on active_classes.class_schedule_id = class_schedule.id order by active_classes.id");
             while (dbControl.rs.next() && arraySize >= 0) {
-                class_table[dbControl.rs.getInt("id")][0] = dbControl.rs.getInt("id");
-                class_table[dbControl.rs.getInt("id")][1] = Presence.toMins(dbControl.rs.getString("start_time"));
+                int row = dbControl.rs.getInt("id");
+                String start_time = dbControl.rs.getString("start_time");
+                
+                class_table[row][0] = row;
+                class_table[row][1] = toMins(start_time);
+//                System.out.println(class_table[dbControl.rs.getInt("id")][0]);
+//                System.out.println(class_table[dbControl.rs.getInt("id")][1]);
+//                System.out.println(dbControl.rs.getInt("id") + " ID of the index in the array.");
+                  //System.out.println(class_table.length + " class_table length");
+                  //System.out.println(currentTime + " Current Time");
+                //Ideally, I'd have this array in the main class, it'd save on memory,
+                //However, its memory and CPU footprint is small enough to ignore
                 arraySize--;
+                
             }class_table[class_table.length-1][1] = class_table[class_table.length-2][1] + 90;
         } catch (SQLException ex) {
             Logger.getLogger(ClassThread.class.getName()).log(Level.SEVERE, null, ex);
         } finally {dbControl.doClose();}
         return class_table;
     }
+    
+    /**
+     * For some reason, accessing another method within the DB call loop (in the ActiveClassesList() method)
+     * renders the whole operation as void. I added another copy of the toMins() method originally from Presence.java
+     * to help counter this error.
+     * @param s
+     * @return 
+     */
+     public static int toMins(String s) {
+    String[] hourMin = s.split(":");
+    int hour = Integer.parseInt(hourMin[0]);
+    int mins = Integer.parseInt(hourMin[1]);
+    int hoursInMins = hour * 60;
+    return hoursInMins + mins;
+}
     
     /**
      * This method is to check which "time slot" of the day as class is ongoing.

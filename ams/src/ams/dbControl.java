@@ -40,7 +40,7 @@ public class dbControl {
      */
     public static void dbComd(String sqlcmd){
         try {
-            
+            doConnect();
             COMMANDTHEE = doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);//ResultSet.CONCUR_UPDATABLE if we wish to update the record
             String SQL = sqlcmd;
             rs = COMMANDTHEE.executeQuery(SQL);
@@ -129,6 +129,8 @@ public class dbControl {
                 String password = "test";
                 Connection con = DriverManager.getConnection( host, username, password );//login info; test, test
                 con.setSchema("AMS");
+                con.setAutoCommit(false);
+
                 //System.out.println(con.getSchema());
                 
                 return con;

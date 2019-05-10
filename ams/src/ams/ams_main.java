@@ -34,16 +34,18 @@ public class ams_main {
         //Runtime.getRuntime().exec("cmd /c osk");
         //Class list/array init
         
-        ClassThread.ActiveClassesList();
+        
 //        for(int i = 0; i < ClassThread.class_table.length; i++){
 //            for(int j = 0; j < ClassThread.class_table[i].length; j++){
 //                System.out.print(ClassThread.class_table[i][j] + " ");
 //            }
 //        }
-        System.out.println(Arrays.deepToString(ClassThread.class_table));
-        System.out.println("Class table array accessed \n");
+        
         
         CardConnection c1 = new CardConnection();
+        ClassThread.ActiveClassesList();
+        System.out.println(Arrays.deepToString(ClassThread.class_table));
+        System.out.println("Class table array accessed \n");
         c1.enablePlugnPlay();
         c1.initateTerminal();
         c1.disableSound(true); //Silent for now while I work, else it'd beep a lot
