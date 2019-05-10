@@ -234,7 +234,7 @@ public class Presence {
      * 
      * @param UID 
      */
-    static boolean screwmeover = timeCheck(); 
+    //static boolean screwmeover = timeCheck(); 
     public static void InstructorPresence(String UID){
         
         int class_id = ClassThread.classCheck();

@@ -209,9 +209,6 @@ import javax.smartcardio.TerminalFactory;
                     //Checks if an instructor ever swiped. This also resets after the class ends
                     //if (ClassThread.class_table[ClassThread.classCheck()][1] )
                     System.out.print(Presence.instructorIN+" ");
-                    if (Presence.screwmeover) Presence.screwmeover = false;
-                    else Presence.screwmeover = true;
-                    System.out.print(Presence.screwmeover +" ");
                     // Checks if a card is present, if not it'll sleep and then check again.
                     if(!terminal.isCardPresent()){
                         //Pause for half a second
@@ -262,16 +259,12 @@ import javax.smartcardio.TerminalFactory;
                             System.out.println("bdLookUp HERE:");
                             emp_stud_check = dbLookUp.uidCheck(out);
                             
-                            //HEY POOPOO FACE LOOK HERE! Place activation method here
-                            boolean imageIconBoolean;
+                            
+                            //This IF : View Student list
                             if (emp_stud_check) {
                                 Presence.instructorIN = true;
                                 Presence.InstructorPresence(out);
                                 UserInterface.viewStudentsButton.setVisible(true);
-                                //UI ACTIVE CHECK (This should return true)
-                                //THIS IS FOR TESTING TEST YALLA
-                                //updateActiveCheck(true);
-                                //UserInterfaceActiveCheck.setIcon(ICON_ACTIVE);
                             } else{
                                 UserInterface.viewStudentsButton.setVisible(false);
                             }
@@ -288,8 +281,8 @@ import javax.smartcardio.TerminalFactory;
                                         if(dbControl.rs.getString("CARD_ID") != null){
                                             //amsActivate.activateAms(emp_stud_check, out);
                                             UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out));
-                                            System.out.println("ACTIVATED!!!");
-                                        } else System.out.println("PHAYLURE!!!");
+                                            //System.out.println("ACTIVATED!!!");
+                                        } else {}//System.out.println("PHAYLURE!!!");
                                     }
                                 } catch (SQLException ex) {
                                     Logger.getLogger(CardConnection.class.getName()).log(Level.SEVERE, null, ex);
