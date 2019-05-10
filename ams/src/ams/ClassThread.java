@@ -108,7 +108,7 @@ public class ClassThread {
             }
         }
         //return class_id;
-        return 1;
+        return 6;
      }
     
     

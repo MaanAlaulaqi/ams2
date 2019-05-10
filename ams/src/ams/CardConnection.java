@@ -20,7 +20,10 @@ import java.awt.HeadlessException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.smartcardio.Card;
 import javax.smartcardio.CardChannel;
 import javax.smartcardio.CardException;
@@ -266,14 +269,32 @@ import javax.smartcardio.TerminalFactory;
                                 Presence.InstructorPresence(out);
                                 UserInterface.viewStudentsButton.setVisible(true);
                                 //UI ACTIVE CHECK (This should return true)
-                                UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out));
                                 //THIS IS FOR TESTING TEST YALLA
                                 //updateActiveCheck(true);
                                 //UserInterfaceActiveCheck.setIcon(ICON_ACTIVE);
                             } else{
                                 UserInterface.viewStudentsButton.setVisible(false);
                             }
-                            amsActivate.activateAms(emp_stud_check, out);
+                            //AMS Activation checks!!
+                            if(emp_stud_check){
+                                System.out.println("EMPLOYEEE");
+                                dbControl.dbComd("select distinct active_classes.ID, instructor.CARD_ID from active_classes, instructor_class, instructor, class_schedule\n" +
+                                            "    where active_classes.class_id = instructor_class.CLASS_ID\n" +
+                                            "    and instructor_class.INSTRUCTOR_ID = instructor.ID\n" +
+                                            "    and instructor.CARD_ID = '"+out+"'\n" +
+                                            "    and active_classes.id =" +ClassThread.classCheck());
+                                try {
+                                    if(dbControl.rs.next()){
+                                        if(dbControl.rs.getString("CARD_ID") != null){
+                                            //amsActivate.activateAms(emp_stud_check, out);
+                                            UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out));
+                                            System.out.println("ACTIVATED!!!");
+                                        } else System.out.println("PHAYLURE!!!");
+                                    }
+                                } catch (SQLException ex) {
+                                    Logger.getLogger(CardConnection.class.getName()).log(Level.SEVERE, null, ex);
+                                } finally {dbControl.doClose();}
+                            }
                                 
                             
                             }

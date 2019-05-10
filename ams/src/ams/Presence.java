@@ -255,7 +255,7 @@ public class Presence {
                     "        join active_classes on instructor_attend.CLASS_ID = active_classes.CLASS_ID\n" +
                     "        join class on instructor_attend.CLASS_ID = class.id\n" +
                     "        where instructor.CARD_ID = '"+UID+"'\n" +
-                    "        and active_classes.class_id = "+class_id+" );");
+                    "        and active_classes.class_id = "+class_id+" )");
             instructorIN = true;
             } catch (SQLException ex) {
                 Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
