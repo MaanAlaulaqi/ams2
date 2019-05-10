@@ -192,10 +192,15 @@ public class UserInterface extends javax.swing.JFrame {
         main_start.add(viewStudentsButton);
         viewStudentsButton.setBounds(620, 500, 140, 60);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Attendance List");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jButton1MouseReleased(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
         main_start.add(jButton1);
@@ -289,6 +294,10 @@ public class UserInterface extends javax.swing.JFrame {
          jPanel2.setVisible(true);
         jPanel4.setVisible(false);
     }//GEN-LAST:event_backToStartMouseReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     
     /**
