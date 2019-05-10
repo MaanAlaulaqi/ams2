@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import net.proteanit.sql.DbUtils;
 
-/**
+/** The main UI. The homescreen basically
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
@@ -257,7 +257,7 @@ public class UserInterface extends javax.swing.JFrame {
         //dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
         int active_class_id = ClassThread.classCheck();
         System.out.println(active_class_id);
-        active_class_id = 2;
+        //active_class_id = 2;
         if (active_class_id == 0){
             //jPanel4.setVisible(true);
             //StudentListOnStart.setVisible(true);
@@ -300,45 +300,7 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
     
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        
-        /* Set the Nimbus look and feel */ //This is related to my own NetBeans settings, Nimbus theme.
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(UserInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-        //</editor-fold>
-        
-        //</editor-fold>
-
-        /* Create and display the form */
-        
-        
-//        ImageIcon ACTIVE = 
-       /* ImageIcon ICON_ACTIVE1;
-        ICON_ACTIVE1 = createImageIcon2("/images/Start_ACTIVE.png", "Card reader currently active.");
-         ICON_INACTIVE = new createImageIcon("/images/Start_NOTACTIVE.png");
-        */
-       
-       //updateActiveCheck(false); 
-       //createImageIcon.updateMe(true);
-       //ActiveCheck.setIcon(ICON_ACTIVE);
-//        UserInterface.viewStudentsButton.setVisible(false);
-
-    }
+    
     
        
     /** Returns an ImageIcon, or null if the path was invalid. 

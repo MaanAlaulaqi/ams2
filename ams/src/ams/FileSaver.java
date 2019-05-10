@@ -10,7 +10,7 @@ import java.io.FileWriter;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-/**
+/** File exporter class (Exporting the student list)
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

@@ -5,7 +5,7 @@
  */
 package ams;
 
-/**
+/**The Database Controller class
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

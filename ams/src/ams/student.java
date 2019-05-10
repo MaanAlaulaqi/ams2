@@ -8,7 +8,7 @@ package ams;
 import java.sql.SQLException;
 import java.sql.Date;
 
-/**
+/** @deprecated An early class assigned for students
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

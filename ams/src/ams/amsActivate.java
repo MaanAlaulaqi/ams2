@@ -5,7 +5,7 @@
  */
 package ams;
 
-/**
+/**Class to activate and deactivate AMS attendance recording method
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
+/** A class assigned for certain multi use code (UID look-up)
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

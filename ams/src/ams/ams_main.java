@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-/**
+/**The main class that runs the application
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */

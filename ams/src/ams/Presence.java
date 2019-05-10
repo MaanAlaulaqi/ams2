@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
+/** The attendance taking class. 
  *
  * @author Maan Alaulaqi (201610814@aau.ac.ae)
  */
