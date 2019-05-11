@@ -46,6 +46,7 @@ import javax.smartcardio.TerminalFactory;
     private final CommandAPDU GET_UID_COMMAND_APDU = new CommandAPDU(0xFF, 0xCA, 0x00, 0x00, 0x04);
     public static String cardUID = ""; //Used to test passing the UID through classes to interact with db.
     public static int counter = 0;
+    public static int view_counter = 0;
 	public CardConnection(){
 		
 	}
@@ -262,8 +263,6 @@ import javax.smartcardio.TerminalFactory;
                             
                             //This IF : View Student list
                             if (emp_stud_check) {
-                                Presence.instructorIN = true;
-                                Presence.InstructorPresence(out);
                                 UserInterface.viewStudentsButton.setVisible(true);
                             } else{
                                 UserInterface.viewStudentsButton.setVisible(false);
@@ -280,6 +279,8 @@ import javax.smartcardio.TerminalFactory;
                                     if(dbControl.rs.next()){
                                         if(dbControl.rs.getString("CARD_ID") != null){
                                             //amsActivate.activateAms(emp_stud_check, out);
+                                            Presence.instructorIN = true;
+                                            Presence.InstructorPresence(out);
                                             UserInterface.updateActiveCheck(amsActivate.ActivateOrNah(emp_stud_check, out));
                                             //System.out.println("ACTIVATED!!!");
                                         } else {}//System.out.println("PHAYLURE!!!");
