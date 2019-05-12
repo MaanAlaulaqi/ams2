@@ -1,0 +1,1 @@
+To browse through the HTML niceties, open up html/index.html
