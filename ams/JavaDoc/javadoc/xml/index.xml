@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="classams_1_1ams__main" kind="class"><name>ams::ams_main</name>
+    <member refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classams_1_1ams_activate" kind="class"><name>ams::amsActivate</name>
+    <member refid="classams_1_1ams_activate_1acb14ae4687ceaed0997d837d6efd6bbc" kind="variable"><name>status</name></member>
+    <member refid="classams_1_1ams_activate_1a0d114e5980e360dddeb2c9243cdc3b52" kind="function"><name>activeCheck</name></member>
+    <member refid="classams_1_1ams_activate_1a01ac1b9a3cd5d20b61b46496a7ff3a95" kind="function"><name>ActivateOrNah</name></member>
+    <member refid="classams_1_1ams_activate_1a103584e81b703fa2552d353d14366057" kind="function"><name>activateAms</name></member>
+    <member refid="classams_1_1ams_activate_1a5ed697f974ce79263f7974f29a11312b" kind="function"><name>activationTimerRunOut</name></member>
+  </compound>
+  <compound refid="classams_1_1_card_connection" kind="class"><name>ams::CardConnection</name>
+    <member refid="classams_1_1_card_connection_1ab7f20e37feae85f6958ea441ce99aa42" kind="variable"><name>terminal</name></member>
+    <member refid="classams_1_1_card_connection_1a03b2d48e6c9a02bf63958fe8b844fac9" kind="variable"><name>running</name></member>
+    <member refid="classams_1_1_card_connection_1afebf857900af077a6d2da54dc9196253" kind="variable"><name>sendConfirmation</name></member>
+    <member refid="classams_1_1_card_connection_1a9ace40f5af28c492e55a001f5e11a8b7" kind="variable"><name>GET_UID_COMMAND_APDU</name></member>
+    <member refid="classams_1_1_card_connection_1a1670405761b5d4141b4cf69f85938869" kind="variable"><name>ESCAPE_COMMAND</name></member>
+    <member refid="classams_1_1_card_connection_1a50141d033d85f1e5859c09b4cdcf6d9f" kind="variable"><name>cardUID</name></member>
+    <member refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" kind="variable"><name>counter</name></member>
+    <member refid="classams_1_1_card_connection_1a608f1d4516c799989ec105c6b72a83f1" kind="variable"><name>view_counter</name></member>
+    <member refid="classams_1_1_card_connection_1afa765cc7c8f61cb08327119713d328f9" kind="function"><name>CardConnection</name></member>
+    <member refid="classams_1_1_card_connection_1a84c6991f3340668fe44a3b7122719bb7" kind="function"><name>enablePlugnPlay</name></member>
+    <member refid="classams_1_1_card_connection_1a29c57f229be609d06518d8764bcee323" kind="function"><name>initateTerminal</name></member>
+    <member refid="classams_1_1_card_connection_1a9e20e93963b78e6b960dfdd5166504bb" kind="function"><name>disableSound</name></member>
+    <member refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" kind="function"><name>run</name></member>
+    <member refid="classams_1_1_card_connection_1ad64ef421bc44c06dc3ed799f281182ae" kind="function"><name>pause</name></member>
+    <member refid="classams_1_1_card_connection_1abbba44c123cd6f69c54e7d9ea0e5e291" kind="function"><name>resume</name></member>
+    <member refid="classams_1_1_card_connection_1a25b0ff4c7b137be761f2814ef1dcaba7" kind="function"><name>cardUID</name></member>
+  </compound>
+  <compound refid="classams_1_1_class_manager" kind="class"><name>ams::ClassManager</name>
+    <member refid="classams_1_1_class_manager_1ab0570f84fe4905fc2c9ba238396e28e8" kind="variable"><name>y</name></member>
+    <member refid="classams_1_1_class_manager_1ab1f97c16a9bc244405ed5e66ead551e7" kind="variable"><name>incrementMe</name></member>
+    <member refid="classams_1_1_class_manager_1a154789a7a8dac3a05181547e6b1da20d" kind="variable"><name>sizeMeUpbb</name></member>
+    <member refid="classams_1_1_class_manager_1a8a1bad293c724aa7abe4b4c204177e47" kind="variable"><name>stringy</name></member>
+    <member refid="classams_1_1_class_manager_1ab492f2ac78663b2df54d120d54135150" kind="variable"><name>stringy2</name></member>
+    <member refid="classams_1_1_class_manager_1a31f0142ee28420b441559b70cee55144" kind="variable"><name>uid</name></member>
+    <member refid="classams_1_1_class_manager_1a2f58d6fb68fbf93b7dc3708c059fc021" kind="variable"><name>class_name</name></member>
+    <member refid="classams_1_1_class_manager_1ad831081927a43f0a043d3e006f76418c" kind="variable"><name>class_sec</name></member>
+    <member refid="classams_1_1_class_manager_1a2b45337dd6e418e09af1a05a2501c5ff" kind="variable"><name>stringy3</name></member>
+    <member refid="classams_1_1_class_manager_1ac95b704a2772ee4dbfab0e94593329bc" kind="variable"><name>sClassSelect</name></member>
+    <member refid="classams_1_1_class_manager_1a775a9d75431d09a57d832b7fdb7f32f5" kind="variable"><name>InstructorUID</name></member>
+    <member refid="classams_1_1_class_manager_1a7f9201877ed7e78a82c16f8f53bd8d7e" kind="variable"><name>jButton1</name></member>
+    <member refid="classams_1_1_class_manager_1affa805644fcee317e367022627237abb" kind="variable"><name>jComboBox1</name></member>
+    <member refid="classams_1_1_class_manager_1a09a08c8e4b796c194948c3f7ea327632" kind="variable"><name>jLabel1</name></member>
+    <member refid="classams_1_1_class_manager_1a0615b52d859dd4994b490b8f334ff682" kind="variable"><name>jLabel2</name></member>
+    <member refid="classams_1_1_class_manager_1acd68fac5633c16e4d733c03e8b17b86d" kind="variable"><name>jLabel3</name></member>
+    <member refid="classams_1_1_class_manager_1a109636406738d607b4652efc8f26a9b1" kind="variable"><name>jLabel4</name></member>
+    <member refid="classams_1_1_class_manager_1a24a6c1c7749d8e4af978e69126c28085" kind="variable"><name>jPanel1</name></member>
+    <member refid="classams_1_1_class_manager_1a874f4d45da3136d443ed03882152f813" kind="variable"><name>jPanel2</name></member>
+    <member refid="classams_1_1_class_manager_1a814551a37174e1897b4da61d96410b70" kind="variable"><name>jScrollPane1</name></member>
+    <member refid="classams_1_1_class_manager_1a56963ac9c165e6f26c8f570658c6f3e2" kind="variable"><name>jScrollPane2</name></member>
+    <member refid="classams_1_1_class_manager_1a05f8b481e82e46808600aeb09cbad9c3" kind="variable"><name>jTabbedPane1</name></member>
+    <member refid="classams_1_1_class_manager_1a53342a31c9cfdfd999ed4c73d9ce7424" kind="variable"><name>sClassSelectButton</name></member>
+    <member refid="classams_1_1_class_manager_1ad939360a8ab78d1f7a70c059ee23162f" kind="variable"><name>sDisplayListBUTTON</name></member>
+    <member refid="classams_1_1_class_manager_1aa7c02920eb72bd646a0899bcce585353" kind="variable"><name>sExportListBUTTON</name></member>
+    <member refid="classams_1_1_class_manager_1a6b203f5681990ffa848ad304392dd56e" kind="variable"><name>sManualClassInput</name></member>
+    <member refid="classams_1_1_class_manager_1ae89fb94663b06ad6c121e624aed83978" kind="variable"><name>sOfferedClassesList</name></member>
+    <member refid="classams_1_1_class_manager_1abea1bcd30832c7af935ce3d2aaaf530d" kind="variable"><name>sTimeSelect</name></member>
+    <member refid="classams_1_1_class_manager_1a48bf8dbcd5eecc8bbaa8fc18719c35ad" kind="variable"><name>sTimeSelect1</name></member>
+    <member refid="classams_1_1_class_manager_1abedb1092d1d7726fb5357e20b7472bc2" kind="variable"><name>sTimeSelectBUTTON</name></member>
+    <member refid="classams_1_1_class_manager_1aed7b0767102a465becd84364a27e6345" kind="variable"><name>studentLIST</name></member>
+    <member refid="classams_1_1_class_manager_1a771e3c47d7ec87e29fc232287eb441e3" kind="variable"><name>studentListLEFT</name></member>
+    <member refid="classams_1_1_class_manager_1a4de85dd7b2823ed8bafa45ea1f242f6a" kind="variable"><name>studentListRIGHT</name></member>
+    <member refid="classams_1_1_class_manager_1a3b26f0eba3ed4f3c02d2e2bf1733863f" kind="function"><name>ClassManager</name></member>
+    <member refid="classams_1_1_class_manager_1a9b0924e9fc08323cf6a91bea96f8f398" kind="function"><name>classListFiller2</name></member>
+    <member refid="classams_1_1_class_manager_1a14992ccf08396a727940200ec421d4f1" kind="function"><name>timeListFiller2</name></member>
+    <member refid="classams_1_1_class_manager_1a0c0987f97d77198e6781fbbc6586b76b" kind="function"><name>class2ListFiller2</name></member>
+    <member refid="classams_1_1_class_manager_1a58654d39f62f9d5c11d8967c0fef3059" kind="function"><name>timingsListFiller2</name></member>
+    <member refid="classams_1_1_class_manager_1a3485ea2038d2b1050bb772a27aa45b38" kind="function"><name>infoBox</name></member>
+    <member refid="classams_1_1_class_manager_1aaeffab653e70f0fcf8a560b710933093" kind="function"><name>initComponents</name></member>
+    <member refid="classams_1_1_class_manager_1ac8bd6e575a3189051bcc34783b16e6cb" kind="function"><name>sDisplayListBUTTONActionPerformed</name></member>
+    <member refid="classams_1_1_class_manager_1a551224bada3d93cea51940656543946f" kind="function"><name>sExportListBUTTONActionPerformed</name></member>
+    <member refid="classams_1_1_class_manager_1ad90ee9568c16ec4829864b77a849566e" kind="function"><name>sClassSelectMouseReleased</name></member>
+    <member refid="classams_1_1_class_manager_1a151f4a8b1087b60b367b53ace6566631" kind="function"><name>sDisplayListBUTTONMouseReleased</name></member>
+    <member refid="classams_1_1_class_manager_1afd0ab473c8c143893ca13d7972c9256b" kind="function"><name>sExportListBUTTONMouseReleased</name></member>
+    <member refid="classams_1_1_class_manager_1a40adfc663b4943f546a1adceb6c9fb98" kind="function"><name>jComboBox1ActionPerformed</name></member>
+    <member refid="classams_1_1_class_manager_1afe726b9bfb55b63830abac5a86ac107a" kind="function"><name>jButton1ActionPerformed</name></member>
+  </compound>
+  <compound refid="classams_1_1_class_thread" kind="class"><name>ams::ClassThread</name>
+    <member refid="classams_1_1_class_thread_1a04476dab7a3fa17d90f82c0b1eeaa4e2" kind="variable"><name>class_table</name></member>
+    <member refid="classams_1_1_class_thread_1a507ccd0861e5ef4b3d9cf312052b7f0e" kind="function"><name>ClassThread</name></member>
+    <member refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" kind="function"><name>ActiveClassesList</name></member>
+    <member refid="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" kind="function"><name>toMins</name></member>
+    <member refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" kind="function"><name>classCheck</name></member>
+  </compound>
+  <compound refid="classams_1_1db_control" kind="class"><name>ams::dbControl</name>
+    <member refid="classams_1_1db_control_1a0c6f92a6dacfb7ded185b59757217378" kind="variable"><name>con</name></member>
+    <member refid="classams_1_1db_control_1a46e0c4f5d58055d6d7e3fdcf31c953df" kind="variable"><name>COMMANDTHEE</name></member>
+    <member refid="classams_1_1db_control_1ab717c7cb3633497dbbafde2c21bf607d" kind="variable"><name>DO_THE_THING</name></member>
+    <member refid="classams_1_1db_control_1a9338b39cc3be99ec80bc9ace5cb2af9f" kind="variable"><name>rs</name></member>
+    <member refid="classams_1_1db_control_1a8b7c3b84a607e051abd34447b8ed35e2" kind="variable"><name>rsUpdate</name></member>
+    <member refid="classams_1_1db_control_1aa9eb77a7eb823c4fe35a469fdbad081b" kind="variable"><name>rsUpdateMe</name></member>
+    <member refid="classams_1_1db_control_1aaee242cb4109e9f51017b99ac9f484ec" kind="variable"><name>SQL</name></member>
+    <member refid="classams_1_1db_control_1ad62d6afaf9e7f9fdd20b6d7c571a0de8" kind="function"><name>dbControl</name></member>
+    <member refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" kind="function"><name>dbComd</name></member>
+    <member refid="classams_1_1db_control_1a725cd6ae84ef6aca9bfd782b319d9f34" kind="function"><name>dbComdUpdate</name></member>
+    <member refid="classams_1_1db_control_1ac130c7d3b8e1b37cfcacc3f05b9562d2" kind="function"><name>getID</name></member>
+    <member refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" kind="function"><name>doConnect</name></member>
+    <member refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" kind="function"><name>doClose</name></member>
+  </compound>
+  <compound refid="classams_1_1db_look_up" kind="class"><name>ams::dbLookUp</name>
+    <member refid="classams_1_1db_look_up_1a814de724b9ce1e298e401291df12433f" kind="variable"><name>db</name></member>
+    <member refid="classams_1_1db_look_up_1ad6c18e9b1273bb02213060aa47289fed" kind="function"><name>dbLookUp</name></member>
+    <member refid="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" kind="function"><name>uidCheck</name></member>
+  </compound>
+  <compound refid="classams_1_1_file_saver" kind="class"><name>ams::FileSaver</name>
+    <member refid="classams_1_1_file_saver_1aa9244b45b67171ba4a8e0b1977dfe636" kind="function"><name>FileSaver</name></member>
+    <member refid="classams_1_1_file_saver_1a925b8d63d7240a7e925f26d8cd0f0988" kind="function"><name>SaveMe</name></member>
+  </compound>
+  <compound refid="classams_1_1_interface_cmds" kind="class"><name>ams::InterfaceCmds</name>
+    <member refid="classams_1_1_interface_cmds_1aba359d35baa050d7ccde75e4edfdbfb6" kind="variable"><name>dbC</name></member>
+    <member refid="classams_1_1_interface_cmds_1a68883663348ee0756c621f05b4539d8c" kind="variable"><name>xx</name></member>
+    <member refid="classams_1_1_interface_cmds_1a3b939176cc56225274a7f24954c57a08" kind="function"><name>InterfaceCmds</name></member>
+    <member refid="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" kind="function"><name>getCurrentClass</name></member>
+    <member refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" kind="function"><name>getCurrentUID</name></member>
+    <member refid="classams_1_1_interface_cmds_1aaae6e75ca4f733d4af6b2eb27844d730" kind="function"><name>getCurrentSwipe</name></member>
+  </compound>
+  <compound refid="classams_1_1_presence" kind="class"><name>ams::Presence</name>
+    <member refid="classams_1_1_presence_1a41c8d5f161a35a645604c538c634d36d" kind="variable"><name>db</name></member>
+    <member refid="classams_1_1_presence_1a7c7c994b58e9d4930e9f1389ad239efc" kind="variable"><name>dbUpdate</name></member>
+    <member refid="classams_1_1_presence_1a08cfff80a9d889224d82716c0299cc62" kind="variable"><name>LookUp</name></member>
+    <member refid="classams_1_1_presence_1abfd2de6d39fdf2bbb6ded2b7a518b6d2" kind="variable"><name>classC</name></member>
+    <member refid="classams_1_1_presence_1ab0747049cc22ece88441e9b58fa237b8" kind="variable"><name>instructorIN</name></member>
+    <member refid="classams_1_1_presence_1a2f2f0c375628ca573e40201cfc514e17" kind="variable"><name>readStudentUID</name></member>
+    <member refid="classams_1_1_presence_1a7facdc9c46e28bbeafd2b6208b3de6b0" kind="variable"><name>UIStudentName</name></member>
+    <member refid="classams_1_1_presence_1a88d6cd256a57c95640b53a5bd221fac7" kind="function"><name>Presence</name></member>
+    <member refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" kind="function"><name>timeCheck</name></member>
+    <member refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" kind="function"><name>FifteenMinActivate</name></member>
+    <member refid="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" kind="function"><name>toMins</name></member>
+    <member refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" kind="function"><name>MarkPresent</name></member>
+    <member refid="classams_1_1_presence_1aa72c8cdcdfbec64c43fa32b469b9e822" kind="function"><name>AdjustPresence</name></member>
+    <member refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" kind="function"><name>UpPresence</name></member>
+    <member refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" kind="function"><name>DownPresence</name></member>
+    <member refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" kind="function"><name>InstructorPresence</name></member>
+    <member refid="classams_1_1_presence_1af8a73a088625da3be87b17190563fd81" kind="function"><name>getPresncePercentage</name></member>
+  </compound>
+  <compound refid="classams_1_1student" kind="class"><name>ams::student</name>
+    <member refid="classams_1_1student_1ab30b8e72483cd0f144791eb91ac7764f" kind="variable"><name>fName</name></member>
+    <member refid="classams_1_1student_1aac9054cdb49bd50f39ad2eb3bd4a4014" kind="variable"><name>lName</name></member>
+    <member refid="classams_1_1student_1a1169efa82fd18e90242e431d71dd278a" kind="variable"><name>id</name></member>
+    <member refid="classams_1_1student_1a0e2271e4fc0b942f7ed07d242050ee64" kind="variable"><name>dob</name></member>
+    <member refid="classams_1_1student_1ae81e5324a650578e6b516f76da434e42" kind="variable"><name>contact_phone</name></member>
+    <member refid="classams_1_1student_1a0371efc0d25daff2fc959a58d1d4e52a" kind="variable"><name>card_id</name></member>
+    <member refid="classams_1_1student_1a98ec27678dc5be44445cd63520789909" kind="variable"><name>boop</name></member>
+    <member refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" kind="function"><name>student</name></member>
+    <member refid="classams_1_1student_1aaf15213b221829a2c44c15a859af9da2" kind="function"><name>SQLStudent</name></member>
+    <member refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" kind="function"><name>cardIDLookUp</name></member>
+    <member refid="classams_1_1student_1a7a8c1d0c0952dfd7e9e71f90bd70d09e" kind="function"><name>print</name></member>
+    <member refid="classams_1_1student_1a42b04eee66eade655dc460f622ebd7cd" kind="function"><name>getProfile</name></member>
+  </compound>
+  <compound refid="classams_1_1update_checker" kind="class"><name>ams::updateChecker</name>
+    <member refid="classams_1_1update_checker_1af796e0298f9cc7abd088f9012c54a33f" kind="function"><name>updateActiveCheck</name></member>
+  </compound>
+  <compound refid="classams_1_1_user_interface" kind="class"><name>ams::UserInterface</name>
+    <member refid="classams_1_1_user_interface_1aa059c1bdd7d1c11ee0930e7da113a836" kind="variable"><name>ICON_ACTIVE</name></member>
+    <member refid="classams_1_1_user_interface_1a77dfb30596c6419c587d65748c969b4f" kind="variable"><name>ICON_INACTIVE</name></member>
+    <member refid="classams_1_1_user_interface_1a89f889d43e99ec32651d1e735f7c8621" kind="variable"><name>uid_placeholder</name></member>
+    <member refid="classams_1_1_user_interface_1a4220d2d966388244f998d042249a71fc" kind="variable"><name>UID</name></member>
+    <member refid="classams_1_1_user_interface_1a5f205e78a8b1725a791e5f77a767f4f7" kind="variable"><name>x</name></member>
+    <member refid="classams_1_1_user_interface_1a0b8f1d9a42b069d55e7e686d85e9d912" kind="variable"><name>ACTIVE_ICON</name></member>
+    <member refid="classams_1_1_user_interface_1a41ce6feb6a3a8e250a4a5d08543ea0e0" kind="variable"><name>INACTIVE_ICON</name></member>
+    <member refid="classams_1_1_user_interface_1a0149f362602f1ce708e919161b3d77d2" kind="variable"><name>viewStudentsButton</name></member>
+    <member refid="classams_1_1_user_interface_1a715ca8d47d3a7bb1fb5f1837295b16d6" kind="variable"><name>StudentCall</name></member>
+    <member refid="classams_1_1_user_interface_1a8d012e4838bd2f40599866385a33ce3b" kind="variable"><name>backToStart</name></member>
+    <member refid="classams_1_1_user_interface_1a03c8127ebc135e2d4afb80fc0434c03f" kind="variable"><name>currentClass</name></member>
+    <member refid="classams_1_1_user_interface_1a259c3e8b1f57340b4c309a9f30a5345e" kind="variable"><name>jButton1</name></member>
+    <member refid="classams_1_1_user_interface_1a790ecf52e49d59f66d72af9a2995419e" kind="variable"><name>jLabel1</name></member>
+    <member refid="classams_1_1_user_interface_1a82cd2039aa0e9dd31c63b1d15d3a5bca" kind="variable"><name>jLayeredPane1</name></member>
+    <member refid="classams_1_1_user_interface_1ae59f070a18dab36355c1c9deb46cfc85" kind="variable"><name>jPanel1</name></member>
+    <member refid="classams_1_1_user_interface_1a0deecd599b68586ecfb01b90b88fc3d2" kind="variable"><name>jPanel2</name></member>
+    <member refid="classams_1_1_user_interface_1a50e19cfa66f668ca5512abd5cbbe8867" kind="variable"><name>jPanel3</name></member>
+    <member refid="classams_1_1_user_interface_1a322fbd68afd8efaf0af96aaed1034691" kind="variable"><name>jPanel4</name></member>
+    <member refid="classams_1_1_user_interface_1a04b3cc9f5ca99a6bbe70575e9afb4bed" kind="variable"><name>jScrollPane1</name></member>
+    <member refid="classams_1_1_user_interface_1a9ae584b90d303eb5a3fab351a2a7747a" kind="variable"><name>mainBG_start</name></member>
+    <member refid="classams_1_1_user_interface_1a7c2aa3e17662e06f3481bd5557d7c208" kind="variable"><name>main_start</name></member>
+    <member refid="classams_1_1_user_interface_1a9131044da505b30dd0616419268aec59" kind="variable"><name>studentListOnStart</name></member>
+    <member refid="classams_1_1_user_interface_1ae33aa2bd865ccf2225438dcd757fb3f4" kind="variable"><name>classCall</name></member>
+    <member refid="classams_1_1_user_interface_1aee729eb579067256175a86f3da2e37bc" kind="function"><name>UserInterface</name></member>
+    <member refid="classams_1_1_user_interface_1ad09415985d34e294d22c29acfdfa448b" kind="function"><name>initComponents</name></member>
+    <member refid="classams_1_1_user_interface_1aa1452734f3a7eabcfc8e8a5347c0f957" kind="function"><name>viewStudentsButtonActionPerformed</name></member>
+    <member refid="classams_1_1_user_interface_1acac6d1700e1e823f559e72152d92ae5d" kind="function"><name>jButton1MouseReleased</name></member>
+    <member refid="classams_1_1_user_interface_1a526f3e0012ba36e3cae9036173a52bab" kind="function"><name>backToStartMouseReleased</name></member>
+    <member refid="classams_1_1_user_interface_1afee544cdd2c026cb151ae55f0635b02f" kind="function"><name>jButton1ActionPerformed</name></member>
+    <member refid="classams_1_1_user_interface_1ab22216d30202f196e243447004ef51cd" kind="function"><name>createImageIcon</name></member>
+    <member refid="classams_1_1_user_interface_1a6d65a19f7a850d64f969d516ec4b7642" kind="function"><name>getIcon</name></member>
+    <member refid="classams_1_1_user_interface_1a2c095e5b4874956fc7831b9986656130" kind="function"><name>updateStudent</name></member>
+    <member refid="classams_1_1_user_interface_1a9350019300425cd33e6afa3155029ce6" kind="function"><name>updateActiveCheck</name></member>
+  </compound>
+  <compound refid="namespaceams" kind="namespace"><name>ams</name>
+  </compound>
+  <compound refid="ams__main_8java" kind="file"><name>ams_main.java</name>
+  </compound>
+  <compound refid="ams_activate_8java" kind="file"><name>amsActivate.java</name>
+  </compound>
+  <compound refid="_card_connection_8java" kind="file"><name>CardConnection.java</name>
+  </compound>
+  <compound refid="_class_manager_8java" kind="file"><name>ClassManager.java</name>
+  </compound>
+  <compound refid="_class_thread_8java" kind="file"><name>ClassThread.java</name>
+  </compound>
+  <compound refid="create_image_icon_8java" kind="file"><name>createImageIcon.java</name>
+  </compound>
+  <compound refid="db_control_8java" kind="file"><name>dbControl.java</name>
+  </compound>
+  <compound refid="db_look_up_8java" kind="file"><name>dbLookUp.java</name>
+  </compound>
+  <compound refid="_file_saver_8java" kind="file"><name>FileSaver.java</name>
+  </compound>
+  <compound refid="_interface_cmds_8java" kind="file"><name>InterfaceCmds.java</name>
+  </compound>
+  <compound refid="_presence_8java" kind="file"><name>Presence.java</name>
+  </compound>
+  <compound refid="student_8java" kind="file"><name>student.java</name>
+  </compound>
+  <compound refid="update_checker_8java" kind="file"><name>updateChecker.java</name>
+  </compound>
+  <compound refid="_user_interface_8java" kind="file"><name>UserInterface.java</name>
+  </compound>
+  <compound refid="deprecated" kind="page"><name>deprecated</name>
+  </compound>
+  <compound refid="dir_d3f5636e64b5f92308f97ef557b6e0e3" kind="dir"><name>C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams</name>
+  </compound>
+  <compound refid="dir_8e6a2a22d59e5b89e14755245c30e07a" kind="dir"><name>C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams</name>
+  </compound>
+  <compound refid="dir_7159a0b79bffcc693b8d3696d3c54cc7" kind="dir"><name>C:/Users/thema/OneDrive/Desktop/Attendance Management System</name>
+  </compound>
+  <compound refid="dir_07d750cdbac5283e6dbe206d3e0499f1" kind="dir"><name>C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src</name>
+  </compound>
+</doxygenindex>

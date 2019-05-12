@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_d3f5636e64b5f92308f97ef557b6e0e3" kind="dir">
+    <compoundname>C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams</compoundname>
+    <innerdir refid="dir_07d750cdbac5283e6dbe206d3e0499f1">C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/"/>
+  </compounddef>
+</doxygen>

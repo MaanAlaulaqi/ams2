@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_8e6a2a22d59e5b89e14755245c30e07a" kind="dir">
+    <compoundname>C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams</compoundname>
+    <innerfile refid="ams__main_8java">ams_main.java</innerfile>
+    <innerfile refid="ams_activate_8java">amsActivate.java</innerfile>
+    <innerfile refid="_card_connection_8java">CardConnection.java</innerfile>
+    <innerfile refid="_class_manager_8java">ClassManager.java</innerfile>
+    <innerfile refid="_class_thread_8java">ClassThread.java</innerfile>
+    <innerfile refid="create_image_icon_8java">createImageIcon.java</innerfile>
+    <innerfile refid="db_control_8java">dbControl.java</innerfile>
+    <innerfile refid="db_look_up_8java">dbLookUp.java</innerfile>
+    <innerfile refid="_file_saver_8java">FileSaver.java</innerfile>
+    <innerfile refid="_interface_cmds_8java">InterfaceCmds.java</innerfile>
+    <innerfile refid="_presence_8java">Presence.java</innerfile>
+    <innerfile refid="student_8java">student.java</innerfile>
+    <innerfile refid="update_checker_8java">updateChecker.java</innerfile>
+    <innerfile refid="_user_interface_8java">UserInterface.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/"/>
+  </compounddef>
+</doxygen>

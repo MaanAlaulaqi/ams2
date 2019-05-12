@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1student" kind="class" language="Java" prot="public">
+    <compoundname>ams::student</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1student_1ab30b8e72483cd0f144791eb91ac7764f" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.student.fName</definition>
+        <argsstring></argsstring>
+        <name>fName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="16" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1aac9054cdb49bd50f39ad2eb3bd4a4014" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.student.lName</definition>
+        <argsstring></argsstring>
+        <name>lName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="17" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1a1169efa82fd18e90242e431d71dd278a" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ams.student.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="18" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1a0e2271e4fc0b942f7ed07d242050ee64" prot="private" static="yes" mutable="no">
+        <type>Date</type>
+        <definition>Date ams.student.dob</definition>
+        <argsstring></argsstring>
+        <name>dob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="19" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1ae81e5324a650578e6b516f76da434e42" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.student.contact_phone</definition>
+        <argsstring></argsstring>
+        <name>contact_phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="20" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1a0371efc0d25daff2fc959a58d1d4e52a" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.student.card_id</definition>
+        <argsstring></argsstring>
+        <name>card_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="21" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1student_1a98ec27678dc5be44445cd63520789909" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_control" kindref="compound">dbControl</ref></type>
+        <definition>dbControl ams.student.boop</definition>
+        <argsstring></argsstring>
+        <name>boop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.student.student</definition>
+        <argsstring>()</argsstring>
+        <name>student</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="25" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="25" bodyend="49"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1student_1aaf15213b221829a2c44c15a859af9da2" compoundref="student_8java" startline="56" endline="58">ams.student.SQLStudent</references>
+        <references refid="classams_1_1student_1a7a8c1d0c0952dfd7e9e71f90bd70d09e" compoundref="student_8java" startline="95" endline="98">ams.student.print</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1student_1aaf15213b221829a2c44c15a859af9da2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String ams.student.SQLStudent</definition>
+        <argsstring>(String column, String table)</argsstring>
+        <name>SQLStudent</name>
+        <param>
+          <type>String</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The idea here is to have a ready SQL statement that can be multi-purposed </para>
+</xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a string. To include more than one column, make sure to pass all the needed columns as a string. ie: &quot;col1, col2&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a string. At a later time, this will be able to include multiple tables </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns an SQL command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="56" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="56" bodyend="58"/>
+        <referencedby refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" compoundref="student_8java" startline="25" endline="49">ams.student.student</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.student.cardIDLookUp</definition>
+        <argsstring>(String cardid)</argsstring>
+        <name>cardIDLookUp</name>
+        <param>
+          <type>String</type>
+          <declname>cardid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method will compare the card_id (from the database) with the UID of the card that is scanned <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cardid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This will be called forth from the database. //TO-DO Figure out how to pass SQL parameters through java. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="65" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="65" bodyend="94"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1student_1a7a8c1d0c0952dfd7e9e71f90bd70d09e" compoundref="student_8java" startline="95" endline="98">ams.student.print</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1student_1a7a8c1d0c0952dfd7e9e71f90bd70d09e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.student.print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="95" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="95" bodyend="98"/>
+        <referencedby refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" compoundref="student_8java" startline="25" endline="49">ams.student.student</referencedby>
+        <referencedby refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" compoundref="student_8java" startline="65" endline="94">ams.student.cardIDLookUp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1student_1a42b04eee66eade655dc460f622ebd7cd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.student.getProfile</definition>
+        <argsstring>()</argsstring>
+        <name>getProfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used when a student wishes to see their profile and attendance records This will be automatically called if AMS is inactive (<ref refid="classams_1_1ams_activate" kindref="compound">amsActivate</ref> class will determine this) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="103" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="103" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>An early class assigned for students</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" line="15" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/student.java" bodystart="15" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classams_1_1student_1a98ec27678dc5be44445cd63520789909" prot="private" virt="non-virtual"><scope>ams::student</scope><name>boop</name></member>
+      <member refid="classams_1_1student_1a0371efc0d25daff2fc959a58d1d4e52a" prot="private" virt="non-virtual"><scope>ams::student</scope><name>card_id</name></member>
+      <member refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" prot="public" virt="non-virtual"><scope>ams::student</scope><name>cardIDLookUp</name></member>
+      <member refid="classams_1_1student_1ae81e5324a650578e6b516f76da434e42" prot="private" virt="non-virtual"><scope>ams::student</scope><name>contact_phone</name></member>
+      <member refid="classams_1_1student_1a0e2271e4fc0b942f7ed07d242050ee64" prot="private" virt="non-virtual"><scope>ams::student</scope><name>dob</name></member>
+      <member refid="classams_1_1student_1ab30b8e72483cd0f144791eb91ac7764f" prot="private" virt="non-virtual"><scope>ams::student</scope><name>fName</name></member>
+      <member refid="classams_1_1student_1a42b04eee66eade655dc460f622ebd7cd" prot="public" virt="non-virtual"><scope>ams::student</scope><name>getProfile</name></member>
+      <member refid="classams_1_1student_1a1169efa82fd18e90242e431d71dd278a" prot="private" virt="non-virtual"><scope>ams::student</scope><name>id</name></member>
+      <member refid="classams_1_1student_1aac9054cdb49bd50f39ad2eb3bd4a4014" prot="private" virt="non-virtual"><scope>ams::student</scope><name>lName</name></member>
+      <member refid="classams_1_1student_1a7a8c1d0c0952dfd7e9e71f90bd70d09e" prot="public" virt="non-virtual"><scope>ams::student</scope><name>print</name></member>
+      <member refid="classams_1_1student_1aaf15213b221829a2c44c15a859af9da2" prot="public" virt="non-virtual"><scope>ams::student</scope><name>SQLStudent</name></member>
+      <member refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" prot="public" virt="non-virtual"><scope>ams::student</scope><name>student</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

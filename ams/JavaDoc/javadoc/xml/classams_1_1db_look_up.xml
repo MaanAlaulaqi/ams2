@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1db_look_up" kind="class" language="Java" prot="public">
+    <compoundname>ams::dbLookUp</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1db_look_up_1a814de724b9ce1e298e401291df12433f" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_control" kindref="compound">dbControl</ref></type>
+        <definition>dbControl ams.dbLookUp.db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" line="17" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1db_look_up_1ad6c18e9b1273bb02213060aa47289fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.dbLookUp.dbLookUp</definition>
+        <argsstring>()</argsstring>
+        <name>dbLookUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" line="19" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean ams.dbLookUp.uidCheck</definition>
+        <argsstring>(String uid)</argsstring>
+        <name>uidCheck</name>
+        <param>
+          <type>String</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a method to check if the card scanned is belongs to either a student or an instructor It will return true for instructors and false for students</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Card UID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>False = Student, True = Instructor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" line="27" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" bodystart="27" bodyend="60"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class assigned for certain multi use code (UID look-up)</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" line="16" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbLookUp.java" bodystart="16" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classams_1_1db_look_up_1a814de724b9ce1e298e401291df12433f" prot="private" virt="non-virtual"><scope>ams::dbLookUp</scope><name>db</name></member>
+      <member refid="classams_1_1db_look_up_1ad6c18e9b1273bb02213060aa47289fed" prot="public" virt="non-virtual"><scope>ams::dbLookUp</scope><name>dbLookUp</name></member>
+      <member refid="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" prot="public" virt="non-virtual"><scope>ams::dbLookUp</scope><name>uidCheck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

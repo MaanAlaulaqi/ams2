@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="create_image_icon_8java" kind="file" language="Java">
+    <compoundname>createImageIcon.java</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>To<sp/>change<sp/>this<sp/>license<sp/>header,<sp/>choose<sp/>License<sp/>Headers<sp/>in<sp/>Project<sp/>Properties.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>To<sp/>change<sp/>this<sp/>template<sp/>file,<sp/>choose<sp/>Tools<sp/>|<sp/>Templates</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>and<sp/>open<sp/>the<sp/>template<sp/>in<sp/>the<sp/>editor.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//package<sp/>ams;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//import<sp/>static<sp/>ams.UserInterface.ActiveCheck;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.swing.ImageIcon;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">/*public<sp/>class<sp/>createImageIcon<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>public<sp/>ImageIcon<sp/>createImageIcon(String<sp/>path,<sp/>String<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>java.net.URL<sp/>imgURL;</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imgURL<sp/>=<sp/>getClass().getResource(path);</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(imgURL<sp/>!=<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>new<sp/>ImageIcon(imgURL,<sp/>description);</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>System.out.println(&quot;Couldn&apos;t<sp/>find<sp/>file:<sp/>&quot;<sp/>+<sp/>path);</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>null;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*/</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">public<sp/>class<sp/>createImageIcon<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>public<sp/>void<sp/>updateMe(boolean<sp/>x){</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(x)<sp/>UserInterface.ActiveCheck.setIcon(new<sp/>javax.swing.ImageIcon(getClass().getResource(&quot;/images/Start_ACTIVE.png&quot;)));</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>UserInterface.ActiveCheck.setIcon(new<sp/>javax.swing.ImageIcon(getClass().getResource(&quot;/images/Start_NOTACTIVE.png&quot;)));</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/>public<sp/>static<sp/>void<sp/>hey(boolean<sp/>x){</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateMe(x);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">class<sp/>Lol{</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>public<sp/>static<sp/>void<sp/>hey(boolean<sp/>x){</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>createImageIcon.updateMe(x);</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">}*/</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/createImageIcon.java"/>
+  </compounddef>
+</doxygen>

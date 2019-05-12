@@ -1,0 +1,266 @@
+\hypertarget{classams_1_1_presence}{}\section{ams.\+Presence Class Reference}
+\label{classams_1_1_presence}\index{ams.Presence@{ams.Presence}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classams_1_1_presence_a88d6cd256a57c95640b53a5bd221fac7}{Presence}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{classams_1_1_presence_af021bed37055300b60e76853f4bc0666}{time\+Check}} ()
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_a84efc9c047a0a2259f61cf55356c9701}{Fifteen\+Min\+Activate}} ()
+\item 
+static int \mbox{\hyperlink{classams_1_1_presence_ac7407509b71e22e2ca2fde9d52681b73}{to\+Mins}} (String s)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_a6f7a875d8decb48536c8eb9a6ef8d3d2}{Mark\+Present}} (String U\+ID)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_aa72c8cdcdfbec64c43fa32b469b9e822}{Adjust\+Presence}} (String U\+ID, boolean req)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_af23602b98a9a3003ff240fd5cd133378}{Up\+Presence}} (String U\+ID)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_a1b05700a39e8cadcba0c749d296a04f8}{Down\+Presence}} (String U\+ID)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_a1ffc74f2f36c4c792834abcc5e2c28ea}{Instructor\+Presence}} (String U\+ID)
+\item 
+static void \mbox{\hyperlink{classams_1_1_presence_af8a73a088625da3be87b17190563fd81}{get\+Presnce\+Percentage}} (String U\+ID)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{classams_1_1_presence_a2f2f0c375628ca573e40201cfc514e17}{read\+Student\+U\+ID}} = false
+\item 
+static String \mbox{\hyperlink{classams_1_1_presence_a7facdc9c46e28bbeafd2b6208b3de6b0}{U\+I\+Student\+Name}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The attendance taking class.
+
+\begin{DoxyAuthor}{Author}
+Maan Alaulaqi (\href{mailto:201610814@aau.ac.ae}{\texttt{ 201610814@aau.\+ac.\+ae}}) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classams_1_1_presence_a88d6cd256a57c95640b53a5bd221fac7}\label{classams_1_1_presence_a88d6cd256a57c95640b53a5bd221fac7}} 
+\index{ams.Presence@{ams.Presence}!Presence@{Presence}}
+\index{Presence@{Presence}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{Presence()}{Presence()}}
+{\footnotesize\ttfamily ams.\+Presence.\+Presence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1_presence_aa72c8cdcdfbec64c43fa32b469b9e822}\label{classams_1_1_presence_aa72c8cdcdfbec64c43fa32b469b9e822}} 
+\index{ams.Presence@{ams.Presence}!AdjustPresence@{AdjustPresence}}
+\index{AdjustPresence@{AdjustPresence}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{AdjustPresence()}{AdjustPresence()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Adjust\+Presence (\begin{DoxyParamCaption}\item[{String}]{U\+ID,  }\item[{boolean}]{req }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The following three methods are geared towards adjusting a student\textquotesingle{}s presence in a certain class. 
+\begin{DoxyParams}{Parameters}
+{\em U\+ID} & Card U\+ID \\
+\hline
+{\em req} & req \\
+\hline
+\end{DoxyParams}
+In case the instructor needs to up someone\textquotesingle{}s presence count manually for a class This can only be used effectively within the time range of a particular class session 
+\begin{DoxyParams}{Parameters}
+{\em U\+ID} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_aa72c8cdcdfbec64c43fa32b469b9e822_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_a1b05700a39e8cadcba0c749d296a04f8}\label{classams_1_1_presence_a1b05700a39e8cadcba0c749d296a04f8}} 
+\index{ams.Presence@{ams.Presence}!DownPresence@{DownPresence}}
+\index{DownPresence@{DownPresence}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{DownPresence()}{DownPresence()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Down\+Presence (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+In case the instructor needs to lower someone\textquotesingle{}s presence count for a class This can only be used effectively within the time range of a particular class session 
+\begin{DoxyParams}{Parameters}
+{\em U\+ID} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a1b05700a39e8cadcba0c749d296a04f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a1b05700a39e8cadcba0c749d296a04f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_a84efc9c047a0a2259f61cf55356c9701}\label{classams_1_1_presence_a84efc9c047a0a2259f61cf55356c9701}} 
+\index{ams.Presence@{ams.Presence}!FifteenMinActivate@{FifteenMinActivate}}
+\index{FifteenMinActivate@{FifteenMinActivate}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{FifteenMinActivate()}{FifteenMinActivate()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Fifteen\+Min\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+There are times when the instructor is late or not present during a lecture. This method is geared towards activating the the A\+MS 15 minutes into class automatically so students who\textquotesingle{}ve attended may mark their presence in the system. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a84efc9c047a0a2259f61cf55356c9701_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a84efc9c047a0a2259f61cf55356c9701_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_af8a73a088625da3be87b17190563fd81}\label{classams_1_1_presence_af8a73a088625da3be87b17190563fd81}} 
+\index{ams.Presence@{ams.Presence}!getPresncePercentage@{getPresncePercentage}}
+\index{getPresncePercentage@{getPresncePercentage}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{getPresncePercentage()}{getPresncePercentage()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+get\+Presnce\+Percentage (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classams_1_1_presence_a1ffc74f2f36c4c792834abcc5e2c28ea}\label{classams_1_1_presence_a1ffc74f2f36c4c792834abcc5e2c28ea}} 
+\index{ams.Presence@{ams.Presence}!InstructorPresence@{InstructorPresence}}
+\index{InstructorPresence@{InstructorPresence}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{InstructorPresence()}{InstructorPresence()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Instructor\+Presence (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Instructor\+Presence will have multiple functions\+: • It\textquotesingle{}ll mark their presence for that class • If this method is not met, the 15 minute activation of the A\+MS will automatically commence
+
+
+\begin{DoxyParams}{Parameters}
+{\em U\+ID} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a1ffc74f2f36c4c792834abcc5e2c28ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a1ffc74f2f36c4c792834abcc5e2c28ea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_a6f7a875d8decb48536c8eb9a6ef8d3d2}\label{classams_1_1_presence_a6f7a875d8decb48536c8eb9a6ef8d3d2}} 
+\index{ams.Presence@{ams.Presence}!MarkPresent@{MarkPresent}}
+\index{MarkPresent@{MarkPresent}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{MarkPresent()}{MarkPresent()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Mark\+Present (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a6f7a875d8decb48536c8eb9a6ef8d3d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_a6f7a875d8decb48536c8eb9a6ef8d3d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_af021bed37055300b60e76853f4bc0666}\label{classams_1_1_presence_af021bed37055300b60e76853f4bc0666}} 
+\index{ams.Presence@{ams.Presence}!timeCheck@{timeCheck}}
+\index{timeCheck@{timeCheck}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{timeCheck()}{timeCheck()}}
+{\footnotesize\ttfamily static boolean ams.\+Presence.\+time\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The \mbox{\hyperlink{classams_1_1_presence_af021bed37055300b60e76853f4bc0666}{time\+Check()}} method is meant to be an inclusive method that can be used anyhwhere in the application to check whether the current time has any ongoing classes.
+
+\begin{DoxyReturn}{Returns}
+Time Check Positive or Negative 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_af021bed37055300b60e76853f4bc0666_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_af021bed37055300b60e76853f4bc0666_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_ac7407509b71e22e2ca2fde9d52681b73}\label{classams_1_1_presence_ac7407509b71e22e2ca2fde9d52681b73}} 
+\index{ams.Presence@{ams.Presence}!toMins@{toMins}}
+\index{toMins@{toMins}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{toMins()}{toMins()}}
+{\footnotesize\ttfamily static int ams.\+Presence.\+to\+Mins (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method is meant for the time\+Check method. It returns the minute format for D\+D\+:\+HH\+:MM
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & This is a method used to turn H\+H\+:\+MM\+:SS format into one int number in M\+I\+N\+U\+T\+ES only. It helps with time comparisons. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hours\+In\+Mins 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_ac7407509b71e22e2ca2fde9d52681b73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_presence_af23602b98a9a3003ff240fd5cd133378}\label{classams_1_1_presence_af23602b98a9a3003ff240fd5cd133378}} 
+\index{ams.Presence@{ams.Presence}!UpPresence@{UpPresence}}
+\index{UpPresence@{UpPresence}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{UpPresence()}{UpPresence()}}
+{\footnotesize\ttfamily static void ams.\+Presence.\+Up\+Presence (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_af23602b98a9a3003ff240fd5cd133378_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_presence_af23602b98a9a3003ff240fd5cd133378_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classams_1_1_presence_a2f2f0c375628ca573e40201cfc514e17}\label{classams_1_1_presence_a2f2f0c375628ca573e40201cfc514e17}} 
+\index{ams.Presence@{ams.Presence}!readStudentUID@{readStudentUID}}
+\index{readStudentUID@{readStudentUID}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{readStudentUID}{readStudentUID}}
+{\footnotesize\ttfamily boolean ams.\+Presence.\+read\+Student\+U\+ID = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classams_1_1_presence_a7facdc9c46e28bbeafd2b6208b3de6b0}\label{classams_1_1_presence_a7facdc9c46e28bbeafd2b6208b3de6b0}} 
+\index{ams.Presence@{ams.Presence}!UIStudentName@{UIStudentName}}
+\index{UIStudentName@{UIStudentName}!ams.Presence@{ams.Presence}}
+\subsubsection{\texorpdfstring{UIStudentName}{UIStudentName}}
+{\footnotesize\ttfamily String ams.\+Presence.\+U\+I\+Student\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{_presence_8java}{Presence.\+java}}\end{DoxyCompactItemize}

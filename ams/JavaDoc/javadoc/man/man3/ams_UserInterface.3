@@ -1,0 +1,130 @@
+.TH "ams.UserInterface" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.UserInterface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits JFrame\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUserInterface\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static ImageIcon \fBcreateImageIcon\fP (String path, String description)"
+.br
+.ti -1c
+.RI "static ImageIcon \fBgetIcon\fP (String \fBx\fP)"
+.br
+.ti -1c
+.RI "static void \fBupdateStudent\fP (String \fBUID\fP)"
+.br
+.ti -1c
+.RI "static void \fBupdateActiveCheck\fP (boolean success)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBx\fP = false"
+.br
+.ti -1c
+.RI "static javax\&.swing\&.JLabel \fBACTIVE_ICON\fP"
+.br
+.ti -1c
+.RI "static javax\&.swing\&.JLabel \fBINACTIVE_ICON\fP"
+.br
+.ti -1c
+.RI "static javax\&.swing\&.JButton \fBviewStudentsButton\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final ImageIcon \fBICON_ACTIVE\fP = \fBcreateImageIcon\fP('images/Start_ACTIVE\&.png', 'Card reader currently active\&.')"
+.br
+.ti -1c
+.RI "static final ImageIcon \fBICON_INACTIVE\fP = \fBcreateImageIcon\fP('images/Start_NOTACTIVE\&.png', 'Card reader currently active\&.')"
+.br
+.ti -1c
+.RI "static String \fBuid_placeholder\fP = ''"
+.br
+.ti -1c
+.RI "static String \fBUID\fP = \fBuid_placeholder\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The main UI\&. The homescreen basically
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.UserInterface\&.UserInterface ()"
+Creates new form \fBUserInterface\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "static ImageIcon ams\&.UserInterface\&.createImageIcon (String path, String description)\fC [static]\fP"
+Returns an ImageIcon, or null if the path was invalid\&. This is to allow images to brought in without a NullPointerException Resourced from : https://stackoverflow.com/questions/13151979/null-pointer-exception-when-an-imageicon-is-added-to-jbutton-in-netbeans 
+.SS "static ImageIcon ams\&.UserInterface\&.getIcon (String x)\fC [static]\fP"
+Need a way to access non-static methods from static context Referenced from https://www.javacodegeeks.com/2017/10/can-non-static-method-access-static-variablemethod-java.html
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP Picture URL/File Path location 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+ImageIcon The image file will now be able to be used in java\&. 
+.RE
+.PP
+
+.SS "static void ams\&.UserInterface\&.updateActiveCheck (boolean success)\fC [static]\fP"
+
+.SS "static void ams\&.UserInterface\&.updateStudent (String UID)\fC [static]\fP"
+This is to update the name bar of the student/employee\&. I just stuck to student coz it's easier 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP Card UID\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "javax\&.swing\&.JLabel ams\&.UserInterface\&.ACTIVE_ICON\fC [static]\fP"
+
+.SS "final ImageIcon ams\&.UserInterface\&.ICON_ACTIVE = \fBcreateImageIcon\fP('images/Start_ACTIVE\&.png', 'Card reader currently active\&.')\fC [static]\fP, \fC [protected]\fP"
+
+.SS "final ImageIcon ams\&.UserInterface\&.ICON_INACTIVE = \fBcreateImageIcon\fP('images/Start_NOTACTIVE\&.png', 'Card reader currently active\&.')\fC [static]\fP, \fC [protected]\fP"
+
+.SS "javax\&.swing\&.JLabel ams\&.UserInterface\&.INACTIVE_ICON\fC [static]\fP"
+
+.SS "String ams\&.UserInterface\&.UID = \fBuid_placeholder\fP\fC [static]\fP, \fC [protected]\fP"
+
+.SS "String ams\&.UserInterface\&.uid_placeholder = ''\fC [static]\fP, \fC [protected]\fP"
+
+.SS "javax\&.swing\&.JButton ams\&.UserInterface\&.viewStudentsButton\fC [static]\fP"
+
+.SS "boolean ams\&.UserInterface\&.x = false\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

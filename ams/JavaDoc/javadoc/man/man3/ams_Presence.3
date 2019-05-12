@@ -1,0 +1,149 @@
+.TH "ams.Presence" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.Presence
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPresence\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBtimeCheck\fP ()"
+.br
+.ti -1c
+.RI "static void \fBFifteenMinActivate\fP ()"
+.br
+.ti -1c
+.RI "static int \fBtoMins\fP (String s)"
+.br
+.ti -1c
+.RI "static void \fBMarkPresent\fP (String UID)"
+.br
+.ti -1c
+.RI "static void \fBAdjustPresence\fP (String UID, boolean req)"
+.br
+.ti -1c
+.RI "static void \fBUpPresence\fP (String UID)"
+.br
+.ti -1c
+.RI "static void \fBDownPresence\fP (String UID)"
+.br
+.ti -1c
+.RI "static void \fBInstructorPresence\fP (String UID)"
+.br
+.ti -1c
+.RI "static void \fBgetPresncePercentage\fP (String UID)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBreadStudentUID\fP = false"
+.br
+.ti -1c
+.RI "static String \fBUIStudentName\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The attendance taking class\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.Presence\&.Presence ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void ams\&.Presence\&.AdjustPresence (String UID, boolean req)\fC [static]\fP"
+The following three methods are geared towards adjusting a student's presence in a certain class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP Card UID 
+.br
+\fIreq\fP req 
+.RE
+.PP
+In case the instructor needs to up someone's presence count manually for a class This can only be used effectively within the time range of a particular class session 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP 
+.RE
+.PP
+
+.SS "static void ams\&.Presence\&.DownPresence (String UID)\fC [static]\fP"
+In case the instructor needs to lower someone's presence count for a class This can only be used effectively within the time range of a particular class session 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP 
+.RE
+.PP
+
+.SS "static void ams\&.Presence\&.FifteenMinActivate ()\fC [static]\fP"
+There are times when the instructor is late or not present during a lecture\&. This method is geared towards activating the the AMS 15 minutes into class automatically so students who've attended may mark their presence in the system\&. 
+.SS "static void ams\&.Presence\&.getPresncePercentage (String UID)\fC [static]\fP"
+
+.SS "static void ams\&.Presence\&.InstructorPresence (String UID)\fC [static]\fP"
+InstructorPresence will have multiple functions: • It'll mark their presence for that class • If this method is not met, the 15 minute activation of the AMS will automatically commence
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP 
+.RE
+.PP
+
+.SS "static void ams\&.Presence\&.MarkPresent (String UID)\fC [static]\fP"
+
+.SS "static boolean ams\&.Presence\&.timeCheck ()\fC [static]\fP"
+The \fBtimeCheck()\fP method is meant to be an inclusive method that can be used anyhwhere in the application to check whether the current time has any ongoing classes\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Time Check Positive or Negative 
+.RE
+.PP
+
+.SS "static int ams\&.Presence\&.toMins (String s)\fC [static]\fP"
+This method is meant for the timeCheck method\&. It returns the minute format for DD:HH:MM
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP This is a method used to turn HH:MM:SS format into one int number in MINUTES only\&. It helps with time comparisons\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+HoursInMins 
+.RE
+.PP
+
+.SS "static void ams\&.Presence\&.UpPresence (String UID)\fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "boolean ams\&.Presence\&.readStudentUID = false\fC [static]\fP"
+
+.SS "String ams\&.Presence\&.UIStudentName\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

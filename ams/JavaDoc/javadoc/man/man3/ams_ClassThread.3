@@ -1,0 +1,79 @@
+.TH "ams.ClassThread" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.ClassThread
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClassThread\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int [][] \fBActiveClassesList\fP ()"
+.br
+.ti -1c
+.RI "static int \fBtoMins\fP (String s)"
+.br
+.ti -1c
+.RI "static int \fBclassCheck\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The idea here is to try and have a constant java thread that's consistently checking the time to see verify which class is currently ongoing\&. The main use I have for this is for the \fBPresence\fP class, the timeCheck() method
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.ClassThread\&.ClassThread ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static int [][] ams\&.ClassThread\&.ActiveClassesList ()\fC [static]\fP"
+Creates an array of the active classes of a current semester every time it's called\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a 2D array, index [x][0] is for the class_id, [x][1] is for the time of that class_start in minutes\&. 
+.RE
+.PP
+
+.SS "static int ams\&.ClassThread\&.classCheck ()\fC [static]\fP"
+This method is to check which 'time slot' of the day as class is ongoing\&. The \fBclassCheck()\fP method is written with knowledge of the tables in the database\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The number returned will be used in SQL queries where we need to obtain the class list of active classes 
+.RE
+.PP
+
+.SS "static int ams\&.ClassThread\&.toMins (String s)\fC [static]\fP"
+For some reason, accessing another method within the DB call loop (in the \fBActiveClassesList()\fP method) renders the whole operation as void\&. I added another copy of the \fBtoMins()\fP method originally from \fBPresence\&.java\fP to help counter this error\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

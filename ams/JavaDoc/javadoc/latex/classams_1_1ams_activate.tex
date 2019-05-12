@@ -1,0 +1,97 @@
+\hypertarget{classams_1_1ams_activate}{}\section{ams.\+ams\+Activate Class Reference}
+\label{classams_1_1ams_activate}\index{ams.amsActivate@{ams.amsActivate}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classams_1_1ams_activate_a5ed697f974ce79263f7974f29a11312b}{activation\+Timer\+Run\+Out}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{classams_1_1ams_activate_a0d114e5980e360dddeb2c9243cdc3b52}{active\+Check}} ()
+\item 
+static boolean \mbox{\hyperlink{classams_1_1ams_activate_a01ac1b9a3cd5d20b61b46496a7ff3a95}{Activate\+Or\+Nah}} (boolean x, String U\+ID)
+\item 
+static boolean \mbox{\hyperlink{classams_1_1ams_activate_a103584e81b703fa2552d353d14366057}{activate\+Ams}} (boolean x, String U\+ID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to activate and deactivate A\+MS attendance recording method
+
+\begin{DoxyAuthor}{Author}
+Maan Alaulaqi (\href{mailto:201610814@aau.ac.ae}{\texttt{ 201610814@aau.\+ac.\+ae}}) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1ams_activate_a103584e81b703fa2552d353d14366057}\label{classams_1_1ams_activate_a103584e81b703fa2552d353d14366057}} 
+\index{ams.amsActivate@{ams.amsActivate}!activateAms@{activateAms}}
+\index{activateAms@{activateAms}!ams.amsActivate@{ams.amsActivate}}
+\subsubsection{\texorpdfstring{activateAms()}{activateAms()}}
+{\footnotesize\ttfamily static boolean ams.\+ams\+Activate.\+activate\+Ams (\begin{DoxyParamCaption}\item[{boolean}]{x,  }\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+A straight to it activate or deactivate method of the A\+MS. 
+\begin{DoxyParams}{Parameters}
+{\em x} & will be obtained from Activate\+Or\+Nah method \\
+\hline
+{\em U\+ID} & will be obtained from Activate\+Or\+Nah method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true will turn it on 
+\end{DoxyReturn}
+Ok what we need to do is allow students to walk up to this and scan their cards and be marked present, ya? So let\textquotesingle{}s assume. Swipe $>$ get\+U\+ID $>$ pass U\+ID to mark\+Presnce $>$ End of transaction? That\textquotesingle{}s basically it tbh.. There\textquotesingle{}s nothing more to it..Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1ams_activate_a103584e81b703fa2552d353d14366057_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1ams_activate_a01ac1b9a3cd5d20b61b46496a7ff3a95}\label{classams_1_1ams_activate_a01ac1b9a3cd5d20b61b46496a7ff3a95}} 
+\index{ams.amsActivate@{ams.amsActivate}!ActivateOrNah@{ActivateOrNah}}
+\index{ActivateOrNah@{ActivateOrNah}!ams.amsActivate@{ams.amsActivate}}
+\subsubsection{\texorpdfstring{ActivateOrNah()}{ActivateOrNah()}}
+{\footnotesize\ttfamily static boolean ams.\+ams\+Activate.\+Activate\+Or\+Nah (\begin{DoxyParamCaption}\item[{boolean}]{x,  }\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The idea here is the instructor will be presented with a choice of whether to activate or not. If not, it should call another method to present the instructor with options. 
+\begin{DoxyParams}{Parameters}
+{\em x} & True = Yes activate, false = No don\textquotesingle{}t activate. \\
+\hline
+{\em U\+ID} & The U\+ID will be passed through here from the \mbox{\hyperlink{classams_1_1_card_connection}{Card\+Connection}} class. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false. This method is being called by a couple other methods. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1ams_activate_a01ac1b9a3cd5d20b61b46496a7ff3a95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1ams_activate_a01ac1b9a3cd5d20b61b46496a7ff3a95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1ams_activate_a5ed697f974ce79263f7974f29a11312b}\label{classams_1_1ams_activate_a5ed697f974ce79263f7974f29a11312b}} 
+\index{ams.amsActivate@{ams.amsActivate}!activationTimerRunOut@{activationTimerRunOut}}
+\index{activationTimerRunOut@{activationTimerRunOut}!ams.amsActivate@{ams.amsActivate}}
+\subsubsection{\texorpdfstring{activationTimerRunOut()}{activationTimerRunOut()}}
+{\footnotesize\ttfamily void ams.\+ams\+Activate.\+activation\+Timer\+Run\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classams_1_1ams_activate_a0d114e5980e360dddeb2c9243cdc3b52}\label{classams_1_1ams_activate_a0d114e5980e360dddeb2c9243cdc3b52}} 
+\index{ams.amsActivate@{ams.amsActivate}!activeCheck@{activeCheck}}
+\index{activeCheck@{activeCheck}!ams.amsActivate@{ams.amsActivate}}
+\subsubsection{\texorpdfstring{activeCheck()}{activeCheck()}}
+{\footnotesize\ttfamily static boolean ams.\+ams\+Activate.\+active\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{ams_activate_8java}{ams\+Activate.\+java}}\end{DoxyCompactItemize}

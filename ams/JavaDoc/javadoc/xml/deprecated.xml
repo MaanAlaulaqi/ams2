@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Class <ref refid="classams_1_1student" kindref="compound">ams.student</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>An early class assigned for students </para>
+</listitem>
+<varlistentry><term>Member <ref refid="classams_1_1student_1aaf15213b221829a2c44c15a859af9da2" kindref="member">ams.student.SQLStudent</ref>  (String column, String table)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/> The idea here is to have a ready SQL statement that can be multi-purposed </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

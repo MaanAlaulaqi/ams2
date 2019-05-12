@@ -1,0 +1,80 @@
+.TH "ams.amsActivate" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.amsActivate
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBactivationTimerRunOut\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBactiveCheck\fP ()"
+.br
+.ti -1c
+.RI "static boolean \fBActivateOrNah\fP (boolean x, String UID)"
+.br
+.ti -1c
+.RI "static boolean \fBactivateAms\fP (boolean x, String UID)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class to activate and deactivate AMS attendance recording method
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static boolean ams\&.amsActivate\&.activateAms (boolean x, String UID)\fC [static]\fP"
+A straight to it activate or deactivate method of the AMS\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP will be obtained from ActivateOrNah method 
+.br
+\fIUID\fP will be obtained from ActivateOrNah method 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true will turn it on 
+.RE
+.PP
+Ok what we need to do is allow students to walk up to this and scan their cards and be marked present, ya? So let's assume\&. Swipe > getUID > pass UID to markPresnce > End of transaction? That's basically it tbh\&.\&. There's nothing more to it\&.\&.
+.SS "static boolean ams\&.amsActivate\&.ActivateOrNah (boolean x, String UID)\fC [static]\fP"
+The idea here is the instructor will be presented with a choice of whether to activate or not\&. If not, it should call another method to present the instructor with options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP True = Yes activate, false = No don't activate\&. 
+.br
+\fIUID\fP The UID will be passed through here from the \fBCardConnection\fP class\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true/false\&. This method is being called by a couple other methods\&. 
+.RE
+.PP
+
+.SS "void ams\&.amsActivate\&.activationTimerRunOut ()"
+
+.SS "static boolean ams\&.amsActivate\&.activeCheck ()\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

@@ -1,0 +1,108 @@
+\hypertarget{classams_1_1_class_thread}{}\section{ams.\+Class\+Thread Class Reference}
+\label{classams_1_1_class_thread}\index{ams.ClassThread@{ams.ClassThread}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classams_1_1_class_thread_a507ccd0861e5ef4b3d9cf312052b7f0e}{Class\+Thread}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587}{Active\+Classes\+List}} ()
+\item 
+static int \mbox{\hyperlink{classams_1_1_class_thread_a6cf57979f8aee94a4b4c5d46525bb76d}{to\+Mins}} (String s)
+\item 
+static int \mbox{\hyperlink{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72}{class\+Check}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The idea here is to try and have a constant java thread that\textquotesingle{}s consistently checking the time to see verify which class is currently ongoing. The main use I have for this is for the \mbox{\hyperlink{classams_1_1_presence}{Presence}} class, the time\+Check() method
+
+\begin{DoxyAuthor}{Author}
+Maan Alaulaqi (\href{mailto:201610814@aau.ac.ae}{\texttt{ 201610814@aau.\+ac.\+ae}}) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classams_1_1_class_thread_a507ccd0861e5ef4b3d9cf312052b7f0e}\label{classams_1_1_class_thread_a507ccd0861e5ef4b3d9cf312052b7f0e}} 
+\index{ams.ClassThread@{ams.ClassThread}!ClassThread@{ClassThread}}
+\index{ClassThread@{ClassThread}!ams.ClassThread@{ams.ClassThread}}
+\subsubsection{\texorpdfstring{ClassThread()}{ClassThread()}}
+{\footnotesize\ttfamily ams.\+Class\+Thread.\+Class\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587}\label{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587}} 
+\index{ams.ClassThread@{ams.ClassThread}!ActiveClassesList@{ActiveClassesList}}
+\index{ActiveClassesList@{ActiveClassesList}!ams.ClassThread@{ams.ClassThread}}
+\subsubsection{\texorpdfstring{ActiveClassesList()}{ActiveClassesList()}}
+{\footnotesize\ttfamily static int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} ams.\+Class\+Thread.\+Active\+Classes\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates an array of the active classes of a current semester every time it\textquotesingle{}s called. \begin{DoxyReturn}{Returns}
+a 2D array, index \mbox{[}x\mbox{]}\mbox{[}0\mbox{]} is for the class\+\_\+id, \mbox{[}x\mbox{]}\mbox{[}1\mbox{]} is for the time of that class\+\_\+start in minutes. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72}\label{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72}} 
+\index{ams.ClassThread@{ams.ClassThread}!classCheck@{classCheck}}
+\index{classCheck@{classCheck}!ams.ClassThread@{ams.ClassThread}}
+\subsubsection{\texorpdfstring{classCheck()}{classCheck()}}
+{\footnotesize\ttfamily static int ams.\+Class\+Thread.\+class\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method is to check which \char`\"{}time slot\char`\"{} of the day as class is ongoing. The \mbox{\hyperlink{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72}{class\+Check()}} method is written with knowledge of the tables in the database. \begin{DoxyReturn}{Returns}
+The number returned will be used in S\+QL queries where we need to obtain the class list of active classes 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_class_thread_a7b05781a31721bb8ee9f4c40203bef72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_class_thread_a6cf57979f8aee94a4b4c5d46525bb76d}\label{classams_1_1_class_thread_a6cf57979f8aee94a4b4c5d46525bb76d}} 
+\index{ams.ClassThread@{ams.ClassThread}!toMins@{toMins}}
+\index{toMins@{toMins}!ams.ClassThread@{ams.ClassThread}}
+\subsubsection{\texorpdfstring{toMins()}{toMins()}}
+{\footnotesize\ttfamily static int ams.\+Class\+Thread.\+to\+Mins (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+For some reason, accessing another method within the DB call loop (in the \mbox{\hyperlink{classams_1_1_class_thread_addadbfedff6d9cc822345caa787ad587}{Active\+Classes\+List()}} method) renders the whole operation as void. I added another copy of the \mbox{\hyperlink{classams_1_1_class_thread_a6cf57979f8aee94a4b4c5d46525bb76d}{to\+Mins()}} method originally from \mbox{\hyperlink{_presence_8java}{Presence.\+java}} to help counter this error. 
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_class_thread_a6cf57979f8aee94a4b4c5d46525bb76d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{_class_thread_8java}{Class\+Thread.\+java}}\end{DoxyCompactItemize}

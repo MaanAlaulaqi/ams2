@@ -1,0 +1,82 @@
+.TH "ams.dbControl" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.dbControl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdbControl\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdbComd\fP (String sqlcmd)"
+.br
+.ti -1c
+.RI "static void \fBdbComdUpdate\fP (String sqlcmd)"
+.br
+.ti -1c
+.RI "static String \fBgetID\fP (String uid)"
+.br
+.ti -1c
+.RI "static Connection \fBdoConnect\fP ()"
+.br
+.ti -1c
+.RI "static void \fBdoClose\fP ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.dbControl\&.dbControl ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void ams\&.dbControl\&.dbComd (String sqlcmd)\fC [static]\fP"
+This method is aimed at making a general use method for SQL statements\&. When using this method, be sure to add the 'doClose();' method in your finally block in the end of the try-catch\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsqlcmd\fP The all-in-one SQL query (READ ONLY) method\&. The WRITABLE method is doComdUpdate(String) 
+.RE
+.PP
+
+.SS "static void ams\&.dbControl\&.dbComdUpdate (String sqlcmd)\fC [static]\fP"
+dComUpdate is to be used when updating a record in the database(student presence for example) When this is called, call \fBdoClose()\fP right after it to avoid database errors and close unneeded connections\&. Generally, at the 'finally' stage of a try-catch-finally\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsqlcmd\fP The all-in-one SQL query (UPDATABLE) method\&. 
+.RE
+.PP
+
+.SS "static void ams\&.dbControl\&.doClose ()\fC [static]\fP"
+Closes the connection in the agreed upon safe pattern: ResultSet ¬ Statement ¬ Connection\&. Should generally be added to the finally block after the try-catch\&. Based on ( https://stackoverflow.com/questions/2225221/closing-database-connections-in-java ) 
+.SS "static Connection ams\&.dbControl\&.doConnect ()\fC [static]\fP"
+Connects to the database\&. I've had issues with this bit\&. It continuously tried to connect to a deleted scheme, therefore I manually set a direct connection to the schema we're using with 'con\&.setSchema('AMS');' 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIusername\fP = 'test' username for the DB 
+.br
+\fIpassword\fP = 'test' username for the DB 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+con to carry out the connection to other methods 
+.RE
+.PP
+
+.SS "static String ams\&.dbControl\&.getID (String uid)\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

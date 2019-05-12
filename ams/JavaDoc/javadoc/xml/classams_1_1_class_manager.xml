@@ -1,0 +1,821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_class_manager" kind="class" language="Java" prot="public">
+    <compoundname>ams::ClassManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">JFrame</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ab0570f84fe4905fc2c9ba238396e28e8" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.ClassManager.y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <initializer>=&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="23" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ab1f97c16a9bc244405ed5e66ead551e7" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ams.ClassManager.incrementMe</definition>
+        <argsstring></argsstring>
+        <name>incrementMe</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="24" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a154789a7a8dac3a05181547e6b1da20d" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ams.ClassManager.sizeMeUpbb</definition>
+        <argsstring></argsstring>
+        <name>sizeMeUpbb</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="25" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a8a1bad293c724aa7abe4b4c204177e47" prot="private" static="yes" mutable="no">
+        <type>String []</type>
+        <definition>String [] ams.ClassManager.stringy</definition>
+        <argsstring></argsstring>
+        <name>stringy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="26" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ab492f2ac78663b2df54d120d54135150" prot="private" static="yes" mutable="no">
+        <type>String [][]</type>
+        <definition>String [][] ams.ClassManager.stringy2</definition>
+        <argsstring></argsstring>
+        <name>stringy2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="27" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a31f0142ee28420b441559b70cee55144" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.ClassManager.uid</definition>
+        <argsstring></argsstring>
+        <name>uid</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="28" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a2f58d6fb68fbf93b7dc3708c059fc021" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.ClassManager.class_name</definition>
+        <argsstring></argsstring>
+        <name>class_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="29" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ad831081927a43f0a043d3e006f76418c" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.ClassManager.class_sec</definition>
+        <argsstring></argsstring>
+        <name>class_sec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="30" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a2b45337dd6e418e09af1a05a2501c5ff" prot="private" static="yes" mutable="no">
+        <type>String []</type>
+        <definition>String [] ams.ClassManager.stringy3</definition>
+        <argsstring></argsstring>
+        <name>stringy3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="31" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ac95b704a2772ee4dbfab0e94593329bc" prot="private" static="yes" mutable="no">
+        <type>javax.swing.JList&lt; String &gt;</type>
+        <definition>javax.swing.JList&lt;String&gt; ams.ClassManager.sClassSelect</definition>
+        <argsstring></argsstring>
+        <name>sClassSelect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="589" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="589" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a775a9d75431d09a57d832b7fdb7f32f5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String ams.ClassManager.InstructorUID</definition>
+        <argsstring></argsstring>
+        <name>InstructorUID</name>
+        <initializer>= <ref refid="classams_1_1_user_interface_1a4220d2d966388244f998d042249a71fc" kindref="member">UserInterface.UID</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="38" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a7f9201877ed7e78a82c16f8f53bd8d7e" prot="private" static="no" mutable="no">
+        <type>javax.swing.JButton</type>
+        <definition>javax.swing.JButton ams.ClassManager.jButton1</definition>
+        <argsstring></argsstring>
+        <name>jButton1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command line arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="578" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="578" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1affa805644fcee317e367022627237abb" prot="private" static="no" mutable="no">
+        <type>javax.swing.JComboBox&lt; String &gt;</type>
+        <definition>javax.swing.JComboBox&lt;String&gt; ams.ClassManager.jComboBox1</definition>
+        <argsstring></argsstring>
+        <name>jComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="579" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a09a08c8e4b796c194948c3f7ea327632" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel ams.ClassManager.jLabel1</definition>
+        <argsstring></argsstring>
+        <name>jLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="580" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a0615b52d859dd4994b490b8f334ff682" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel ams.ClassManager.jLabel2</definition>
+        <argsstring></argsstring>
+        <name>jLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="581" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1acd68fac5633c16e4d733c03e8b17b86d" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel ams.ClassManager.jLabel3</definition>
+        <argsstring></argsstring>
+        <name>jLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="582" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a109636406738d607b4652efc8f26a9b1" prot="private" static="no" mutable="no">
+        <type>javax.swing.JLabel</type>
+        <definition>javax.swing.JLabel ams.ClassManager.jLabel4</definition>
+        <argsstring></argsstring>
+        <name>jLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="583" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a24a6c1c7749d8e4af978e69126c28085" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPanel</type>
+        <definition>javax.swing.JPanel ams.ClassManager.jPanel1</definition>
+        <argsstring></argsstring>
+        <name>jPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="584" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a874f4d45da3136d443ed03882152f813" prot="private" static="no" mutable="no">
+        <type>javax.swing.JPanel</type>
+        <definition>javax.swing.JPanel ams.ClassManager.jPanel2</definition>
+        <argsstring></argsstring>
+        <name>jPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="585" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a814551a37174e1897b4da61d96410b70" prot="private" static="no" mutable="no">
+        <type>javax.swing.JScrollPane</type>
+        <definition>javax.swing.JScrollPane ams.ClassManager.jScrollPane1</definition>
+        <argsstring></argsstring>
+        <name>jScrollPane1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="586" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a56963ac9c165e6f26c8f570658c6f3e2" prot="private" static="no" mutable="no">
+        <type>javax.swing.JScrollPane</type>
+        <definition>javax.swing.JScrollPane ams.ClassManager.jScrollPane2</definition>
+        <argsstring></argsstring>
+        <name>jScrollPane2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="587" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a05f8b481e82e46808600aeb09cbad9c3" prot="private" static="no" mutable="no">
+        <type>javax.swing.JTabbedPane</type>
+        <definition>javax.swing.JTabbedPane ams.ClassManager.jTabbedPane1</definition>
+        <argsstring></argsstring>
+        <name>jTabbedPane1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="588" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a53342a31c9cfdfd999ed4c73d9ce7424" prot="private" static="no" mutable="no">
+        <type>java.awt.Label</type>
+        <definition>java.awt.Label ams.ClassManager.sClassSelectButton</definition>
+        <argsstring></argsstring>
+        <name>sClassSelectButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="590" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ad939360a8ab78d1f7a70c059ee23162f" prot="private" static="no" mutable="no">
+        <type>java.awt.Button</type>
+        <definition>java.awt.Button ams.ClassManager.sDisplayListBUTTON</definition>
+        <argsstring></argsstring>
+        <name>sDisplayListBUTTON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="591" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1aa7c02920eb72bd646a0899bcce585353" prot="private" static="no" mutable="no">
+        <type>java.awt.Button</type>
+        <definition>java.awt.Button ams.ClassManager.sExportListBUTTON</definition>
+        <argsstring></argsstring>
+        <name>sExportListBUTTON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="592" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="592" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a6b203f5681990ffa848ad304392dd56e" prot="private" static="no" mutable="no">
+        <type>javax.swing.JTextField</type>
+        <definition>javax.swing.JTextField ams.ClassManager.sManualClassInput</definition>
+        <argsstring></argsstring>
+        <name>sManualClassInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="593" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1ae89fb94663b06ad6c121e624aed83978" prot="private" static="no" mutable="no">
+        <type>javax.swing.JList&lt; String &gt;</type>
+        <definition>javax.swing.JList&lt;String&gt; ams.ClassManager.sOfferedClassesList</definition>
+        <argsstring></argsstring>
+        <name>sOfferedClassesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="594" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1abea1bcd30832c7af935ce3d2aaaf530d" prot="private" static="no" mutable="no">
+        <type>javax.swing.JScrollPane</type>
+        <definition>javax.swing.JScrollPane ams.ClassManager.sTimeSelect</definition>
+        <argsstring></argsstring>
+        <name>sTimeSelect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="595" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a48bf8dbcd5eecc8bbaa8fc18719c35ad" prot="private" static="no" mutable="no">
+        <type>javax.swing.JList&lt; String &gt;</type>
+        <definition>javax.swing.JList&lt;String&gt; ams.ClassManager.sTimeSelect1</definition>
+        <argsstring></argsstring>
+        <name>sTimeSelect1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="596" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1abedb1092d1d7726fb5357e20b7472bc2" prot="private" static="no" mutable="no">
+        <type>java.awt.Label</type>
+        <definition>java.awt.Label ams.ClassManager.sTimeSelectBUTTON</definition>
+        <argsstring></argsstring>
+        <name>sTimeSelectBUTTON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="597" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1aed7b0767102a465becd84364a27e6345" prot="private" static="no" mutable="no">
+        <type>javax.swing.JTable</type>
+        <definition>javax.swing.JTable ams.ClassManager.studentLIST</definition>
+        <argsstring></argsstring>
+        <name>studentLIST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="598" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a771e3c47d7ec87e29fc232287eb441e3" prot="private" static="no" mutable="no">
+        <type>javax.swing.JInternalFrame</type>
+        <definition>javax.swing.JInternalFrame ams.ClassManager.studentListLEFT</definition>
+        <argsstring></argsstring>
+        <name>studentListLEFT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="599" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_class_manager_1a4de85dd7b2823ed8bafa45ea1f242f6a" prot="private" static="no" mutable="no">
+        <type>javax.swing.JScrollPane</type>
+        <definition>javax.swing.JScrollPane ams.ClassManager.studentListRIGHT</definition>
+        <argsstring></argsstring>
+        <name>studentListRIGHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="600" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1_class_manager_1a3b26f0eba3ed4f3c02d2e2bf1733863f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.ClassManager.ClassManager</definition>
+        <argsstring>()</argsstring>
+        <name>ClassManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates new form <ref refid="classams_1_1_class_manager" kindref="compound">ClassManager</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="35" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="35" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_class_manager_1a9b0924e9fc08323cf6a91bea96f8f398" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassManager.classListFiller2</definition>
+        <argsstring>()</argsstring>
+        <name>classListFiller2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is to fill the first table of classes. All the classes will be listed with which section that particular professor is using <simplesect kind="return"><para>The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="43" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="43" bodyend="78"/>
+        <references refid="classams_1_1_user_interface_1a89f889d43e99ec32651d1e735f7c8621" compoundref="_user_interface_8java" startline="24">ams.UserInterface.uid_placeholder</references>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a14992ccf08396a727940200ec421d4f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassManager.timeListFiller2</definition>
+        <argsstring>(String class_select)</argsstring>
+        <name>timeListFiller2</name>
+        <param>
+          <type>String</type>
+          <declname>class_select</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is to fill the time table with selectable times. You&apos;ll see that class_select is taken and split into two sub strings. The substrings are used to call sql queries, therefore the string MUST be formated like so: &quot;string - #&quot; where the section is the very last charact and preceeding it is 2 spaces and 1 dash(total 3 char spaces) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>class_select</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This will be concatnated into two separate Strings . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="88" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="88" bodyend="129"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a0c0987f97d77198e6781fbbc6586b76b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassManager.class2ListFiller2</definition>
+        <argsstring>()</argsstring>
+        <name>class2ListFiller2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is basically to fill in the &quot;add class&quot; roster shouldn&apos;t be too complicated <simplesect kind="return"><para>The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="136" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="136" bodyend="171"/>
+        <references refid="classams_1_1_user_interface_1a89f889d43e99ec32651d1e735f7c8621" compoundref="_user_interface_8java" startline="24">ams.UserInterface.uid_placeholder</references>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a58654d39f62f9d5c11d8967c0fef3059" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassManager.timingsListFiller2</definition>
+        <argsstring>()</argsstring>
+        <name>timingsListFiller2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="173" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="173" bodyend="209"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a3485ea2038d2b1050bb772a27aa45b38" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.ClassManager.infoBox</definition>
+        <argsstring>(String infoMessage, String titleBar)</argsstring>
+        <name>infoBox</name>
+        <param>
+          <type>String</type>
+          <declname>infoMessage</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>titleBar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Just an error message window generator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>infoMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contents of error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>titleBar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title bar of error message window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="215" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="215" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classams_1_1_class_manager_1aaeffab653e70f0fcf8a560b710933093" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.initComponents</definition>
+        <argsstring>()</argsstring>
+        <name>initComponents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this code. The content of this method is always regenerated by the Form Editor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="226" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="226" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1ac8bd6e575a3189051bcc34783b16e6cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.sDisplayListBUTTONActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>sDisplayListBUTTONActionPerformed</name>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="496" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="496" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a551224bada3d93cea51940656543946f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.sExportListBUTTONActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>sExportListBUTTONActionPerformed</name>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="500" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="500" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1ad90ee9568c16ec4829864b77a849566e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.sClassSelectMouseReleased</definition>
+        <argsstring>(java.awt.event.MouseEvent evt)</argsstring>
+        <name>sClassSelectMouseReleased</name>
+        <param>
+          <type>java.awt.event.MouseEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="505" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="505" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a151f4a8b1087b60b367b53ace6566631" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.sDisplayListBUTTONMouseReleased</definition>
+        <argsstring>(java.awt.event.MouseEvent evt)</argsstring>
+        <name>sDisplayListBUTTONMouseReleased</name>
+        <param>
+          <type>java.awt.event.MouseEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="525" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="525" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1afd0ab473c8c143893ca13d7972c9256b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.sExportListBUTTONMouseReleased</definition>
+        <argsstring>(java.awt.event.MouseEvent evt)</argsstring>
+        <name>sExportListBUTTONMouseReleased</name>
+        <param>
+          <type>java.awt.event.MouseEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Export student list of select class <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mouse release event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="536" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="536" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1a40adfc663b4943f546a1adceb6c9fb98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.jComboBox1ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jComboBox1ActionPerformed</name>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="564" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="564" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_manager_1afe726b9bfb55b63830abac5a86ac107a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.ClassManager.jButton1ActionPerformed</definition>
+        <argsstring>(java.awt.event.ActionEvent evt)</argsstring>
+        <name>jButton1ActionPerformed</name>
+        <param>
+          <type>java.awt.event.ActionEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="568" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="568" bodyend="570"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class manager kind of class. My hopes with this class is to provide the instructor with an interface that will allow them to manage their students and classes.</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>ams.ClassManager</label>
+        <link refid="classams_1_1_class_manager"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>JFrame</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>ams.ClassManager</label>
+        <link refid="classams_1_1_class_manager"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>JFrame</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassManager.java" bodystart="22" bodyend="602"/>
+    <listofallmembers>
+      <member refid="classams_1_1_class_manager_1a0c0987f97d77198e6781fbbc6586b76b" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>class2ListFiller2</name></member>
+      <member refid="classams_1_1_class_manager_1a2f58d6fb68fbf93b7dc3708c059fc021" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>class_name</name></member>
+      <member refid="classams_1_1_class_manager_1ad831081927a43f0a043d3e006f76418c" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>class_sec</name></member>
+      <member refid="classams_1_1_class_manager_1a9b0924e9fc08323cf6a91bea96f8f398" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>classListFiller2</name></member>
+      <member refid="classams_1_1_class_manager_1a3b26f0eba3ed4f3c02d2e2bf1733863f" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>ClassManager</name></member>
+      <member refid="classams_1_1_class_manager_1ab1f97c16a9bc244405ed5e66ead551e7" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>incrementMe</name></member>
+      <member refid="classams_1_1_class_manager_1a3485ea2038d2b1050bb772a27aa45b38" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>infoBox</name></member>
+      <member refid="classams_1_1_class_manager_1aaeffab653e70f0fcf8a560b710933093" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>initComponents</name></member>
+      <member refid="classams_1_1_class_manager_1a775a9d75431d09a57d832b7fdb7f32f5" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>InstructorUID</name></member>
+      <member refid="classams_1_1_class_manager_1a7f9201877ed7e78a82c16f8f53bd8d7e" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jButton1</name></member>
+      <member refid="classams_1_1_class_manager_1afe726b9bfb55b63830abac5a86ac107a" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jButton1ActionPerformed</name></member>
+      <member refid="classams_1_1_class_manager_1affa805644fcee317e367022627237abb" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jComboBox1</name></member>
+      <member refid="classams_1_1_class_manager_1a40adfc663b4943f546a1adceb6c9fb98" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jComboBox1ActionPerformed</name></member>
+      <member refid="classams_1_1_class_manager_1a09a08c8e4b796c194948c3f7ea327632" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jLabel1</name></member>
+      <member refid="classams_1_1_class_manager_1a0615b52d859dd4994b490b8f334ff682" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jLabel2</name></member>
+      <member refid="classams_1_1_class_manager_1acd68fac5633c16e4d733c03e8b17b86d" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jLabel3</name></member>
+      <member refid="classams_1_1_class_manager_1a109636406738d607b4652efc8f26a9b1" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jLabel4</name></member>
+      <member refid="classams_1_1_class_manager_1a24a6c1c7749d8e4af978e69126c28085" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jPanel1</name></member>
+      <member refid="classams_1_1_class_manager_1a874f4d45da3136d443ed03882152f813" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jPanel2</name></member>
+      <member refid="classams_1_1_class_manager_1a814551a37174e1897b4da61d96410b70" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jScrollPane1</name></member>
+      <member refid="classams_1_1_class_manager_1a56963ac9c165e6f26c8f570658c6f3e2" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jScrollPane2</name></member>
+      <member refid="classams_1_1_class_manager_1a05f8b481e82e46808600aeb09cbad9c3" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>jTabbedPane1</name></member>
+      <member refid="classams_1_1_class_manager_1ac95b704a2772ee4dbfab0e94593329bc" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sClassSelect</name></member>
+      <member refid="classams_1_1_class_manager_1a53342a31c9cfdfd999ed4c73d9ce7424" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sClassSelectButton</name></member>
+      <member refid="classams_1_1_class_manager_1ad90ee9568c16ec4829864b77a849566e" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sClassSelectMouseReleased</name></member>
+      <member refid="classams_1_1_class_manager_1ad939360a8ab78d1f7a70c059ee23162f" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sDisplayListBUTTON</name></member>
+      <member refid="classams_1_1_class_manager_1ac8bd6e575a3189051bcc34783b16e6cb" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sDisplayListBUTTONActionPerformed</name></member>
+      <member refid="classams_1_1_class_manager_1a151f4a8b1087b60b367b53ace6566631" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sDisplayListBUTTONMouseReleased</name></member>
+      <member refid="classams_1_1_class_manager_1aa7c02920eb72bd646a0899bcce585353" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sExportListBUTTON</name></member>
+      <member refid="classams_1_1_class_manager_1a551224bada3d93cea51940656543946f" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sExportListBUTTONActionPerformed</name></member>
+      <member refid="classams_1_1_class_manager_1afd0ab473c8c143893ca13d7972c9256b" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sExportListBUTTONMouseReleased</name></member>
+      <member refid="classams_1_1_class_manager_1a154789a7a8dac3a05181547e6b1da20d" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sizeMeUpbb</name></member>
+      <member refid="classams_1_1_class_manager_1a6b203f5681990ffa848ad304392dd56e" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sManualClassInput</name></member>
+      <member refid="classams_1_1_class_manager_1ae89fb94663b06ad6c121e624aed83978" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sOfferedClassesList</name></member>
+      <member refid="classams_1_1_class_manager_1abea1bcd30832c7af935ce3d2aaaf530d" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sTimeSelect</name></member>
+      <member refid="classams_1_1_class_manager_1a48bf8dbcd5eecc8bbaa8fc18719c35ad" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sTimeSelect1</name></member>
+      <member refid="classams_1_1_class_manager_1abedb1092d1d7726fb5357e20b7472bc2" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>sTimeSelectBUTTON</name></member>
+      <member refid="classams_1_1_class_manager_1a8a1bad293c724aa7abe4b4c204177e47" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>stringy</name></member>
+      <member refid="classams_1_1_class_manager_1ab492f2ac78663b2df54d120d54135150" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>stringy2</name></member>
+      <member refid="classams_1_1_class_manager_1a2b45337dd6e418e09af1a05a2501c5ff" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>stringy3</name></member>
+      <member refid="classams_1_1_class_manager_1aed7b0767102a465becd84364a27e6345" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>studentLIST</name></member>
+      <member refid="classams_1_1_class_manager_1a771e3c47d7ec87e29fc232287eb441e3" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>studentListLEFT</name></member>
+      <member refid="classams_1_1_class_manager_1a4de85dd7b2823ed8bafa45ea1f242f6a" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>studentListRIGHT</name></member>
+      <member refid="classams_1_1_class_manager_1a14992ccf08396a727940200ec421d4f1" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>timeListFiller2</name></member>
+      <member refid="classams_1_1_class_manager_1a58654d39f62f9d5c11d8967c0fef3059" prot="public" virt="non-virtual"><scope>ams::ClassManager</scope><name>timingsListFiller2</name></member>
+      <member refid="classams_1_1_class_manager_1a31f0142ee28420b441559b70cee55144" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>uid</name></member>
+      <member refid="classams_1_1_class_manager_1ab0570f84fe4905fc2c9ba238396e28e8" prot="private" virt="non-virtual"><scope>ams::ClassManager</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

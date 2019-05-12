@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_file_saver" kind="class" language="Java" prot="public">
+    <compoundname>ams::FileSaver</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1_file_saver_1aa9244b45b67171ba4a8e0b1977dfe636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.FileSaver.FileSaver</definition>
+        <argsstring>()</argsstring>
+        <name>FileSaver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" line="19" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_file_saver_1a925b8d63d7240a7e925f26d8cd0f0988" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.FileSaver.SaveMe</definition>
+        <argsstring>(String x, String y)</argsstring>
+        <name>SaveMe</name>
+        <param>
+          <type>String</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" line="21" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" bodystart="21" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>File exporter class (Exporting the student list)</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" line="17" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/FileSaver.java" bodystart="17" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classams_1_1_file_saver_1aa9244b45b67171ba4a8e0b1977dfe636" prot="public" virt="non-virtual"><scope>ams::FileSaver</scope><name>FileSaver</name></member>
+      <member refid="classams_1_1_file_saver_1a925b8d63d7240a7e925f26d8cd0f0988" prot="public" virt="non-virtual"><scope>ams::FileSaver</scope><name>SaveMe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

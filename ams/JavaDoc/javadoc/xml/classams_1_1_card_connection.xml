@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_card_connection" kind="class" language="Java" prot="public">
+    <compoundname>ams::CardConnection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classams_1_1_card_connection_1ab7f20e37feae85f6958ea441ce99aa42" prot="private" static="no" mutable="no">
+        <type>CardTerminal</type>
+        <definition>CardTerminal ams.CardConnection.terminal</definition>
+        <argsstring></argsstring>
+        <name>terminal</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="39" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a03b2d48e6c9a02bf63958fe8b844fac9" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ams.CardConnection.running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="40" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_card_connection_1afebf857900af077a6d2da54dc9196253" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ams.CardConnection.sendConfirmation</definition>
+        <argsstring></argsstring>
+        <name>sendConfirmation</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="41" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a9ace40f5af28c492e55a001f5e11a8b7" prot="private" static="no" mutable="no">
+        <type>final CommandAPDU</type>
+        <definition>final CommandAPDU ams.CardConnection.GET_UID_COMMAND_APDU</definition>
+        <argsstring></argsstring>
+        <name>GET_UID_COMMAND_APDU</name>
+        <initializer>= new CommandAPDU(0xFF, 0xCA, 0x00, 0x00, 0x04)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="46" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a1670405761b5d4141b4cf69f85938869" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ams.CardConnection.ESCAPE_COMMAND</definition>
+        <argsstring></argsstring>
+        <name>ESCAPE_COMMAND</name>
+        <initializer>= 0x003136b0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="43" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a50141d033d85f1e5859c09b4cdcf6d9f" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.CardConnection.cardUID</definition>
+        <argsstring></argsstring>
+        <name>cardUID</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="47" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" compoundref="_interface_cmds_8java" startline="61" endline="76">ams.InterfaceCmds.getCurrentUID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ams.CardConnection.counter</definition>
+        <argsstring></argsstring>
+        <name>counter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="48" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classams_1_1ams_activate_1a01ac1b9a3cd5d20b61b46496a7ff3a95" compoundref="ams_activate_8java" startline="27" endline="39">ams.amsActivate.ActivateOrNah</referencedby>
+        <referencedby refid="classams_1_1ams_activate_1a103584e81b703fa2552d353d14366057" compoundref="ams_activate_8java" startline="46" endline="75">ams.amsActivate.activateAms</referencedby>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+        <referencedby refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" compoundref="_presence_8java" startline="83" endline="111">ams.Presence.FifteenMinActivate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_card_connection_1a608f1d4516c799989ec105c6b72a83f1" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ams.CardConnection.view_counter</definition>
+        <argsstring></argsstring>
+        <name>view_counter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="49" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1_card_connection_1afa765cc7c8f61cb08327119713d328f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.CardConnection.CardConnection</definition>
+        <argsstring>()</argsstring>
+        <name>CardConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="50" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1a84c6991f3340668fe44a3b7122719bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean ams.CardConnection.enablePlugnPlay</definition>
+        <argsstring>()</argsstring>
+        <name>enablePlugnPlay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables the USB NFC reader to be removed and then reinserted without errors. Based entirely on: <ulink url="http://stackoverflow.com/a/16987873">http://stackoverflow.com/a/16987873</ulink> <simplesect kind="return"><para>boolean of whether it&apos;s a success or not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="59" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="59" bodyend="86"/>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1a29c57f229be609d06518d8764bcee323" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean ams.CardConnection.initateTerminal</definition>
+        <argsstring>()</argsstring>
+        <name>initateTerminal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiates the card terminal connection, i.e. connects to the USB NFC Reader. <simplesect kind="return"><para>boolean of whether it&apos;s a success or not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="91" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="91" bodyend="108"/>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1a9e20e93963b78e6b960dfdd5166504bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.CardConnection.disableSound</definition>
+        <argsstring>(boolean set)</argsstring>
+        <name>disableSound</name>
+        <param>
+          <type>boolean</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method disables the buzzer sound of the USB NCF Reader based on a boolean A neat option I found while researching the card reader ( API-ACR122U-2.02.pdf Page 28 - 6.7- Set Buzzer output) Some issues with this method is that I couldn&apos;t figure out how to enable it to work with the method <ref refid="classams_1_1_card_connection_1a84c6991f3340668fe44a3b7122719bb7" kindref="member">enablePlugnPlay()</ref> as it wasn&apos;t a priority. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean on whether it&apos;s set as disabled or not </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="116" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="116" bodyend="146"/>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.CardConnection.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is the main loop for the <ref refid="classams_1_1_card_connection" kindref="compound">CardConnection</ref>, it&apos;ll continously check for new cards. This will be used as something like: <programlisting><codeline><highlight class="normal">text<sp/></highlight></codeline>
+</programlisting> : new Thread(CardConnection).start(); </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="153" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="153" bodyend="312"/>
+        <references refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" compoundref="_card_connection_8java" startline="48">ams.CardConnection.counter</references>
+        <references refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" compoundref="_presence_8java" startline="83" endline="111">ams.Presence.FifteenMinActivate</references>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1_user_interface_1a9350019300425cd33e6afa3155029ce6" compoundref="_user_interface_8java" startline="354" endline="385">ams.UserInterface.updateActiveCheck</references>
+        <references refid="classams_1_1_card_connection_1a25b0ff4c7b137be761f2814ef1dcaba7" compoundref="_card_connection_8java" startline="317" endline="320">ams.CardConnection.cardUID</references>
+        <references refid="classams_1_1_user_interface_1a2c095e5b4874956fc7831b9986656130" compoundref="_user_interface_8java" startline="340" endline="351">ams.UserInterface.updateStudent</references>
+        <references refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" compoundref="student_8java" startline="65" endline="94">ams.student.cardIDLookUp</references>
+        <references refid="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" compoundref="db_look_up_8java" startline="27" endline="60">ams.dbLookUp.uidCheck</references>
+        <references refid="classams_1_1_user_interface_1a0149f362602f1ce708e919161b3d77d2" compoundref="_user_interface_8java" startline="404">ams.UserInterface.viewStudentsButton</references>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" compoundref="_presence_8java" startline="238" endline="266">ams.Presence.InstructorPresence</references>
+        <references refid="classams_1_1ams_activate_1a01ac1b9a3cd5d20b61b46496a7ff3a95" compoundref="ams_activate_8java" startline="27" endline="39">ams.amsActivate.ActivateOrNah</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1ad64ef421bc44c06dc3ed799f281182ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.CardConnection.pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <exceptions> throws InterruptedException     </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Will pause the <ref refid="classams_1_1_card_connection" kindref="compound">CardConnection</ref>. I don&apos;t think I ever needed to use it But to have an unused method is better than having to make one later on I think. <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InterruptedException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>InterruptException </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="326" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="326" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_card_connection_1abbba44c123cd6f69c54e7d9ea0e5e291" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.CardConnection.resume</definition>
+        <argsstring>()</argsstring>
+        <name>resume</name>
+        <exceptions> throws InterruptedException     </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Will resume the <ref refid="classams_1_1_card_connection" kindref="compound">CardConnection</ref>. <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InterruptedException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>InterruptedException </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="334" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="334" bodyend="337"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_card_connection_1a25b0ff4c7b137be761f2814ef1dcaba7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ams.CardConnection.cardUID</definition>
+        <argsstring>()</argsstring>
+        <name>cardUID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For instances where we call the card UID from another class <simplesect kind="return"><para>Returns the card&apos;s UID in String format. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="317" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="317" bodyend="320"/>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>implements Runnable in order to allow Threads to be used Based on this tutorial ( <ulink url="https://www.callicoder.com/java-multithreading-thread-and-runnable-tutorial/">https://www.callicoder.com/java-multithreading-thread-and-runnable-tutorial/</ulink> ) </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>ams.CardConnection</label>
+        <link refid="classams_1_1_card_connection"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>ams.CardConnection</label>
+        <link refid="classams_1_1_card_connection"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" line="38" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/CardConnection.java" bodystart="38" bodyend="339"/>
+    <listofallmembers>
+      <member refid="classams_1_1_card_connection_1afa765cc7c8f61cb08327119713d328f9" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>CardConnection</name></member>
+      <member refid="classams_1_1_card_connection_1a50141d033d85f1e5859c09b4cdcf6d9f" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>cardUID</name></member>
+      <member refid="classams_1_1_card_connection_1a25b0ff4c7b137be761f2814ef1dcaba7" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>cardUID</name></member>
+      <member refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>counter</name></member>
+      <member refid="classams_1_1_card_connection_1a9e20e93963b78e6b960dfdd5166504bb" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>disableSound</name></member>
+      <member refid="classams_1_1_card_connection_1a84c6991f3340668fe44a3b7122719bb7" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>enablePlugnPlay</name></member>
+      <member refid="classams_1_1_card_connection_1a1670405761b5d4141b4cf69f85938869" prot="private" virt="non-virtual"><scope>ams::CardConnection</scope><name>ESCAPE_COMMAND</name></member>
+      <member refid="classams_1_1_card_connection_1a9ace40f5af28c492e55a001f5e11a8b7" prot="private" virt="non-virtual"><scope>ams::CardConnection</scope><name>GET_UID_COMMAND_APDU</name></member>
+      <member refid="classams_1_1_card_connection_1a29c57f229be609d06518d8764bcee323" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>initateTerminal</name></member>
+      <member refid="classams_1_1_card_connection_1ad64ef421bc44c06dc3ed799f281182ae" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>pause</name></member>
+      <member refid="classams_1_1_card_connection_1abbba44c123cd6f69c54e7d9ea0e5e291" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>resume</name></member>
+      <member refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>run</name></member>
+      <member refid="classams_1_1_card_connection_1a03b2d48e6c9a02bf63958fe8b844fac9" prot="private" virt="non-virtual"><scope>ams::CardConnection</scope><name>running</name></member>
+      <member refid="classams_1_1_card_connection_1afebf857900af077a6d2da54dc9196253" prot="private" virt="non-virtual"><scope>ams::CardConnection</scope><name>sendConfirmation</name></member>
+      <member refid="classams_1_1_card_connection_1ab7f20e37feae85f6958ea441ce99aa42" prot="private" virt="non-virtual"><scope>ams::CardConnection</scope><name>terminal</name></member>
+      <member refid="classams_1_1_card_connection_1a608f1d4516c799989ec105c6b72a83f1" prot="public" virt="non-virtual"><scope>ams::CardConnection</scope><name>view_counter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

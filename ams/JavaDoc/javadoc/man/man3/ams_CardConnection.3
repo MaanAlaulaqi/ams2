@@ -1,0 +1,139 @@
+.TH "ams.CardConnection" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.CardConnection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Runnable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCardConnection\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBenablePlugnPlay\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBinitateTerminal\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisableSound\fP (boolean set)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBpause\fP ()  throws InterruptedException     "
+.br
+.ti -1c
+.RI "void \fBresume\fP ()  throws InterruptedException     "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBcardUID\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static String \fBcardUID\fP = ''"
+.br
+.ti -1c
+.RI "static int \fBcounter\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBview_counter\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+implements Runnable in order to allow Threads to be used Based on this tutorial ( https://www.callicoder.com/java-multithreading-thread-and-runnable-tutorial/ ) 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.CardConnection\&.CardConnection ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static String ams\&.CardConnection\&.cardUID ()\fC [static]\fP"
+For instances where we call the card UID from another class 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns the card's UID in String format\&. 
+.RE
+.PP
+
+.SS "void ams\&.CardConnection\&.disableSound (boolean set)"
+This method disables the buzzer sound of the USB NCF Reader based on a boolean A neat option I found while researching the card reader ( API-ACR122U-2\&.02\&.pdf Page 28 - 6\&.7- Set Buzzer output) Some issues with this method is that I couldn't figure out how to enable it to work with the method \fBenablePlugnPlay()\fP as it wasn't a priority\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIset\fP boolean on whether it's set as disabled or not 
+.RE
+.PP
+
+.SS "boolean ams\&.CardConnection\&.enablePlugnPlay ()"
+Enables the USB NFC reader to be removed and then reinserted without errors\&. Based entirely on: http://stackoverflow.com/a/16987873 
+.PP
+\fBReturns:\fP
+.RS 4
+boolean of whether it's a success or not\&. 
+.RE
+.PP
+
+.SS "boolean ams\&.CardConnection\&.initateTerminal ()"
+Initiates the card terminal connection, i\&.e\&. connects to the USB NFC Reader\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+boolean of whether it's a success or not\&. 
+.RE
+.PP
+
+.SS "void ams\&.CardConnection\&.pause () throws InterruptedException"
+Will pause the \fBCardConnection\fP\&. I don't think I ever needed to use it But to have an unused method is better than having to make one later on I think\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInterruptedException\fP InterruptException 
+.RE
+.PP
+
+.SS "void ams\&.CardConnection\&.resume () throws InterruptedException"
+Will resume the \fBCardConnection\fP\&. 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInterruptedException\fP InterruptedException 
+.RE
+.PP
+
+.SS "void ams\&.CardConnection\&.run ()"
+This method is the main loop for the \fBCardConnection\fP, it'll continously check for new cards\&. This will be used as something like: 
+.PP
+.nf
+text 
+
+.fi
+.PP
+ : new Thread(CardConnection)\&.start(); 
+.SH "Member Data Documentation"
+.PP 
+.SS "String ams\&.CardConnection\&.cardUID = ''\fC [static]\fP"
+
+.SS "int ams\&.CardConnection\&.counter = 0\fC [static]\fP"
+
+.SS "int ams\&.CardConnection\&.view_counter = 0\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

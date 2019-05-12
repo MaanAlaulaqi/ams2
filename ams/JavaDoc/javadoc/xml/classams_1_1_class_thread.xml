@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_class_thread" kind="class" language="Java" prot="public">
+    <compoundname>ams::ClassThread</compoundname>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_class_thread_1a04476dab7a3fa17d90f82c0b1eeaa4e2" prot="package" static="yes" mutable="no">
+        <type>int [][]</type>
+        <definition>int [][] ams.ClassThread.class_table</definition>
+        <argsstring></argsstring>
+        <name>class_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="24" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1_class_thread_1a507ccd0861e5ef4b3d9cf312052b7f0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.ClassThread.ClassThread</definition>
+        <argsstring>()</argsstring>
+        <name>ClassThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="26" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="26" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int [][]</type>
+        <definition>static int [][] ams.ClassThread.ActiveClassesList</definition>
+        <argsstring>()</argsstring>
+        <name>ActiveClassesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an array of the active classes of a current semester every time it&apos;s called. <simplesect kind="return"><para>a 2D array, index [x][0] is for the class_id, [x][1] is for the time of that class_start in minutes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="34" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="34" bodyend="75"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <references refid="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" compoundref="_class_thread_8java" startline="84" endline="90">ams.ClassThread.toMins</references>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassThread.toMins</definition>
+        <argsstring>(String s)</argsstring>
+        <name>toMins</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For some reason, accessing another method within the DB call loop (in the <ref refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" kindref="member">ActiveClassesList()</ref> method) renders the whole operation as void. I added another copy of the <ref refid="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" kindref="member">toMins()</ref> method originally from <ref refid="_presence_8java" kindref="compound">Presence.java</ref> to help counter this error. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="84" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="84" bodyend="90"/>
+        <referencedby refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" compoundref="_class_thread_8java" startline="34" endline="75">ams.ClassThread.ActiveClassesList</referencedby>
+        <referencedby refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.ClassThread.classCheck</definition>
+        <argsstring>()</argsstring>
+        <name>classCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is to check which &quot;time slot&quot; of the day as class is ongoing. The <ref refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" kindref="member">classCheck()</ref> method is written with knowledge of the tables in the database. <simplesect kind="return"><para>The number returned will be used in SQL queries where we need to obtain the class list of active classes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="98" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="98" bodyend="112"/>
+        <references refid="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" compoundref="_class_thread_8java" startline="84" endline="90">ams.ClassThread.toMins</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" compoundref="_interface_cmds_8java" startline="28" endline="56">ams.InterfaceCmds.getCurrentClass</referencedby>
+        <referencedby refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</referencedby>
+        <referencedby refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</referencedby>
+        <referencedby refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" compoundref="_presence_8java" startline="174" endline="198">ams.Presence.UpPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" compoundref="_presence_8java" startline="204" endline="228">ams.Presence.DownPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" compoundref="_presence_8java" startline="238" endline="266">ams.Presence.InstructorPresence</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The idea here is to try and have a constant java thread that&apos;s consistently checking the time to see verify which class is currently ongoing. The main use I have for this is for the <ref refid="classams_1_1_presence" kindref="compound">Presence</ref> class, the timeCheck() method</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" line="23" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ClassThread.java" bodystart="23" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" prot="public" virt="non-virtual"><scope>ams::ClassThread</scope><name>ActiveClassesList</name></member>
+      <member refid="classams_1_1_class_thread_1a04476dab7a3fa17d90f82c0b1eeaa4e2" prot="package" virt="non-virtual"><scope>ams::ClassThread</scope><name>class_table</name></member>
+      <member refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" prot="public" virt="non-virtual"><scope>ams::ClassThread</scope><name>classCheck</name></member>
+      <member refid="classams_1_1_class_thread_1a507ccd0861e5ef4b3d9cf312052b7f0e" prot="public" virt="non-virtual"><scope>ams::ClassThread</scope><name>ClassThread</name></member>
+      <member refid="classams_1_1_class_thread_1a6cf57979f8aee94a4b4c5d46525bb76d" prot="public" virt="non-virtual"><scope>ams::ClassThread</scope><name>toMins</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

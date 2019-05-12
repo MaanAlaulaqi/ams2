@@ -1,0 +1,100 @@
+\hypertarget{classams_1_1_interface_cmds}{}\section{ams.\+Interface\+Cmds Class Reference}
+\label{classams_1_1_interface_cmds}\index{ams.InterfaceCmds@{ams.InterfaceCmds}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classams_1_1_interface_cmds_a058a0bca2695aca4f396daddaf009686}{get\+Current\+Class}} (int x)
+\item 
+static String \mbox{\hyperlink{classams_1_1_interface_cmds_a130756a981203cad81e5d92a8bfaf1f0}{get\+Current\+U\+ID}} (String U\+ID)
+\item 
+static String \mbox{\hyperlink{classams_1_1_interface_cmds_aaae6e75ca4f733d4af6b2eb27844d730}{get\+Current\+Swipe}} (String U\+ID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This will mostly geared towards obtaining different information from the database, such as student info, class timings, etc. I mainly made it so I can use it with the UI so that I don\textquotesingle{}t have a messy thing going on over in that class and try to keep it strictly UI.
+
+\begin{DoxyAuthor}{Author}
+Maan Alaulaqi (\href{mailto:201610814@aau.ac.ae}{\texttt{ 201610814@aau.\+ac.\+ae}}) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1_interface_cmds_a058a0bca2695aca4f396daddaf009686}\label{classams_1_1_interface_cmds_a058a0bca2695aca4f396daddaf009686}} 
+\index{ams.InterfaceCmds@{ams.InterfaceCmds}!getCurrentClass@{getCurrentClass}}
+\index{getCurrentClass@{getCurrentClass}!ams.InterfaceCmds@{ams.InterfaceCmds}}
+\subsubsection{\texorpdfstring{getCurrentClass()}{getCurrentClass()}}
+{\footnotesize\ttfamily static String ams.\+Interface\+Cmds.\+get\+Current\+Class (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This is mostly used to obtain the name of the current class, and its timing
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x = 1 \+: return class name, x = 2\+: return start, x = 3\+: return end time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns class name, start time, or end time, depending on the parameter of x 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_interface_cmds_a058a0bca2695aca4f396daddaf009686_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_interface_cmds_aaae6e75ca4f733d4af6b2eb27844d730}\label{classams_1_1_interface_cmds_aaae6e75ca4f733d4af6b2eb27844d730}} 
+\index{ams.InterfaceCmds@{ams.InterfaceCmds}!getCurrentSwipe@{getCurrentSwipe}}
+\index{getCurrentSwipe@{getCurrentSwipe}!ams.InterfaceCmds@{ams.InterfaceCmds}}
+\subsubsection{\texorpdfstring{getCurrentSwipe()}{getCurrentSwipe()}}
+{\footnotesize\ttfamily static String ams.\+Interface\+Cmds.\+get\+Current\+Swipe (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This is mostly used in the UI of the application. It\textquotesingle{}ll be mostly used to print out the name of the student on the front page of the application and their ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em U\+ID} & Card U\+ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string of words that relate to the student\textquotesingle{}s ID card\textquotesingle{}s being scanned 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_interface_cmds_aaae6e75ca4f733d4af6b2eb27844d730_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_interface_cmds_aaae6e75ca4f733d4af6b2eb27844d730_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_interface_cmds_a130756a981203cad81e5d92a8bfaf1f0}\label{classams_1_1_interface_cmds_a130756a981203cad81e5d92a8bfaf1f0}} 
+\index{ams.InterfaceCmds@{ams.InterfaceCmds}!getCurrentUID@{getCurrentUID}}
+\index{getCurrentUID@{getCurrentUID}!ams.InterfaceCmds@{ams.InterfaceCmds}}
+\subsubsection{\texorpdfstring{getCurrentUID()}{getCurrentUID()}}
+{\footnotesize\ttfamily static String ams.\+Interface\+Cmds.\+get\+Current\+U\+ID (\begin{DoxyParamCaption}\item[{String}]{U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_interface_cmds_a130756a981203cad81e5d92a8bfaf1f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_interface_cmds_a130756a981203cad81e5d92a8bfaf1f0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{_interface_cmds_8java}{Interface\+Cmds.\+java}}\end{DoxyCompactItemize}

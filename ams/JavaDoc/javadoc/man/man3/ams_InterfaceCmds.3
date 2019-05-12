@@ -1,0 +1,67 @@
+.TH "ams.InterfaceCmds" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.InterfaceCmds
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static String \fBgetCurrentClass\fP (int x)"
+.br
+.ti -1c
+.RI "static String \fBgetCurrentUID\fP (String UID)"
+.br
+.ti -1c
+.RI "static String \fBgetCurrentSwipe\fP (String UID)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This will mostly geared towards obtaining different information from the database, such as student info, class timings, etc\&. I mainly made it so I can use it with the UI so that I don't have a messy thing going on over in that class and try to keep it strictly UI\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static String ams\&.InterfaceCmds\&.getCurrentClass (int x)\fC [static]\fP"
+This is mostly used to obtain the name of the current class, and its timing
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP x = 1 : return class name, x = 2: return start, x = 3: return end time 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns class name, start time, or end time, depending on the parameter of x 
+.RE
+.PP
+
+.SS "static String ams\&.InterfaceCmds\&.getCurrentSwipe (String UID)\fC [static]\fP"
+This is mostly used in the UI of the application\&. It'll be mostly used to print out the name of the student on the front page of the application and their ID\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIUID\fP Card UID 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A string of words that relate to the student's ID card's being scanned 
+.RE
+.PP
+
+.SS "static String ams\&.InterfaceCmds\&.getCurrentUID (String UID)\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1ams__main" kind="class" language="Java" prot="public">
+    <compoundname>ams::ams_main</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.ams_main.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String []</type>
+          <declname>args</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ams_main.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ams_main.java" bodystart="22" bodyend="81"/>
+        <references refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" compoundref="_class_thread_8java" startline="34" endline="75">ams.ClassThread.ActiveClassesList</references>
+        <references refid="classams_1_1_card_connection_1a84c6991f3340668fe44a3b7122719bb7" compoundref="_card_connection_8java" startline="59" endline="86">ams.CardConnection.enablePlugnPlay</references>
+        <references refid="classams_1_1_card_connection_1a29c57f229be609d06518d8764bcee323" compoundref="_card_connection_8java" startline="91" endline="108">ams.CardConnection.initateTerminal</references>
+        <references refid="classams_1_1_card_connection_1a9e20e93963b78e6b960dfdd5166504bb" compoundref="_card_connection_8java" startline="116" endline="146">ams.CardConnection.disableSound</references>
+        <references refid="classams_1_1_card_connection_1a50141d033d85f1e5859c09b4cdcf6d9f" compoundref="_card_connection_8java" startline="47">ams.CardConnection.cardUID</references>
+        <references refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</references>
+        <references refid="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" compoundref="_presence_8java" startline="118" endline="124">ams.Presence.toMins</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The main class that runs the application</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ams_main.java" line="21" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ams_main.java" bodystart="21" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" prot="public" virt="non-virtual"><scope>ams::ams_main</scope><name>main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

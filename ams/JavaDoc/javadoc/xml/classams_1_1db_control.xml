@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1db_control" kind="class" language="Java" prot="public">
+    <compoundname>ams::dbControl</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1db_control_1a0c6f92a6dacfb7ded185b59757217378" prot="private" static="yes" mutable="no">
+        <type>Connection</type>
+        <definition>Connection ams.dbControl.con</definition>
+        <argsstring></argsstring>
+        <name>con</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="24" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classams_1_1db_control_1a46e0c4f5d58055d6d7e3fdcf31c953df" prot="package" static="yes" mutable="no">
+        <type>Statement</type>
+        <definition>Statement ams.dbControl.COMMANDTHEE</definition>
+        <argsstring></argsstring>
+        <name>COMMANDTHEE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="25" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1db_control_1ab717c7cb3633497dbbafde2c21bf607d" prot="package" static="yes" mutable="no">
+        <type>Statement</type>
+        <definition>Statement ams.dbControl.DO_THE_THING</definition>
+        <argsstring></argsstring>
+        <name>DO_THE_THING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="26" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1db_control_1a9338b39cc3be99ec80bc9ace5cb2af9f" prot="package" static="yes" mutable="no">
+        <type>ResultSet</type>
+        <definition>ResultSet ams.dbControl.rs</definition>
+        <argsstring></argsstring>
+        <name>rs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="27" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1db_control_1a8b7c3b84a607e051abd34447b8ed35e2" prot="package" static="yes" mutable="no">
+        <type>ResultSet</type>
+        <definition>ResultSet ams.dbControl.rsUpdate</definition>
+        <argsstring></argsstring>
+        <name>rsUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="27" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1db_control_1aa9eb77a7eb823c4fe35a469fdbad081b" prot="package" static="yes" mutable="no">
+        <type>ResultSet</type>
+        <definition>ResultSet ams.dbControl.rsUpdateMe</definition>
+        <argsstring></argsstring>
+        <name>rsUpdateMe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="28" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classams_1_1db_control_1aaee242cb4109e9f51017b99ac9f484ec" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String ams.dbControl.SQL</definition>
+        <argsstring></argsstring>
+        <name>SQL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="29" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1db_control_1ad62d6afaf9e7f9fdd20b6d7c571a0de8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.dbControl.dbControl</definition>
+        <argsstring>()</argsstring>
+        <name>dbControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="31" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="31" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.dbControl.dbComd</definition>
+        <argsstring>(String sqlcmd)</argsstring>
+        <name>dbComd</name>
+        <param>
+          <type>String</type>
+          <declname>sqlcmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is aimed at making a general use method for SQL statements. When using this method, be sure to add the &quot;doClose();&quot; method in your finally block in the end of the try-catch.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sqlcmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The all-in-one SQL query (READ ONLY) method. The WRITABLE method is doComdUpdate(String) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="41" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="41" bodyend="64"/>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a9b0924e9fc08323cf6a91bea96f8f398" compoundref="_class_manager_8java" startline="43" endline="78">ams.ClassManager.classListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a14992ccf08396a727940200ec421d4f1" compoundref="_class_manager_8java" startline="88" endline="129">ams.ClassManager.timeListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a0c0987f97d77198e6781fbbc6586b76b" compoundref="_class_manager_8java" startline="136" endline="171">ams.ClassManager.class2ListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a58654d39f62f9d5c11d8967c0fef3059" compoundref="_class_manager_8java" startline="173" endline="209">ams.ClassManager.timingsListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" compoundref="_class_thread_8java" startline="34" endline="75">ams.ClassThread.ActiveClassesList</referencedby>
+        <referencedby refid="classams_1_1db_control_1ac130c7d3b8e1b37cfcacc3f05b9562d2" compoundref="db_control_8java" startline="97" endline="109">ams.dbControl.getID</referencedby>
+        <referencedby refid="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" compoundref="db_look_up_8java" startline="27" endline="60">ams.dbLookUp.uidCheck</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" compoundref="_interface_cmds_8java" startline="28" endline="56">ams.InterfaceCmds.getCurrentClass</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" compoundref="_interface_cmds_8java" startline="61" endline="76">ams.InterfaceCmds.getCurrentUID</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1aaae6e75ca4f733d4af6b2eb27844d730" compoundref="_interface_cmds_8java" startline="85" endline="159">ams.InterfaceCmds.getCurrentSwipe</referencedby>
+        <referencedby refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</referencedby>
+        <referencedby refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" compoundref="_presence_8java" startline="83" endline="111">ams.Presence.FifteenMinActivate</referencedby>
+        <referencedby refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" compoundref="student_8java" startline="25" endline="49">ams.student.student</referencedby>
+        <referencedby refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" compoundref="student_8java" startline="65" endline="94">ams.student.cardIDLookUp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1db_control_1a725cd6ae84ef6aca9bfd782b319d9f34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.dbControl.dbComdUpdate</definition>
+        <argsstring>(String sqlcmd)</argsstring>
+        <name>dbComdUpdate</name>
+        <param>
+          <type>String</type>
+          <declname>sqlcmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dComUpdate is to be used when updating a record in the database(student presence for example) When this is called, call <ref refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" kindref="member">doClose()</ref> right after it to avoid database errors and close unneeded connections. Generally, at the &quot;finally&quot; stage of a try-catch-finally. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sqlcmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The all-in-one SQL query (UPDATABLE) method. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="71" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="71" bodyend="95"/>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1db_control_1ac130c7d3b8e1b37cfcacc3f05b9562d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ams.dbControl.getID</definition>
+        <argsstring>(String uid)</argsstring>
+        <name>getID</name>
+        <param>
+          <type>String</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="97" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="97" bodyend="109"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Connection</type>
+        <definition>static Connection ams.dbControl.doConnect</definition>
+        <argsstring>()</argsstring>
+        <name>doConnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Connects to the database. I&apos;ve had issues with this bit. It continuously tried to connect to a deleted scheme, therefore I manually set a direct connection to the schema we&apos;re using with &quot;con.setSchema(&quot;AMS&quot;);&quot; <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= &quot;test&quot; username for the DB </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= &quot;test&quot; username for the DB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>con to carry out the connection to other methods </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="124" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="124" bodyend="143"/>
+        <referencedby refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</referencedby>
+        <referencedby refid="classams_1_1db_control_1a725cd6ae84ef6aca9bfd782b319d9f34" compoundref="db_control_8java" startline="71" endline="95">ams.dbControl.dbComdUpdate</referencedby>
+        <referencedby refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</referencedby>
+        <referencedby refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" compoundref="_presence_8java" startline="174" endline="198">ams.Presence.UpPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" compoundref="_presence_8java" startline="204" endline="228">ams.Presence.DownPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" compoundref="_presence_8java" startline="238" endline="266">ams.Presence.InstructorPresence</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.dbControl.doClose</definition>
+        <argsstring>()</argsstring>
+        <name>doClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes the connection in the agreed upon safe pattern: ResultSet ¬ Statement ¬ Connection. Should generally be added to the finally block after the try-catch. Based on ( <ulink url="https://stackoverflow.com/questions/2225221/closing-database-connections-in-java">https://stackoverflow.com/questions/2225221/closing-database-connections-in-java</ulink> ) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="150" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="150" bodyend="154"/>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a9b0924e9fc08323cf6a91bea96f8f398" compoundref="_class_manager_8java" startline="43" endline="78">ams.ClassManager.classListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a14992ccf08396a727940200ec421d4f1" compoundref="_class_manager_8java" startline="88" endline="129">ams.ClassManager.timeListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a0c0987f97d77198e6781fbbc6586b76b" compoundref="_class_manager_8java" startline="136" endline="171">ams.ClassManager.class2ListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_manager_1a58654d39f62f9d5c11d8967c0fef3059" compoundref="_class_manager_8java" startline="173" endline="209">ams.ClassManager.timingsListFiller2</referencedby>
+        <referencedby refid="classams_1_1_class_thread_1addadbfedff6d9cc822345caa787ad587" compoundref="_class_thread_8java" startline="34" endline="75">ams.ClassThread.ActiveClassesList</referencedby>
+        <referencedby refid="classams_1_1db_control_1ac130c7d3b8e1b37cfcacc3f05b9562d2" compoundref="db_control_8java" startline="97" endline="109">ams.dbControl.getID</referencedby>
+        <referencedby refid="classams_1_1db_look_up_1ac09044c1aea786643ccaf67188c61ca3" compoundref="db_look_up_8java" startline="27" endline="60">ams.dbLookUp.uidCheck</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" compoundref="_interface_cmds_8java" startline="28" endline="56">ams.InterfaceCmds.getCurrentClass</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" compoundref="_interface_cmds_8java" startline="61" endline="76">ams.InterfaceCmds.getCurrentUID</referencedby>
+        <referencedby refid="classams_1_1_interface_cmds_1aaae6e75ca4f733d4af6b2eb27844d730" compoundref="_interface_cmds_8java" startline="85" endline="159">ams.InterfaceCmds.getCurrentSwipe</referencedby>
+        <referencedby refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</referencedby>
+        <referencedby refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" compoundref="_presence_8java" startline="83" endline="111">ams.Presence.FifteenMinActivate</referencedby>
+        <referencedby refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</referencedby>
+        <referencedby refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" compoundref="_presence_8java" startline="174" endline="198">ams.Presence.UpPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" compoundref="_presence_8java" startline="204" endline="228">ams.Presence.DownPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" compoundref="_presence_8java" startline="238" endline="266">ams.Presence.InstructorPresence</referencedby>
+        <referencedby refid="classams_1_1student_1ad03bb53d0a1de89f9e960925e3f226ef" compoundref="student_8java" startline="25" endline="49">ams.student.student</referencedby>
+        <referencedby refid="classams_1_1student_1a8395e89b09114ce0b7d2c343b11c6d41" compoundref="student_8java" startline="65" endline="94">ams.student.cardIDLookUp</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="17">
+        <label>ResultSet</label>
+      </node>
+      <node id="15">
+        <label>ams.dbControl</label>
+        <link refid="classams_1_1db_control"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>COMMANDTHEE</edgelabel>
+          <edgelabel>DO_THE_THING</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>rsUpdateMe</edgelabel>
+          <edgelabel>rs</edgelabel>
+          <edgelabel>rsUpdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Statement</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/dbControl.java" bodystart="22" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classams_1_1db_control_1a46e0c4f5d58055d6d7e3fdcf31c953df" prot="package" virt="non-virtual"><scope>ams::dbControl</scope><name>COMMANDTHEE</name></member>
+      <member refid="classams_1_1db_control_1a0c6f92a6dacfb7ded185b59757217378" prot="private" virt="non-virtual"><scope>ams::dbControl</scope><name>con</name></member>
+      <member refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>dbComd</name></member>
+      <member refid="classams_1_1db_control_1a725cd6ae84ef6aca9bfd782b319d9f34" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>dbComdUpdate</name></member>
+      <member refid="classams_1_1db_control_1ad62d6afaf9e7f9fdd20b6d7c571a0de8" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>dbControl</name></member>
+      <member refid="classams_1_1db_control_1ab717c7cb3633497dbbafde2c21bf607d" prot="package" virt="non-virtual"><scope>ams::dbControl</scope><name>DO_THE_THING</name></member>
+      <member refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>doClose</name></member>
+      <member refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>doConnect</name></member>
+      <member refid="classams_1_1db_control_1ac130c7d3b8e1b37cfcacc3f05b9562d2" prot="public" virt="non-virtual"><scope>ams::dbControl</scope><name>getID</name></member>
+      <member refid="classams_1_1db_control_1a9338b39cc3be99ec80bc9ace5cb2af9f" prot="package" virt="non-virtual"><scope>ams::dbControl</scope><name>rs</name></member>
+      <member refid="classams_1_1db_control_1a8b7c3b84a607e051abd34447b8ed35e2" prot="package" virt="non-virtual"><scope>ams::dbControl</scope><name>rsUpdate</name></member>
+      <member refid="classams_1_1db_control_1aa9eb77a7eb823c4fe35a469fdbad081b" prot="package" virt="non-virtual"><scope>ams::dbControl</scope><name>rsUpdateMe</name></member>
+      <member refid="classams_1_1db_control_1aaee242cb4109e9f51017b99ac9f484ec" prot="private" virt="non-virtual"><scope>ams::dbControl</scope><name>SQL</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

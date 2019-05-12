@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1ams_activate" kind="class" language="Java" prot="public">
+    <compoundname>ams::amsActivate</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1ams_activate_1acb14ae4687ceaed0997d837d6efd6bbc" prot="private" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ams.amsActivate.status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="13" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1ams_activate_1a0d114e5980e360dddeb2c9243cdc3b52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean ams.amsActivate.activeCheck</definition>
+        <argsstring>()</argsstring>
+        <name>activeCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="16" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1ams_activate_1a01ac1b9a3cd5d20b61b46496a7ff3a95" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean ams.amsActivate.ActivateOrNah</definition>
+        <argsstring>(boolean x, String UID)</argsstring>
+        <name>ActivateOrNah</name>
+        <param>
+          <type>boolean</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The idea here is the instructor will be presented with a choice of whether to activate or not. If not, it should call another method to present the instructor with options. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True = Yes activate, false = No don&apos;t activate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UID will be passed through here from the <ref refid="classams_1_1_card_connection" kindref="compound">CardConnection</ref> class. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false. This method is being called by a couple other methods. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="27" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="27" bodyend="39"/>
+        <references refid="classams_1_1_user_interface_1a9350019300425cd33e6afa3155029ce6" compoundref="_user_interface_8java" startline="354" endline="385">ams.UserInterface.updateActiveCheck</references>
+        <references refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" compoundref="_card_connection_8java" startline="48">ams.CardConnection.counter</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1ams_activate_1a103584e81b703fa2552d353d14366057" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean ams.amsActivate.activateAms</definition>
+        <argsstring>(boolean x, String UID)</argsstring>
+        <name>activateAms</name>
+        <param>
+          <type>boolean</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A straight to it activate or deactivate method of the AMS. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be obtained from ActivateOrNah method </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>will be obtained from ActivateOrNah method </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true will turn it on </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Ok what we need to do is allow students to walk up to this and scan their cards and be marked present, ya? So let&apos;s assume. Swipe &gt; getUID &gt; pass UID to markPresnce &gt; End of transaction? That&apos;s basically it tbh.. There&apos;s nothing more to it..</para>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="46" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="46" bodyend="75"/>
+        <references refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" compoundref="_card_connection_8java" startline="48">ams.CardConnection.counter</references>
+        <references refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1ams_activate_1a5ed697f974ce79263f7974f29a11312b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ams.amsActivate.activationTimerRunOut</definition>
+        <argsstring>()</argsstring>
+        <name>activationTimerRunOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="76" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="76" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to activate and deactivate AMS attendance recording method</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" line="12" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/amsActivate.java" bodystart="12" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classams_1_1ams_activate_1a103584e81b703fa2552d353d14366057" prot="public" virt="non-virtual"><scope>ams::amsActivate</scope><name>activateAms</name></member>
+      <member refid="classams_1_1ams_activate_1a01ac1b9a3cd5d20b61b46496a7ff3a95" prot="public" virt="non-virtual"><scope>ams::amsActivate</scope><name>ActivateOrNah</name></member>
+      <member refid="classams_1_1ams_activate_1a5ed697f974ce79263f7974f29a11312b" prot="public" virt="non-virtual"><scope>ams::amsActivate</scope><name>activationTimerRunOut</name></member>
+      <member refid="classams_1_1ams_activate_1a0d114e5980e360dddeb2c9243cdc3b52" prot="public" virt="non-virtual"><scope>ams::amsActivate</scope><name>activeCheck</name></member>
+      <member refid="classams_1_1ams_activate_1acb14ae4687ceaed0997d837d6efd6bbc" prot="private" virt="non-virtual"><scope>ams::amsActivate</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

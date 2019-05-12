@@ -1,0 +1,197 @@
+\hypertarget{classams_1_1_card_connection}{}\section{ams.\+Card\+Connection Class Reference}
+\label{classams_1_1_card_connection}\index{ams.CardConnection@{ams.CardConnection}}
+
+
+Inheritance diagram for ams.\+Card\+Connection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classams_1_1_card_connection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ams.\+Card\+Connection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classams_1_1_card_connection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classams_1_1_card_connection_afa765cc7c8f61cb08327119713d328f9}{Card\+Connection}} ()
+\item 
+boolean \mbox{\hyperlink{classams_1_1_card_connection_a84c6991f3340668fe44a3b7122719bb7}{enable\+Plugn\+Play}} ()
+\item 
+boolean \mbox{\hyperlink{classams_1_1_card_connection_a29c57f229be609d06518d8764bcee323}{initate\+Terminal}} ()
+\item 
+void \mbox{\hyperlink{classams_1_1_card_connection_a9e20e93963b78e6b960dfdd5166504bb}{disable\+Sound}} (boolean set)
+\item 
+void \mbox{\hyperlink{classams_1_1_card_connection_a051dbf503815b5296b95ead953c5a137}{run}} ()
+\item 
+void \mbox{\hyperlink{classams_1_1_card_connection_ad64ef421bc44c06dc3ed799f281182ae}{pause}} ()  throws Interrupted\+Exception     
+\item 
+void \mbox{\hyperlink{classams_1_1_card_connection_abbba44c123cd6f69c54e7d9ea0e5e291}{resume}} ()  throws Interrupted\+Exception     
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classams_1_1_card_connection_a25b0ff4c7b137be761f2814ef1dcaba7}{card\+U\+ID}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classams_1_1_card_connection_a50141d033d85f1e5859c09b4cdcf6d9f}{card\+U\+ID}} = \char`\"{}\char`\"{}
+\item 
+static int \mbox{\hyperlink{classams_1_1_card_connection_a4e2e084c8d7f8b0c4008f1f4b3723c5a}{counter}} = 0
+\item 
+static int \mbox{\hyperlink{classams_1_1_card_connection_a608f1d4516c799989ec105c6b72a83f1}{view\+\_\+counter}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implements Runnable in order to allow Threads to be used Based on this tutorial ( \href{https://www.callicoder.com/java-multithreading-thread-and-runnable-tutorial/}{\texttt{ https\+://www.\+callicoder.\+com/java-\/multithreading-\/thread-\/and-\/runnable-\/tutorial/}} ) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classams_1_1_card_connection_afa765cc7c8f61cb08327119713d328f9}\label{classams_1_1_card_connection_afa765cc7c8f61cb08327119713d328f9}} 
+\index{ams.CardConnection@{ams.CardConnection}!CardConnection@{CardConnection}}
+\index{CardConnection@{CardConnection}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{CardConnection()}{CardConnection()}}
+{\footnotesize\ttfamily ams.\+Card\+Connection.\+Card\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1_card_connection_a25b0ff4c7b137be761f2814ef1dcaba7}\label{classams_1_1_card_connection_a25b0ff4c7b137be761f2814ef1dcaba7}} 
+\index{ams.CardConnection@{ams.CardConnection}!cardUID@{cardUID}}
+\index{cardUID@{cardUID}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{cardUID()}{cardUID()}}
+{\footnotesize\ttfamily static String ams.\+Card\+Connection.\+card\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+For instances where we call the card U\+ID from another class \begin{DoxyReturn}{Returns}
+Returns the card\textquotesingle{}s U\+ID in String format. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_card_connection_a25b0ff4c7b137be761f2814ef1dcaba7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_card_connection_a9e20e93963b78e6b960dfdd5166504bb}\label{classams_1_1_card_connection_a9e20e93963b78e6b960dfdd5166504bb}} 
+\index{ams.CardConnection@{ams.CardConnection}!disableSound@{disableSound}}
+\index{disableSound@{disableSound}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{disableSound()}{disableSound()}}
+{\footnotesize\ttfamily void ams.\+Card\+Connection.\+disable\+Sound (\begin{DoxyParamCaption}\item[{boolean}]{set }\end{DoxyParamCaption})}
+
+This method disables the buzzer sound of the U\+SB N\+CF Reader based on a boolean A neat option I found while researching the card reader ( A\+P\+I-\/\+A\+C\+R122\+U-\/2.\+02.\+pdf Page 28 -\/ 6.\+7-\/ Set Buzzer output) Some issues with this method is that I couldn\textquotesingle{}t figure out how to enable it to work with the method \mbox{\hyperlink{classams_1_1_card_connection_a84c6991f3340668fe44a3b7122719bb7}{enable\+Plugn\+Play()}} as it wasn\textquotesingle{}t a priority. 
+\begin{DoxyParams}{Parameters}
+{\em set} & boolean on whether it\textquotesingle{}s set as disabled or not \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_card_connection_a9e20e93963b78e6b960dfdd5166504bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_card_connection_a84c6991f3340668fe44a3b7122719bb7}\label{classams_1_1_card_connection_a84c6991f3340668fe44a3b7122719bb7}} 
+\index{ams.CardConnection@{ams.CardConnection}!enablePlugnPlay@{enablePlugnPlay}}
+\index{enablePlugnPlay@{enablePlugnPlay}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{enablePlugnPlay()}{enablePlugnPlay()}}
+{\footnotesize\ttfamily boolean ams.\+Card\+Connection.\+enable\+Plugn\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enables the U\+SB N\+FC reader to be removed and then reinserted without errors. Based entirely on\+: \href{http://stackoverflow.com/a/16987873}{\texttt{ http\+://stackoverflow.\+com/a/16987873}} \begin{DoxyReturn}{Returns}
+boolean of whether it\textquotesingle{}s a success or not. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_card_connection_a84c6991f3340668fe44a3b7122719bb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_card_connection_a29c57f229be609d06518d8764bcee323}\label{classams_1_1_card_connection_a29c57f229be609d06518d8764bcee323}} 
+\index{ams.CardConnection@{ams.CardConnection}!initateTerminal@{initateTerminal}}
+\index{initateTerminal@{initateTerminal}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{initateTerminal()}{initateTerminal()}}
+{\footnotesize\ttfamily boolean ams.\+Card\+Connection.\+initate\+Terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the card terminal connection, i.\+e. connects to the U\+SB N\+FC Reader. \begin{DoxyReturn}{Returns}
+boolean of whether it\textquotesingle{}s a success or not. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_card_connection_a29c57f229be609d06518d8764bcee323_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1_card_connection_ad64ef421bc44c06dc3ed799f281182ae}\label{classams_1_1_card_connection_ad64ef421bc44c06dc3ed799f281182ae}} 
+\index{ams.CardConnection@{ams.CardConnection}!pause@{pause}}
+\index{pause@{pause}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void ams.\+Card\+Connection.\+pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Interrupted\+Exception}
+
+Will pause the \mbox{\hyperlink{classams_1_1_card_connection}{Card\+Connection}}. I don\textquotesingle{}t think I ever needed to use it But to have an unused method is better than having to make one later on I think. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Interrupted\+Exception} & Interrupt\+Exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classams_1_1_card_connection_abbba44c123cd6f69c54e7d9ea0e5e291}\label{classams_1_1_card_connection_abbba44c123cd6f69c54e7d9ea0e5e291}} 
+\index{ams.CardConnection@{ams.CardConnection}!resume@{resume}}
+\index{resume@{resume}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void ams.\+Card\+Connection.\+resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Interrupted\+Exception}
+
+Will resume the \mbox{\hyperlink{classams_1_1_card_connection}{Card\+Connection}}. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Interrupted\+Exception} & Interrupted\+Exception \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classams_1_1_card_connection_a051dbf503815b5296b95ead953c5a137}\label{classams_1_1_card_connection_a051dbf503815b5296b95ead953c5a137}} 
+\index{ams.CardConnection@{ams.CardConnection}!run@{run}}
+\index{run@{run}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void ams.\+Card\+Connection.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method is the main loop for the \mbox{\hyperlink{classams_1_1_card_connection}{Card\+Connection}}, it\textquotesingle{}ll continously check for new cards. This will be used as something like\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{text }
+\end{DoxyCode}
+ \+: new Thread(\+Card\+Connection).start(); Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1_card_connection_a051dbf503815b5296b95ead953c5a137_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classams_1_1_card_connection_a50141d033d85f1e5859c09b4cdcf6d9f}\label{classams_1_1_card_connection_a50141d033d85f1e5859c09b4cdcf6d9f}} 
+\index{ams.CardConnection@{ams.CardConnection}!cardUID@{cardUID}}
+\index{cardUID@{cardUID}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{cardUID}{cardUID}}
+{\footnotesize\ttfamily String ams.\+Card\+Connection.\+card\+U\+ID = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classams_1_1_card_connection_a4e2e084c8d7f8b0c4008f1f4b3723c5a}\label{classams_1_1_card_connection_a4e2e084c8d7f8b0c4008f1f4b3723c5a}} 
+\index{ams.CardConnection@{ams.CardConnection}!counter@{counter}}
+\index{counter@{counter}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int ams.\+Card\+Connection.\+counter = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classams_1_1_card_connection_a608f1d4516c799989ec105c6b72a83f1}\label{classams_1_1_card_connection_a608f1d4516c799989ec105c6b72a83f1}} 
+\index{ams.CardConnection@{ams.CardConnection}!view\_counter@{view\_counter}}
+\index{view\_counter@{view\_counter}!ams.CardConnection@{ams.CardConnection}}
+\subsubsection{\texorpdfstring{view\_counter}{view\_counter}}
+{\footnotesize\ttfamily int ams.\+Card\+Connection.\+view\+\_\+counter = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{_card_connection_8java}{Card\+Connection.\+java}}\end{DoxyCompactItemize}

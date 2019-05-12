@@ -1,0 +1,101 @@
+.TH "ams.ClassManager" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.ClassManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits JFrame\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClassManager\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBclassListFiller2\fP ()"
+.br
+.ti -1c
+.RI "static int \fBtimeListFiller2\fP (String class_select)"
+.br
+.ti -1c
+.RI "static int \fBclass2ListFiller2\fP ()"
+.br
+.ti -1c
+.RI "static int \fBtimingsListFiller2\fP ()"
+.br
+.ti -1c
+.RI "static void \fBinfoBox\fP (String infoMessage, String titleBar)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A class manager kind of class\&. My hopes with this class is to provide the instructor with an interface that will allow them to manage their students and classes\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.ClassManager\&.ClassManager ()"
+Creates new form \fBClassManager\fP 
+.SH "Member Function Documentation"
+.PP 
+.SS "static int ams\&.ClassManager\&.class2ListFiller2 ()\fC [static]\fP"
+This is basically to fill in the 'add class' roster shouldn't be too complicated 
+.PP
+\fBReturns:\fP
+.RS 4
+The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called 
+.RE
+.PP
+
+.SS "static int ams\&.ClassManager\&.classListFiller2 ()\fC [static]\fP"
+This is to fill the first table of classes\&. All the classes will be listed with which section that particular professor is using 
+.PP
+\fBReturns:\fP
+.RS 4
+The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called 
+.RE
+.PP
+
+.SS "static void ams\&.ClassManager\&.infoBox (String infoMessage, String titleBar)\fC [static]\fP"
+Just an error message window generator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinfoMessage\fP Contents of error 
+.br
+\fItitleBar\fP Title bar of error message window 
+.RE
+.PP
+
+.SS "static int ams\&.ClassManager\&.timeListFiller2 (String class_select)\fC [static]\fP"
+This is to fill the time table with selectable times\&. You'll see that class_select is taken and split into two sub strings\&. The substrings are used to call sql queries, therefore the string MUST be formated like so: 'string - #' where the section is the very last charact and preceeding it is 2 spaces and 1 dash(total 3 char spaces) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclass_select\fP This will be concatnated into two separate Strings \&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The return here is useless mostly, the method just needs a return to be used in the constructing of wherever this is called 
+.RE
+.PP
+
+.SS "static int ams\&.ClassManager\&.timingsListFiller2 ()\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

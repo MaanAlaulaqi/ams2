@@ -1,0 +1,140 @@
+\hypertarget{classams_1_1db_control}{}\section{ams.\+db\+Control Class Reference}
+\label{classams_1_1db_control}\index{ams.dbControl@{ams.dbControl}}
+
+
+Collaboration diagram for ams.\+db\+Control\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classams_1_1db_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classams_1_1db_control_ad62d6afaf9e7f9fdd20b6d7c571a0de8}{db\+Control}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classams_1_1db_control_ade10190f5f5a56dfddcfbba1de5de38c}{db\+Comd}} (String sqlcmd)
+\item 
+static void \mbox{\hyperlink{classams_1_1db_control_a725cd6ae84ef6aca9bfd782b319d9f34}{db\+Comd\+Update}} (String sqlcmd)
+\item 
+static String \mbox{\hyperlink{classams_1_1db_control_ac130c7d3b8e1b37cfcacc3f05b9562d2}{get\+ID}} (String uid)
+\item 
+static Connection \mbox{\hyperlink{classams_1_1db_control_a76fc97489ad6acec2ec72d644e935362}{do\+Connect}} ()
+\item 
+static void \mbox{\hyperlink{classams_1_1db_control_ade1a4d8aaeedb1ae1f32a0e629aa09aa}{do\+Close}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classams_1_1db_control_ad62d6afaf9e7f9fdd20b6d7c571a0de8}\label{classams_1_1db_control_ad62d6afaf9e7f9fdd20b6d7c571a0de8}} 
+\index{ams.dbControl@{ams.dbControl}!dbControl@{dbControl}}
+\index{dbControl@{dbControl}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{dbControl()}{dbControl()}}
+{\footnotesize\ttfamily ams.\+db\+Control.\+db\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classams_1_1db_control_ade10190f5f5a56dfddcfbba1de5de38c}\label{classams_1_1db_control_ade10190f5f5a56dfddcfbba1de5de38c}} 
+\index{ams.dbControl@{ams.dbControl}!dbComd@{dbComd}}
+\index{dbComd@{dbComd}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{dbComd()}{dbComd()}}
+{\footnotesize\ttfamily static void ams.\+db\+Control.\+db\+Comd (\begin{DoxyParamCaption}\item[{String}]{sqlcmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method is aimed at making a general use method for S\+QL statements. When using this method, be sure to add the \char`\"{}do\+Close();\char`\"{} method in your finally block in the end of the try-\/catch.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sqlcmd} & The all-\/in-\/one S\+QL query (R\+E\+AD O\+N\+LY) method. The W\+R\+I\+T\+A\+B\+LE method is do\+Comd\+Update(\+String) \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_ade10190f5f5a56dfddcfbba1de5de38c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_ade10190f5f5a56dfddcfbba1de5de38c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1db_control_a725cd6ae84ef6aca9bfd782b319d9f34}\label{classams_1_1db_control_a725cd6ae84ef6aca9bfd782b319d9f34}} 
+\index{ams.dbControl@{ams.dbControl}!dbComdUpdate@{dbComdUpdate}}
+\index{dbComdUpdate@{dbComdUpdate}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{dbComdUpdate()}{dbComdUpdate()}}
+{\footnotesize\ttfamily static void ams.\+db\+Control.\+db\+Comd\+Update (\begin{DoxyParamCaption}\item[{String}]{sqlcmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+d\+Com\+Update is to be used when updating a record in the database(student presence for example) When this is called, call \mbox{\hyperlink{classams_1_1db_control_ade1a4d8aaeedb1ae1f32a0e629aa09aa}{do\+Close()}} right after it to avoid database errors and close unneeded connections. Generally, at the \char`\"{}finally\char`\"{} stage of a try-\/catch-\/finally. 
+\begin{DoxyParams}{Parameters}
+{\em sqlcmd} & The all-\/in-\/one S\+QL query (U\+P\+D\+A\+T\+A\+B\+LE) method. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_a725cd6ae84ef6aca9bfd782b319d9f34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1db_control_ade1a4d8aaeedb1ae1f32a0e629aa09aa}\label{classams_1_1db_control_ade1a4d8aaeedb1ae1f32a0e629aa09aa}} 
+\index{ams.dbControl@{ams.dbControl}!doClose@{doClose}}
+\index{doClose@{doClose}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{doClose()}{doClose()}}
+{\footnotesize\ttfamily static void ams.\+db\+Control.\+do\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Closes the connection in the agreed upon safe pattern\+: Result\+Set ¬ Statement ¬ Connection. Should generally be added to the finally block after the try-\/catch. Based on ( \href{https://stackoverflow.com/questions/2225221/closing-database-connections-in-java}{\texttt{ https\+://stackoverflow.\+com/questions/2225221/closing-\/database-\/connections-\/in-\/java}} ) Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_ade1a4d8aaeedb1ae1f32a0e629aa09aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1db_control_a76fc97489ad6acec2ec72d644e935362}\label{classams_1_1db_control_a76fc97489ad6acec2ec72d644e935362}} 
+\index{ams.dbControl@{ams.dbControl}!doConnect@{doConnect}}
+\index{doConnect@{doConnect}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{doConnect()}{doConnect()}}
+{\footnotesize\ttfamily static Connection ams.\+db\+Control.\+do\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Connects to the database. I\textquotesingle{}ve had issues with this bit. It continuously tried to connect to a deleted scheme, therefore I manually set a direct connection to the schema we\textquotesingle{}re using with \char`\"{}con.\+set\+Schema(\char`\"{}A\+MS\char`\"{});\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em username} & = \char`\"{}test\char`\"{} username for the DB \\
+\hline
+{\em password} & = \char`\"{}test\char`\"{} username for the DB \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+con to carry out the connection to other methods 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_a76fc97489ad6acec2ec72d644e935362_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classams_1_1db_control_ac130c7d3b8e1b37cfcacc3f05b9562d2}\label{classams_1_1db_control_ac130c7d3b8e1b37cfcacc3f05b9562d2}} 
+\index{ams.dbControl@{ams.dbControl}!getID@{getID}}
+\index{getID@{getID}!ams.dbControl@{ams.dbControl}}
+\subsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily static String ams.\+db\+Control.\+get\+ID (\begin{DoxyParamCaption}\item[{String}]{uid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classams_1_1db_control_ac130c7d3b8e1b37cfcacc3f05b9562d2_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/thema/\+One\+Drive/\+Desktop/\+Attendance Management System/ams/src/ams/\mbox{\hyperlink{db_control_8java}{db\+Control.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespaceams" kind="namespace" language="Java">
+    <compoundname>ams</compoundname>
+    <innerclass refid="classams_1_1ams__main" prot="public">ams::ams_main</innerclass>
+    <innerclass refid="classams_1_1ams_activate" prot="public">ams::amsActivate</innerclass>
+    <innerclass refid="classams_1_1_card_connection" prot="public">ams::CardConnection</innerclass>
+    <innerclass refid="classams_1_1_class_manager" prot="public">ams::ClassManager</innerclass>
+    <innerclass refid="classams_1_1_class_thread" prot="public">ams::ClassThread</innerclass>
+    <innerclass refid="classams_1_1db_control" prot="public">ams::dbControl</innerclass>
+    <innerclass refid="classams_1_1db_look_up" prot="public">ams::dbLookUp</innerclass>
+    <innerclass refid="classams_1_1_file_saver" prot="public">ams::FileSaver</innerclass>
+    <innerclass refid="classams_1_1_interface_cmds" prot="public">ams::InterfaceCmds</innerclass>
+    <innerclass refid="classams_1_1_presence" prot="public">ams::Presence</innerclass>
+    <innerclass refid="classams_1_1student" prot="public">ams::student</innerclass>
+    <innerclass refid="classams_1_1update_checker" prot="public">ams::updateChecker</innerclass>
+    <innerclass refid="classams_1_1_user_interface" prot="public">ams::UserInterface</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/ams_main.java" line="6" column="1"/>
+  </compounddef>
+</doxygen>

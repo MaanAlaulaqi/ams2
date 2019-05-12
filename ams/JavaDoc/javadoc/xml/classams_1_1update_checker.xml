@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1update_checker" kind="class" language="Java" prot="public">
+    <compoundname>ams::updateChecker</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1update_checker_1af796e0298f9cc7abd088f9012c54a33f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.updateChecker.updateActiveCheck</definition>
+        <argsstring>(boolean success)</argsstring>
+        <name>updateActiveCheck</name>
+        <param>
+          <type>boolean</type>
+          <declname>success</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/updateChecker.java" line="19" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/updateChecker.java" bodystart="19" bodyend="43"/>
+        <references refid="classams_1_1_user_interface_1a0b8f1d9a42b069d55e7e686d85e9d912" compoundref="_user_interface_8java" startline="387">ams.UserInterface.ACTIVE_ICON</references>
+        <references refid="classams_1_1_user_interface_1a41ce6feb6a3a8e250a4a5d08543ea0e0" compoundref="_user_interface_8java" startline="388">ams.UserInterface.INACTIVE_ICON</references>
+        <referencedby refid="classams_1_1_user_interface_1a9350019300425cd33e6afa3155029ce6" compoundref="_user_interface_8java" startline="354" endline="385">ams.UserInterface.updateActiveCheck</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is meant to change the UI of the "ACTIVE/NOT ACTIVE phase of the AMS. I made it to avoid having to deal with static/non-static arguments that tended to come up during the development phase of this project. <simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/updateChecker.java" line="18" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/updateChecker.java" bodystart="18" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classams_1_1update_checker_1af796e0298f9cc7abd088f9012c54a33f" prot="public" virt="non-virtual"><scope>ams::updateChecker</scope><name>updateActiveCheck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

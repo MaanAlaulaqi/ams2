@@ -1,0 +1,91 @@
+.TH "ams.student" 3 "Sun May 12 2019" "Version 2.3" "Attendance Management System" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ams.student
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstudent\fP ()"
+.br
+.ti -1c
+.RI "String \fBSQLStudent\fP (String column, String table)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcardIDLookUp\fP (String cardid)"
+.br
+.ti -1c
+.RI "static void \fBprint\fP ()"
+.br
+.ti -1c
+.RI "static void \fBgetProfile\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBDeprecated\fP
+.RS 4
+An early class assigned for students
+.RE
+.PP
+.PP
+\fBAuthor:\fP
+.RS 4
+Maan Alaulaqi (201610814@aau.ac.ae) 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ams\&.student\&.student ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void ams\&.student\&.cardIDLookUp (String cardid)\fC [static]\fP"
+This method will compare the card_id (from the database) with the UID of the card that is scanned 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcardid\fP This will be called forth from the database\&. //TO-DO Figure out how to pass SQL parameters through java\&. 
+.RE
+.PP
+
+.SS "static void ams\&.student\&.getProfile ()\fC [static]\fP"
+Used when a student wishes to see their profile and attendance records This will be automatically called if AMS is inactive (\fBamsActivate\fP class will determine this) 
+.SS "static void ams\&.student\&.print ()\fC [static]\fP"
+
+.SS "String ams\&.student\&.SQLStudent (String column, String table)"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+The idea here is to have a ready SQL statement that can be multi-purposed 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcolumn\fP This is a string\&. To include more than one column, make sure to pass all the needed columns as a string\&. ie: 'col1, col2' 
+.br
+\fItable\fP This is a string\&. At a later time, this will be able to include multiple tables 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns an SQL command 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Attendance Management System from the source code\&.

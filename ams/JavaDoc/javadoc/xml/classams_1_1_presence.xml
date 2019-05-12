@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_presence" kind="class" language="Java" prot="public">
+    <compoundname>ams::Presence</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_presence_1a41c8d5f161a35a645604c538c634d36d" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_control" kindref="compound">dbControl</ref></type>
+        <definition>dbControl ams.Presence.db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <initializer>= new <ref refid="classams_1_1db_control" kindref="compound">dbControl</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_presence_1a7c7c994b58e9d4930e9f1389ad239efc" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_control" kindref="compound">dbControl</ref></type>
+        <definition>dbControl ams.Presence.dbUpdate</definition>
+        <argsstring></argsstring>
+        <name>dbUpdate</name>
+        <initializer>= new <ref refid="classams_1_1db_control" kindref="compound">dbControl</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="23" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_presence_1a08cfff80a9d889224d82716c0299cc62" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_look_up" kindref="compound">dbLookUp</ref></type>
+        <definition>dbLookUp ams.Presence.LookUp</definition>
+        <argsstring></argsstring>
+        <name>LookUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="24" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_presence_1abfd2de6d39fdf2bbb6ded2b7a518b6d2" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1_class_thread" kindref="compound">ClassThread</ref></type>
+        <definition>ClassThread ams.Presence.classC</definition>
+        <argsstring></argsstring>
+        <name>classC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="25" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_presence_1ab0747049cc22ece88441e9b58fa237b8" prot="package" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ams.Presence.instructorIN</definition>
+        <argsstring></argsstring>
+        <name>instructorIN</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="26" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_presence_1a2f2f0c375628ca573e40201cfc514e17" prot="public" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ams.Presence.readStudentUID</definition>
+        <argsstring></argsstring>
+        <name>readStudentUID</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="125" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classams_1_1_presence_1a7facdc9c46e28bbeafd2b6208b3de6b0" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.Presence.UIStudentName</definition>
+        <argsstring></argsstring>
+        <name>UIStudentName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="126" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" compoundref="_interface_cmds_8java" startline="61" endline="76">ams.InterfaceCmds.getCurrentUID</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classams_1_1_presence_1a88d6cd256a57c95640b53a5bd221fac7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.Presence.Presence</definition>
+        <argsstring>()</argsstring>
+        <name>Presence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="31" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean ams.Presence.timeCheck</definition>
+        <argsstring>()</argsstring>
+        <name>timeCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" kindref="member">timeCheck()</ref> method is meant to be an inclusive method that can be used anyhwhere in the application to check whether the current time has any ongoing classes.</para>
+<para><simplesect kind="return"><para>Time Check Positive or Negative </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="39" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="39" bodyend="75"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" compoundref="_presence_8java" startline="118" endline="124">ams.Presence.toMins</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" compoundref="_presence_8java" startline="127" endline="153">ams.Presence.MarkPresent</referencedby>
+        <referencedby refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" compoundref="_presence_8java" startline="174" endline="198">ams.Presence.UpPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" compoundref="_presence_8java" startline="204" endline="228">ams.Presence.DownPresence</referencedby>
+        <referencedby refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" compoundref="_presence_8java" startline="238" endline="266">ams.Presence.InstructorPresence</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.FifteenMinActivate</definition>
+        <argsstring>()</argsstring>
+        <name>FifteenMinActivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There are times when the instructor is late or not present during a lecture. This method is geared towards activating the the AMS 15 minutes into class automatically so students who&apos;ve attended may mark their presence in the system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="83" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="83" bodyend="111"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" compoundref="_presence_8java" startline="118" endline="124">ams.Presence.toMins</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <references refid="classams_1_1_card_connection_1a4e2e084c8d7f8b0c4008f1f4b3723c5a" compoundref="_card_connection_8java" startline="48">ams.CardConnection.counter</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ams.Presence.toMins</definition>
+        <argsstring>(String s)</argsstring>
+        <name>toMins</name>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is meant for the timeCheck method. It returns the minute format for DD:HH:MM</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a method used to turn HH:MM:SS format into one int number in MINUTES only. It helps with time comparisons. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HoursInMins </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="118" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="118" bodyend="124"/>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+        <referencedby refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</referencedby>
+        <referencedby refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" compoundref="_presence_8java" startline="83" endline="111">ams.Presence.FifteenMinActivate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.MarkPresent</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>MarkPresent</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="127" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="127" bodyend="153"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</references>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1ams__main_1a74752faba16c8957221a224d97558e10" compoundref="ams__main_8java" startline="22" endline="81">ams.ams_main.main</referencedby>
+        <referencedby refid="classams_1_1ams_activate_1a103584e81b703fa2552d353d14366057" compoundref="ams_activate_8java" startline="46" endline="75">ams.amsActivate.activateAms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1aa72c8cdcdfbec64c43fa32b469b9e822" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.AdjustPresence</definition>
+        <argsstring>(String UID, boolean req)</argsstring>
+        <name>AdjustPresence</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The following three methods are geared towards adjusting a student&apos;s presence in a certain class. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Card UID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>req </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>In case the instructor needs to up someone&apos;s presence count manually for a class This can only be used effectively within the time range of a particular class session <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="163" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="163" bodyend="173"/>
+        <references refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" compoundref="_presence_8java" startline="174" endline="198">ams.Presence.UpPresence</references>
+        <references refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" compoundref="_presence_8java" startline="204" endline="228">ams.Presence.DownPresence</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.UpPresence</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>UpPresence</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="174" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="174" bodyend="198"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</references>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_presence_1aa72c8cdcdfbec64c43fa32b469b9e822" compoundref="_presence_8java" startline="163" endline="173">ams.Presence.AdjustPresence</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.DownPresence</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>DownPresence</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>In case the instructor needs to lower someone&apos;s presence count for a class This can only be used effectively within the time range of a particular class session <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="204" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="204" bodyend="228"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</references>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_presence_1aa72c8cdcdfbec64c43fa32b469b9e822" compoundref="_presence_8java" startline="163" endline="173">ams.Presence.AdjustPresence</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.InstructorPresence</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>InstructorPresence</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>InstructorPresence will have multiple functions: • It&apos;ll mark their presence for that class • If this method is not met, the 15 minute activation of the AMS will automatically commence</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="238" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="238" bodyend="266"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" compoundref="_presence_8java" startline="39" endline="75">ams.Presence.timeCheck</references>
+        <references refid="classams_1_1db_control_1a76fc97489ad6acec2ec72d644e935362" compoundref="db_control_8java" startline="124" endline="143">ams.dbControl.doConnect</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_card_connection_1a051dbf503815b5296b95ead953c5a137" compoundref="_card_connection_8java" startline="153" endline="312">ams.CardConnection.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_presence_1af8a73a088625da3be87b17190563fd81" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ams.Presence.getPresncePercentage</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>getPresncePercentage</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="268" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="268" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The attendance taking class.</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" line="21" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/Presence.java" bodystart="21" bodyend="273"/>
+    <listofallmembers>
+      <member refid="classams_1_1_presence_1aa72c8cdcdfbec64c43fa32b469b9e822" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>AdjustPresence</name></member>
+      <member refid="classams_1_1_presence_1abfd2de6d39fdf2bbb6ded2b7a518b6d2" prot="private" virt="non-virtual"><scope>ams::Presence</scope><name>classC</name></member>
+      <member refid="classams_1_1_presence_1a41c8d5f161a35a645604c538c634d36d" prot="private" virt="non-virtual"><scope>ams::Presence</scope><name>db</name></member>
+      <member refid="classams_1_1_presence_1a7c7c994b58e9d4930e9f1389ad239efc" prot="private" virt="non-virtual"><scope>ams::Presence</scope><name>dbUpdate</name></member>
+      <member refid="classams_1_1_presence_1a1b05700a39e8cadcba0c749d296a04f8" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>DownPresence</name></member>
+      <member refid="classams_1_1_presence_1a84efc9c047a0a2259f61cf55356c9701" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>FifteenMinActivate</name></member>
+      <member refid="classams_1_1_presence_1af8a73a088625da3be87b17190563fd81" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>getPresncePercentage</name></member>
+      <member refid="classams_1_1_presence_1ab0747049cc22ece88441e9b58fa237b8" prot="package" virt="non-virtual"><scope>ams::Presence</scope><name>instructorIN</name></member>
+      <member refid="classams_1_1_presence_1a1ffc74f2f36c4c792834abcc5e2c28ea" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>InstructorPresence</name></member>
+      <member refid="classams_1_1_presence_1a08cfff80a9d889224d82716c0299cc62" prot="private" virt="non-virtual"><scope>ams::Presence</scope><name>LookUp</name></member>
+      <member refid="classams_1_1_presence_1a6f7a875d8decb48536c8eb9a6ef8d3d2" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>MarkPresent</name></member>
+      <member refid="classams_1_1_presence_1a88d6cd256a57c95640b53a5bd221fac7" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>Presence</name></member>
+      <member refid="classams_1_1_presence_1a2f2f0c375628ca573e40201cfc514e17" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>readStudentUID</name></member>
+      <member refid="classams_1_1_presence_1af021bed37055300b60e76853f4bc0666" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>timeCheck</name></member>
+      <member refid="classams_1_1_presence_1ac7407509b71e22e2ca2fde9d52681b73" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>toMins</name></member>
+      <member refid="classams_1_1_presence_1a7facdc9c46e28bbeafd2b6208b3de6b0" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>UIStudentName</name></member>
+      <member refid="classams_1_1_presence_1af23602b98a9a3003ff240fd5cd133378" prot="public" virt="non-virtual"><scope>ams::Presence</scope><name>UpPresence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

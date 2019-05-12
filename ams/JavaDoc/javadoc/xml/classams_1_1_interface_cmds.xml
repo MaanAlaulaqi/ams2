@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classams_1_1_interface_cmds" kind="class" language="Java" prot="public">
+    <compoundname>ams::InterfaceCmds</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_interface_cmds_1aba359d35baa050d7ccde75e4edfdbfb6" prot="private" static="yes" mutable="no">
+        <type><ref refid="classams_1_1db_control" kindref="compound">dbControl</ref></type>
+        <definition>dbControl ams.InterfaceCmds.dbC</definition>
+        <argsstring></argsstring>
+        <name>dbC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="21" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classams_1_1_interface_cmds_1a68883663348ee0756c621f05b4539d8c" prot="package" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String ams.InterfaceCmds.xx</definition>
+        <argsstring></argsstring>
+        <name>xx</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is supposed to return the Card holder&apos;s name for the main screen of the UI </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="60" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classams_1_1_interface_cmds_1a3b939176cc56225274a7f24954c57a08" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ams.InterfaceCmds.InterfaceCmds</definition>
+        <argsstring>()</argsstring>
+        <name>InterfaceCmds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="22" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ams.InterfaceCmds.getCurrentClass</definition>
+        <argsstring>(int x)</argsstring>
+        <name>getCurrentClass</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is mostly used to obtain the name of the current class, and its timing</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x = 1 : return class name, x = 2: return start, x = 3: return end time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns class name, start time, or end time, depending on the parameter of x </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="28" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="28" bodyend="56"/>
+        <references refid="classams_1_1_class_thread_1a7b05781a31721bb8ee9f4c40203bef72" compoundref="_class_thread_8java" startline="98" endline="112">ams.ClassThread.classCheck</references>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ams.InterfaceCmds.getCurrentUID</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>getCurrentUID</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="61" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="61" bodyend="76"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <references refid="classams_1_1_presence_1a7facdc9c46e28bbeafd2b6208b3de6b0" compoundref="_presence_8java" startline="126">ams.Presence.UIStudentName</references>
+        <references refid="classams_1_1_card_connection_1a50141d033d85f1e5859c09b4cdcf6d9f" compoundref="_card_connection_8java" startline="47">ams.CardConnection.cardUID</references>
+        <referencedby refid="classams_1_1_user_interface_1a2c095e5b4874956fc7831b9986656130" compoundref="_user_interface_8java" startline="340" endline="351">ams.UserInterface.updateStudent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classams_1_1_interface_cmds_1aaae6e75ca4f733d4af6b2eb27844d730" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ams.InterfaceCmds.getCurrentSwipe</definition>
+        <argsstring>(String UID)</argsstring>
+        <name>getCurrentSwipe</name>
+        <param>
+          <type>String</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is mostly used in the UI of the application. It&apos;ll be mostly used to print out the name of the student on the front page of the application and their ID.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>UID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Card UID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string of words that relate to the student&apos;s ID card&apos;s being scanned </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="85" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="85" bodyend="159"/>
+        <references refid="classams_1_1db_control_1ade10190f5f5a56dfddcfbba1de5de38c" compoundref="db_control_8java" startline="41" endline="64">ams.dbControl.dbComd</references>
+        <references refid="classams_1_1db_control_1ade1a4d8aaeedb1ae1f32a0e629aa09aa" compoundref="db_control_8java" startline="150" endline="154">ams.dbControl.doClose</references>
+        <referencedby refid="classams_1_1_user_interface_1a2c095e5b4874956fc7831b9986656130" compoundref="_user_interface_8java" startline="340" endline="351">ams.UserInterface.updateStudent</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This will mostly geared towards obtaining different information from the database, such as student info, class timings, etc. I mainly made it so I can use it with the UI so that I don&apos;t have a messy thing going on over in that class and try to keep it strictly UI.</para>
+<para><simplesect kind="author"><para>Maan Alaulaqi (<ulink url="mailto:201610814@aau.ac.ae">201610814@aau.ac.ae</ulink>) </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" line="20" column="1" bodyfile="C:/Users/thema/OneDrive/Desktop/Attendance Management System/ams/src/ams/InterfaceCmds.java" bodystart="20" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classams_1_1_interface_cmds_1aba359d35baa050d7ccde75e4edfdbfb6" prot="private" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>dbC</name></member>
+      <member refid="classams_1_1_interface_cmds_1a058a0bca2695aca4f396daddaf009686" prot="public" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>getCurrentClass</name></member>
+      <member refid="classams_1_1_interface_cmds_1aaae6e75ca4f733d4af6b2eb27844d730" prot="public" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>getCurrentSwipe</name></member>
+      <member refid="classams_1_1_interface_cmds_1a130756a981203cad81e5d92a8bfaf1f0" prot="public" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>getCurrentUID</name></member>
+      <member refid="classams_1_1_interface_cmds_1a3b939176cc56225274a7f24954c57a08" prot="package" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>InterfaceCmds</name></member>
+      <member refid="classams_1_1_interface_cmds_1a68883663348ee0756c621f05b4539d8c" prot="package" virt="non-virtual"><scope>ams::InterfaceCmds</scope><name>xx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
