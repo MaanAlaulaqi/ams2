@@ -252,7 +252,6 @@ private String InstructorUID = UserInterface.UID;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(798, 514));
         setMinimumSize(new java.awt.Dimension(798, 514));
-        setPreferredSize(new java.awt.Dimension(798, 514));
 
         studentListLEFT.setVisible(true);
 
@@ -526,6 +525,25 @@ private String InstructorUID = UserInterface.UID;
         // TODO add your handling code here:
         System.out.println(stringy2[0][incrementMe-1] + " " + class_sec);
         dbControl.dbComd("select student.STUDENT_ID,student.first_name, student.last_name from student join student_class on student.id = STUDENT_CLASS.STUDENT_ID join class on class.id = student_class.class_id join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID where class.id = "+stringy2[0][incrementMe-1]+" and student_class.class_section = '"+class_sec+"'  and instructor_class.class_section = '"+class_sec+"'");
+        
+        dbControl.dbComd("select distinct a.s as \"Student ID\" , (a.first_name || ' ' || a.last_name) as \"Name\" , b.absent as \"Absent %age\" from \n" +
+                        "(select attend_list.STUDENT_ID,student.STUDENT_ID as s,student.first_name, student.last_name from student \n" +
+                        "join attend_list on attend_list.STUDENT_ID = student.ID\n" +
+                        "join student_class on student.id = STUDENT_CLASS.STUDENT_ID \n" +
+                        "join class on class.id = student_class.class_id \n" +
+                        "join instructor_class on instructor_class.CLASS_ID = student_class.CLASS_ID \n" +
+                        "join instructor on instructor.ID = instructor_class.INSTRUCTOR_ID \n" +
+                        "where class.id = "+stringy2[0][incrementMe-1]+"\n" +
+                        "and student_class.class_section ='"+class_sec+"'   \n" +
+                        "and instructor_class.class_section = '"+class_sec+"'  ) as a\n" +
+                        "join \n" +
+                        "(SELECT ((COUNT(present)/31.0000000000000000000)*100) as absent, student_id \n" +
+                        "FROM attend_list\n" +
+                        "where present = false\n" +
+                        "and class_id = "+stringy2[0][incrementMe-1]+"\n" +
+                        "GROUP BY student_id) as b\n" +
+                        "\n" +
+                        "on a.student_id = b.student_id");
         studentLIST.setModel(DbUtils.resultSetToTableModel(rs));
         dbControl.doClose();
     }//GEN-LAST:event_sDisplayListBUTTONMouseReleased

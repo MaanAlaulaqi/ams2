@@ -16,3 +16,18 @@ FifteenMinActivate method:
 		- But as far as tracing and logic goes, this will work fine. The 15 min activation won't activate unless the boolean is false. 
 		- I feel burnt out of existence 
 	• idk but ya
+
+	• classCall broken
+	• 
+
+
+
+DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+        LocalDateTime now = LocalDateTime.now();
+        int currentTime = Presence.toMins(dtf.format(now));
+
+
+[[0, 0], [1, 750], [2, 660], [3, 840], [4, 660], [5, 990], [0, 1080]]
+[[0, 0], [1, 750], [2, 660], [3, 840], [4, 660], [5, 990], [0, 1080]]
+
+00:00:00	23:59:59	Sunday	Tuesday
