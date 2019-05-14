@@ -171,10 +171,7 @@ import javax.smartcardio.TerminalFactory;
 
                     try {
                         Thread.sleep(500);
-                        if (counter > 0) {
-                            view_counter--;
-                            counter--;
-                        }
+                        if (counter > 0) counter--;
                         else {
                             counter = 0;
                             if(Presence.instructorIN){}
@@ -200,11 +197,8 @@ import javax.smartcardio.TerminalFactory;
                     //System.out.println();
                     //See "while(!running) comments 
                     //This is the timer countdown System print
-                    System.out.print (counter + " ");
-                    if (counter > 0) {
-                        view_counter--;
-                        counter--;
-                    }
+                    //System.out.print (counter + " ");
+                    if (counter > 0) counter--;
                     else  {
                         counter = 0;
                         if(Presence.instructorIN){}
@@ -265,10 +259,10 @@ import javax.smartcardio.TerminalFactory;
                             // Checks if the UID is in our database
                             System.out.println("bdLookUp HERE:");
                             emp_stud_check = dbLookUp.uidCheck(out);
-                            if (emp_stud_check) view_counter = 20;
+                            
                             
                             //This IF : View Student list
-                            if (view_counter > 0) {
+                            if (emp_stud_check) {
                                 UserInterface.viewStudentsButton.setVisible(true);
                             } else{
                                 UserInterface.viewStudentsButton.setVisible(false);
