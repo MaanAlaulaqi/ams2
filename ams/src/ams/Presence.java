@@ -133,16 +133,13 @@ public class Presence {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             dbUpdate.DO_THE_THING.executeUpdate("update attend \n" +
                     "    set present = true \n" +
-                    "    where student_id = (SELECT attend.student_id FROM ATTEND\n" +
-                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
-                            "    AND ACTIVE_CLASSES.ID = "+class_id+")\n" +
-                            "    and class_id = (SELECT attend.class_id FROM ATTEND\n" +
-                            "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                            "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                            "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
-                            "    AND ACTIVE_CLASSES.ID = "+class_id+")");
+                    "    where student_id = (select attend.student_id from attend, class, student, active_classes\n" +
+                    "    where student.ID = attend.STUDENT_ID\n" +
+                    "    and active_classes.CLASS_ID = class.id\n" +
+                    "    and CLASS.ID = ATTEND.CLASS_ID\n" +
+                    "    and class.id = active_classes.class_id\n" +
+                    "    and student.CARD_ID = '"+UID+"'\n" +
+                    "    AND ACTIVE_CLASSES.ID = "+class_id+")");
             } catch (SQLException ex) {
                 Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
             }finally {dbUpdate.doClose();}
@@ -180,16 +177,13 @@ public class Presence {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             dbUpdate.DO_THE_THING.executeUpdate("update attend \n" +
                     "    set present = true \n" +
-                    "    where student_id = (SELECT attend.student_id FROM ATTEND\n" +
-                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
-                            "    AND ACTIVE_CLASSES.ID = "+class_id+")\n" +
-                            "    and class_id = (SELECT attend.class_id FROM ATTEND\n" +
-                            "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                            "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                            "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
-                            "    AND ACTIVE_CLASSES.ID = "+class_id+")");
+                    "    where student_id = (select attend.student_id from attend, class, student, active_classes\n" +
+                    "    where student.ID = attend.STUDENT_ID\n" +
+                    "    and active_classes.CLASS_ID = class.id\n" +
+                    "    and CLASS.ID = ATTEND.CLASS_ID\n" +
+                    "    and class.id = active_classes.class_id\n" +
+                    "    and student.CARD_ID = '"+UID+"'\n" +
+                    "    AND ACTIVE_CLASSES.ID = "+class_id+")");
             } catch (SQLException ex) {
                 Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
             }finally {dbUpdate.doClose();}
@@ -210,15 +204,12 @@ public class Presence {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             dbUpdate.DO_THE_THING.executeUpdate("update attend \n" +
                     "    set present = false \n" +
-                    "    where student_id = (SELECT attend.student_id FROM ATTEND\n" +
-                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
-                    "    AND ACTIVE_CLASSES.ID = "+class_id+")\n" +
-                    "    and class_id = (SELECT attend.class_id FROM ATTEND\n" +
-                    "    JOIN STUDENT ON STUDENT.ID = ATTEND.STUDENT_ID \n" +
-                    "    JOIN ACTIVE_CLASSES ON ACTIVE_CLASSES.ID = ATTEND.CLASS_ID\n" +
-                    "    WHERE STUDENT.CARD_ID = '"+UID+"'\n" +
+                    "    where student_id = (select attend.student_id from attend, class, student, active_classes\n" +
+                    "    where student.ID = attend.STUDENT_ID\n" +
+                    "    and active_classes.CLASS_ID = class.id\n" +
+                    "    and CLASS.ID = ATTEND.CLASS_ID\n" +
+                    "    and class.id = active_classes.class_id\n" +
+                    "    and student.CARD_ID = '"+UID+"'\n" +
                     "    AND ACTIVE_CLASSES.ID = "+class_id+")");
             } catch (SQLException ex) {
                 Logger.getLogger(Presence.class.getName()).log(Level.SEVERE, null, ex);
