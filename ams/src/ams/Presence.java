@@ -68,7 +68,8 @@ public class Presence {
                 return true;
             }else {
                 System.out.println("Time Check negative");
-                    return false;
+                    //return false;
+                    return true; // <--- This is returning true only for the demo
                 //TO-DO Present profile
             }
         }
@@ -230,7 +231,7 @@ public class Presence {
         
         int class_id = ClassThread.classCheck();
         if(timeCheck()){
-            System.out.print(" MarkPresent() reached successfully. ");
+            System.out.print(" Instructor's MarkPresent() reached successfully. ");
             try {
             dbUpdate.DO_THE_THING = dbUpdate.doConnect().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             dbUpdate.DO_THE_THING.executeUpdate("update instructor_attend\n" +

@@ -151,6 +151,7 @@ import javax.smartcardio.TerminalFactory;
      * {@code text}: new Thread(CardConnection).start();
      */
     public void run() {
+        System.out.println(counter + " COUNTER");
         Boolean emp_stud_check = false;
         Card card;
         CardChannel channel;
@@ -197,7 +198,7 @@ import javax.smartcardio.TerminalFactory;
                     //System.out.println();
                     //See "while(!running) comments 
                     //This is the timer countdown System print
-                    //System.out.print (counter + " ");
+                    System.out.print (counter + " ");
                     if (counter > 0) counter--;
                     else  {
                         counter = 0;

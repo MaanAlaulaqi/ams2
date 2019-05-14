@@ -25,7 +25,7 @@ public class amsActivate {
      * @return true/false. This method is being called by a couple other methods. 
      */
     public static boolean ActivateOrNah(boolean x, String UID){
-        System.out.println("ActivateOrNah reached: " + UID);
+        System.out.println("ActivateOrNah reached: " + UID + " " + x + " /end ActivateOrNah " );
         if (x = true) {
             //activateAms(x, UID);
             UserInterface.updateActiveCheck(x);
@@ -44,7 +44,7 @@ public class amsActivate {
      * @return true will turn it on
      */
     public static boolean activateAms(boolean x, String UID){
-        System.out.println("activateAms reached: " + UID);
+        System.out.println("activateAms reached: " + UID + " " + x + " /end activateAms ");
         status = x;
         if(CardConnection.counter > 0){    
             if(!x){
